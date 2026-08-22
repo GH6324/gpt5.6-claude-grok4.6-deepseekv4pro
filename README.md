@@ -22,7 +22,7 @@
 | Grok 4.6 | [`projects/grok4.6-coldbrew`](projects/grok4.6-coldbrew) | Grok 适配器与统一深色界面 |
 | DeepSeek | [`projects/deepseek-harness`](projects/deepseek-harness) | Harness 适配器与导出模板 |
 | 发布工具 | [`pack_release.py`](pack_release.py) | 可复现 ZIP、SHA-256 校验和清单 |
-| 社区入口 | [QQ / 微信 / Telegram](#社区入口) | 交流、更新与版本公告 |
+| 社区入口 | [QQ / Telegram](#社区入口) | 交流、更新与版本公告 |
 
 ## 四个模型
 
@@ -100,14 +100,6 @@ python coldbrew_hub.py --selftest
     </td>
   </tr>
 </table>
-
-### 微信群
-
-<p align="center">
-  <a href="docs/images/wechat-group.jpg"><img src="docs/images/wechat-group.jpg" width="260" alt="微信群：codex 破甲二维码"></a><br>
-  <strong>微信群：codex 破甲</strong><br>
-  <sub>二维码有效期以图片中的日期为准，失效后会替换新图。</sub>
-</p>
 
 ### Telegram
 
