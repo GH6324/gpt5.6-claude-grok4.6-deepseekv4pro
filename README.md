@@ -108,7 +108,7 @@ python coldbrew_hub.py --selftest
 | Telegram 交流群 | [加入 @chachachacha99999](https://t.me/chachachacha99999) | 讨论、提问与反馈 |
 | Telegram 频道 | [订阅 @chachacha99999999](https://t.me/chachacha99999999) | 版本发布、公告与通知 |
 
-> Telegram 交流群与频道是两个独立入口：交流群为 <https://t.me/chachachacha99999>，频道为 <https://t.me/chachacha99999999>。
+> Telegram 交流群与频道是两个独立入口：交流群 [@chachachacha99999](https://t.me/chachachacha99999)，频道 [@chachacha99999999](https://t.me/chachacha99999999)。
 
 ## 仓库结构
 
