@@ -96,9 +96,3 @@ projects/deepseek-harness/      # DeepSeek v4 Pro
 | 频道 | [t.me/chachacha99999999](https://t.me/chachacha99999999) |
 
 许可见 [LICENSE](LICENSE)。不要把密钥和本机快照推进公开仓库。文案、界面、矢量图均为本仓库原创。
-
-<p align="center">
-  <a href="https://www.star-history.com/#3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro&Date">
-    <img alt="Star History" src="https://api.star-history.com/chart?repos=3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro&type=Date" width="80%">
-  </a>
-</p>

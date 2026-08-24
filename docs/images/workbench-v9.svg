@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" role="img" aria-label="冷咖啡工作台">
-  <rect width="1280" height="560" rx="18" fill="#E8F1FB"/>
-  <rect x="24" y="24" width="1232" height="512" rx="14" fill="#F4F7FB" stroke="#C5D6EA"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" role="img" aria-label="冷咖啡工作台">
+  <rect width="1280" height="780" rx="18" fill="#E8F1FB"/>
+  <rect x="24" y="24" width="1232" height="732" rx="14" fill="#F4F7FB" stroke="#C5D6EA"/>
   <circle cx="52" cy="52" r="6" fill="#C4473A"/>
   <circle cx="74" cy="52" r="6" fill="#E8C547"/>
   <circle cx="96" cy="52" r="6" fill="#3B82F6"/>
@@ -18,14 +18,26 @@
   <rect x="376" y="264" width="64" height="28" rx="6" fill="#FFFFFF" stroke="#1F5EBA"/><text x="408" y="283" text-anchor="middle" fill="#1F5EBA" font-size="13" font-family="Microsoft YaHei,sans-serif">渗透</text>
   <rect x="448" y="264" width="64" height="28" rx="6" fill="#FFFFFF" stroke="#1F5EBA"/><text x="480" y="283" text-anchor="middle" fill="#1F5EBA" font-size="13" font-family="Microsoft YaHei,sans-serif">爬虫</text>
   <rect x="520" y="264" width="64" height="28" rx="6" fill="#FFFFFF" stroke="#1F5EBA"/><text x="552" y="283" text-anchor="middle" fill="#1F5EBA" font-size="13" font-family="Microsoft YaHei,sans-serif">外挂</text>
-  <rect x="40" y="316" width="590" height="192" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
-  <rect x="40" y="316" width="590" height="4" fill="#1F5EBA"/>
-  <text x="64" y="360" fill="#17325A" font-size="26" font-weight="700" font-family="Segoe UI,sans-serif">GPT-5.6</text>
-  <text x="64" y="392" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">CODEX COLDBREW</text>
-  <rect x="64" y="430" width="88" height="32" rx="6" fill="#1F5EBA"/><text x="108" y="451" text-anchor="middle" fill="#FFFFFF" font-size="13" font-family="Microsoft YaHei,sans-serif">开启</text>
-  <rect x="650" y="316" width="590" height="192" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
-  <rect x="650" y="316" width="590" height="4" fill="#1F5EBA"/>
-  <text x="674" y="360" fill="#17325A" font-size="26" font-weight="700" font-family="Segoe UI,sans-serif">Claude Code</text>
-  <text x="674" y="392" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">OPUS 5 · FABLE 5 · 4.8</text>
-  <rect x="674" y="430" width="88" height="32" rx="6" fill="#1F5EBA"/><text x="718" y="451" text-anchor="middle" fill="#FFFFFF" font-size="13" font-family="Microsoft YaHei,sans-serif">开启</text>
+  <g font-family="Segoe UI,sans-serif">
+    <rect x="40" y="324" width="590" height="188" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
+    <rect x="40" y="324" width="590" height="4" fill="#1F5EBA"/>
+    <text x="64" y="372" fill="#17325A" font-size="26" font-weight="700">GPT-5.6</text>
+    <text x="64" y="404" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">CODEX COLDBREW</text>
+    <rect x="64" y="444" width="88" height="32" rx="6" fill="#1F5EBA"/><text x="108" y="465" text-anchor="middle" fill="#FFFFFF" font-size="13" font-family="Microsoft YaHei,sans-serif">开启</text>
+    <rect x="650" y="324" width="590" height="188" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
+    <rect x="650" y="324" width="590" height="4" fill="#1F5EBA"/>
+    <text x="674" y="372" fill="#17325A" font-size="26" font-weight="700">Claude Code</text>
+    <text x="674" y="404" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">OPUS 5 · FABLE 5 · 4.8</text>
+    <rect x="674" y="444" width="88" height="32" rx="6" fill="#1F5EBA"/><text x="718" y="465" text-anchor="middle" fill="#FFFFFF" font-size="13" font-family="Microsoft YaHei,sans-serif">开启</text>
+    <rect x="40" y="528" width="590" height="188" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
+    <rect x="40" y="528" width="590" height="4" fill="#1F5EBA"/>
+    <text x="64" y="576" fill="#17325A" font-size="26" font-weight="700">Grok 4.6</text>
+    <text x="64" y="608" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">GROK COLDBREW</text>
+    <rect x="64" y="648" width="88" height="32" rx="6" fill="#1F5EBA"/><text x="108" y="669" text-anchor="middle" fill="#FFFFFF" font-size="13" font-family="Microsoft YaHei,sans-serif">开启</text>
+    <rect x="650" y="528" width="590" height="188" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
+    <rect x="650" y="528" width="590" height="4" fill="#1F5EBA"/>
+    <text x="674" y="576" fill="#17325A" font-size="26" font-weight="700">DeepSeek v4 Pro</text>
+    <text x="674" y="608" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">DEEPSEEK HARNESS</text>
+    <rect x="674" y="648" width="88" height="32" rx="6" fill="#1F5EBA"/><text x="718" y="669" text-anchor="middle" fill="#FFFFFF" font-size="13" font-family="Microsoft YaHei,sans-serif">开启</text>
+  </g>
 </svg>
