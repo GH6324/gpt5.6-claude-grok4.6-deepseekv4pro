@@ -36,7 +36,8 @@
   </tr>
 </table>
 
-Telegram：[群](https://t.me/chachachacha99999) · [频道](https://t.me/chachacha99999999)
+Telegram 群 [`@chachachacha99999`](https://t.me/chachachacha99999)  
+Telegram 频道 [`@chachacha99999999`](https://t.me/chachacha99999999)
 
 ## 五刃
 

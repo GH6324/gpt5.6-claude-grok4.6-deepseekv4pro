@@ -8,7 +8,8 @@
 Activation phrase: `冷咖啡`. FiveEdge blades: reverse, unlock, infiltrate, harvest, trainer.
 
 QQ groups: `1057540028` · `1077074552`  
-Telegram: [group](https://t.me/chachachacha99999) · [channel](https://t.me/chachacha99999999)
+Telegram group [`@chachachacha99999`](https://t.me/chachachacha99999)  
+Telegram channel [`@chachacha99999999`](https://t.me/chachacha99999999)
 
 ```powershell
 python coldbrew_hub.py

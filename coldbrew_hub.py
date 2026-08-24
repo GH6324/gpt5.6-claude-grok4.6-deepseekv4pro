@@ -37,7 +37,10 @@ QQ_GROUPS: tuple[tuple[str, str], ...] = (
     ("交流群", "1057540028"),
     ("专题群", "1077074552"),
 )
-TELEGRAM_GROUP = "https://t.me/chachachacha99999"
+TELEGRAM: tuple[tuple[str, str, str], ...] = (
+    ("群", "@chachachacha99999", "https://t.me/chachachacha99999"),
+    ("频道", "@chachacha99999999", "https://t.me/chachacha99999999"),
+)
 BLADES: tuple[tuple[str, str, str, str], ...] = (
     ("REV", "逆向", "拆箱还原 · 静态+动态 · 偏移/伪代码", "#E8A872"),
     ("UNLOCK", "破解", "开锁双路 · keygen + patcher", "#F5D76E"),
@@ -321,8 +324,18 @@ class HubApp:
                 px=14,
                 py=6,
             ).pack(side="left", padx=(0, 8))
-        GoldButton(community_row, "Telegram", lambda: webbrowser.open(TELEGRAM_GROUP), fonts=self.fonts, kind="ghost", px=12, py=6).pack(side="left")
-        self._label(community_row, "点一下复制群号", fg=self.MUTED, font=(self.fonts["cn"], 9)).pack(side="right")
+        self._label(community_row, "TG", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).pack(side="left", padx=(16, 8))
+        for name, handle, url in TELEGRAM:
+            GoldButton(
+                community_row,
+                f"{name}  {handle}",
+                lambda n=name, h=handle, u=url: self._open_telegram(n, h, u),
+                fonts=self.fonts,
+                kind="ghost",
+                px=10,
+                py=6,
+            ).pack(side="left", padx=(0, 8))
+        self._label(community_row, "点 QQ 复制群号  ·  点 TG 复制并打开", fg=self.MUTED, font=(self.fonts["cn"], 9)).pack(side="right")
 
         model_row = self.plate(shell, padx=14, pady=8)
         model_row.grid(row=3, column=0, sticky="ew", pady=(0, 8))
@@ -407,6 +420,14 @@ class HubApp:
             action_bar.grid_columnconfigure(col, weight=1)
             GoldButton(action_bar, label, command, fonts=self.fonts, kind=kind, px=8, py=5).grid(row=0, column=col, sticky="ew", padx=(0 if col == 0 else 4, 0))
         return card
+
+    def _open_telegram(self, name: str, handle: str, url: str) -> None:
+        self.root.clipboard_clear()
+        self.root.clipboard_append(handle)
+        self.root.update()
+        webbrowser.open(url)
+        _emit(self.log_q, "ok", f"[社群] Telegram {name} {handle}")
+        self.status_var.set(f"Telegram  {name}  {handle}")
 
     def _copy_qq(self, name: str, number: str) -> None:
         self.root.clipboard_clear()

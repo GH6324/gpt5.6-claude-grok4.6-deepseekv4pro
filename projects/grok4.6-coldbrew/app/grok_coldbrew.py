@@ -24,7 +24,8 @@ from coldbrew_ui import launch_shared_gui
 COMMUNITY = {
     "qq_group_1": "交流群 1057540028",
     "qq_group_2": "专题群 1077074552",
-    "telegram": "https://t.me/chachachacha99999",
+    "telegram_group": "@chachachacha99999",
+    "telegram_channel": "@chachacha99999999",
 }
 
 
