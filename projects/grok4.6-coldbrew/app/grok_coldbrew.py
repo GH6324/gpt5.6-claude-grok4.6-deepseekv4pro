@@ -22,9 +22,9 @@ sys.path.insert(0, str(SHARED))
 from coldbrew_ui import launch_shared_gui
 
 COMMUNITY = {
-
-    "wechat": "微信群：冷咖啡破甲社区",
-    "wechat_qr": str(ROOT / "docs" / "images" / "wechat-group.png"),
+    "qq_group_1": "交流群 1057540028",
+    "qq_group_2": "专题群 1077074552",
+    "telegram": "https://t.me/chachachacha99999",
 }
 
 

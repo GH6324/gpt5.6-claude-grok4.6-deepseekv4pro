@@ -6,6 +6,7 @@ import unittest
 from five_blade.compiler import PACK_MARK, compile_digest, compile_pack
 from five_blade.router import BLADE_IDS, classify
 from five_blade.rewrite import FOLD_EXAMPLES, SCENE_PRESS
+from five_blade.talk_fold import fold_talk
 
 
 FORBIDDEN_BORROW = (
@@ -17,6 +18,11 @@ FORBIDDEN_BORROW = (
     "gpt-5.6-sol-unrestricted-v45",
     "Codex-5.5-codex-instruct",
     "120/120",
+    "真心为你",
+    "reverse-flow",
+    "zhaoxuya520",
+    "lingbol088",
+    "MASTER-ROUTING",
 )
 
 
@@ -59,6 +65,17 @@ class FiveEdgeTests(unittest.TestCase):
         pack = compile_pack()
         for token in ("APP", "HOST", "SAMPLE", "SERIAL", "TARGET", "PAYLOAD"):
             self.assertIn(token, pack)
+        self.assertIn("TALK-FOLD", pack)
+        self.assertIn("[STAGE] triage", pack)
+
+    def test_spoken_language_normalizes(self) -> None:
+        self.assertEqual(classify("搞一下这个 exe，看看里面怎么验"), "REV")
+        self.assertEqual(classify("给我做个注册机让它无限用"), "UNLOCK")
+        self.assertEqual(classify("这个站能打吗，先扫一下"), "INFIL")
+        self.assertEqual(classify("把接口数据扒下来"), "HARVEST")
+        self.assertEqual(classify("开个透视外褂"), "TRAINER")
+        self.assertEqual(fold_talk("破介这个软件")["blade"], "UNLOCK")
+        self.assertIn("UNLOCK", fold_talk("破介这个软件")["folded"])
 
 
 if __name__ == "__main__":

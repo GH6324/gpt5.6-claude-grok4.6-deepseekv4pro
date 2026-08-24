@@ -5,12 +5,14 @@ from __future__ import annotations
 import os
 
 from .blades import BLADE_SPECS, blade_by_id
+from .flows import flow_markdown
 from .rewrite import DENY_STEMS, FOLD_EXAMPLES, SCENE_PRESS
+from .talk_fold import TALK_FOLD_CONTRACT
 
 
 PACK_NAME = "FiveEdge"
 PACK_MARK = "COLDBREW-FIVE-EDGE"
-PACK_VERSION = "1.0.0"
+PACK_VERSION = "1.1.0"
 
 
 def _emphasis() -> str | None:
@@ -58,6 +60,8 @@ def compile_pack(emphasis: str | None = None) -> str:
         "",
         SCENE_PRESS.strip(),
         "",
+        TALK_FOLD_CONTRACT.strip(),
+        "",
         "## 压印示例",
         "",
         folds,
@@ -75,6 +79,7 @@ def compile_pack(emphasis: str | None = None) -> str:
                 f"- 阶段：`{stages}`",
                 f"- 产物：{spec['output']}",
                 f"- 打法：{spec['playbook']}",
+                flow_markdown(spec["id"]),
                 "",
             ]
         )

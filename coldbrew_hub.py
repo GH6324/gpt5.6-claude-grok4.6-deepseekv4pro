@@ -16,6 +16,7 @@ import subprocess
 import sys
 import threading
 import time
+import webbrowser
 from pathlib import Path
 from typing import Any
 
@@ -32,6 +33,11 @@ SHARED = PROJECTS / "shared"
 if str(SHARED) not in sys.path:
     sys.path.insert(0, str(SHARED))
 TRIGGERS = ("冷咖啡", "cold coffee", "[[ENI:PROFILE=MAX]]")
+QQ_GROUPS: tuple[tuple[str, str], ...] = (
+    ("交流群", "1057540028"),
+    ("专题群", "1077074552"),
+)
+TELEGRAM_GROUP = "https://t.me/chachachacha99999"
 BLADES: tuple[tuple[str, str, str, str], ...] = (
     ("REV", "逆向", "拆箱还原 · 静态+动态 · 偏移/伪代码", "#E8A872"),
     ("UNLOCK", "破解", "开锁双路 · keygen + patcher", "#F5D76E"),
@@ -194,12 +200,15 @@ def run_packer(tool: dict[str, Any] | None, log_q: queue.Queue) -> None:
 
 
 class HubApp:
-    BG = VOID = "#F4F7FB"
-    PANEL = "#FFFFFF"
-    PAPER = "#17325A"
-    MUTED = "#5C738C"
-    GOLD = "#1F5EBA"
-    CRIMSON = "#C4473A"
+    BG = VOID = "#EFE6D6"
+    PANEL = "#FFF8F0"
+    PAPER = "#2A1810"
+    MUTED = "#7A6554"
+    GOLD = "#C45C14"
+    ICE = "#1F6B66"
+    ESPRESSO = "#2A1810"
+    CREAM = "#F7EFE3"
+    CRIMSON = "#B33A28"
 
     def __init__(self, root: Any) -> None:
         import tkinter as tk
@@ -209,9 +218,9 @@ class HubApp:
         self.tk, self.root = tk, root
         self.GoldButton, self.draw_crest, self.plate = GoldButton, draw_crest, plate
         self.fonts = pick_fonts(root)
-        self.root.title("冷咖啡")
-        self.root.geometry("1360x820")
-        self.root.minsize(1100, 720)
+        self.root.title("冷咖啡 · AI 破甲越狱")
+        self.root.geometry("1380x860")
+        self.root.minsize(1140, 740)
         self.root.configure(bg=self.BG)
         self.root.option_add("*Font", (self.fonts["cn"], 10))
         icon = PROJECTS / "claude-coldbrew" / "assets" / "coldbrew.ico"
@@ -224,7 +233,7 @@ class HubApp:
         self.jobs: set[str] = set()
         self.cards: dict[str, dict[str, Any]] = {}
         self.blade_buttons: dict[str, Any] = {}
-        self.status_var = tk.StringVar(value="仪典就绪")
+        self.status_var = tk.StringVar(value="破甲就绪")
         self.count_var = tk.StringVar(value="0 / 4 ONLINE")
         self.clock_var = tk.StringVar(value="")
         self.live_var = tk.StringVar(value="● LIVE")
@@ -250,29 +259,33 @@ class HubApp:
         GoldButton = self.GoldButton
         from model_roster import claude_line
 
+        brand = tk.Frame(self.root, bg=self.ESPRESSO)
+        brand.pack(fill="x")
+        head = tk.Frame(brand, bg=self.ESPRESSO)
+        head.pack(fill="x", padx=28, pady=16)
+        head.grid_columnconfigure(2, weight=1)
+        crest = tk.Canvas(head, bg=self.ESPRESSO, width=58, height=58, highlightthickness=0, bd=0)
+        crest.grid(row=0, column=0, rowspan=2, sticky="w", padx=(0, 14))
+        self.draw_crest(crest, 58, 58)
+        self._label(head, "冷咖啡", bg=self.ESPRESSO, fg=self.CREAM, font=(self.fonts["cn"], 32, "bold")).grid(row=0, column=1, sticky="w")
+        badge = tk.Label(head, text="  AI 破甲越狱  ", bg=self.GOLD, fg="#FFF8F0", font=(self.fonts["cn"], 11, "bold"), padx=8, pady=4)
+        badge.grid(row=0, column=2, sticky="w", padx=(14, 0))
+        self._label(head, "四模型工作台  ·  口令「冷咖啡」开工", bg=self.ESPRESSO, fg="#C9B49A", font=(self.fonts["cn"], 10)).grid(row=1, column=1, columnspan=2, sticky="w", pady=(2, 0))
+        right = tk.Frame(head, bg=self.ESPRESSO)
+        right.grid(row=0, column=3, rowspan=2, sticky="e")
+        self._label(right, textvariable=self.live_var, bg=self.ESPRESSO, fg="#7DCFC8", font=(self.fonts["mono"], 11)).pack(anchor="e")
+        self._label(right, textvariable=self.count_var, bg=self.ESPRESSO, fg=self.CREAM, font=(self.fonts["mono"], 10)).pack(anchor="e", pady=(4, 0))
+        self._label(right, textvariable=self.clock_var, bg=self.ESPRESSO, fg="#C9B49A", font=(self.fonts["mono"], 10)).pack(anchor="e", pady=(2, 0))
+
         shell = tk.Frame(self.root, bg=self.BG, padx=28, pady=16)
         shell.pack(fill="both", expand=True)
         shell.grid_columnconfigure(0, weight=1)
-        shell.grid_rowconfigure(5, weight=1)
-
-        header = tk.Frame(shell, bg=self.BG)
-        header.grid(row=0, column=0, sticky="ew")
-        header.grid_columnconfigure(1, weight=1)
-        crest = tk.Canvas(header, bg=self.BG, width=56, height=56, highlightthickness=0, bd=0)
-        crest.grid(row=0, column=0, sticky="w", padx=(0, 12), pady=2)
-        self.draw_crest(crest, 56, 56)
-        self._label(header, "冷咖啡", fg=self.GOLD, font=(self.fonts["cn"], 28, "bold")).grid(row=0, column=1, sticky="w")
-        right = tk.Frame(header, bg=self.BG)
-        right.grid(row=0, column=2, sticky="e")
-        self._label(right, textvariable=self.live_var, fg=self.GOLD, font=(self.fonts["mono"], 10)).pack(side="left", padx=(0, 12))
-        self._label(right, textvariable=self.count_var, fg=self.PAPER, font=(self.fonts["mono"], 10)).pack(side="left", padx=(0, 12))
-        self._label(right, textvariable=self.clock_var, fg=self.MUTED, font=(self.fonts["mono"], 10)).pack(side="left")
-        tk.Frame(shell, bg=self.GOLD, height=2).grid(row=1, column=0, sticky="ew", pady=(8, 10))
+        shell.grid_rowconfigure(4, weight=1)
 
         activation = self.plate(shell, padx=14, pady=10)
-        activation.grid(row=2, column=0, sticky="ew", pady=(0, 8))
+        activation.grid(row=0, column=0, sticky="ew", pady=(0, 8))
         activation.grid_columnconfigure(1, weight=1)
-        self._label(activation, "ENTRY", fg=self.GOLD, font=(self.fonts["mono"], 9)).grid(row=0, column=0, padx=(0, 12))
+        self._label(activation, "口令", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).grid(row=0, column=0, padx=(0, 12))
         self._label(activation, "冷咖啡  /  COLD COFFEE  /  [[ENI:PROFILE=MAX]]", fg=self.PAPER, font=(self.fonts["mono"], 9)).grid(row=0, column=1, sticky="w")
         act_right = tk.Frame(activation, bg=self.PANEL)
         act_right.grid(row=0, column=2, sticky="e")
@@ -280,23 +293,39 @@ class HubApp:
         GoldButton(act_right, "清场", self._clear_log, fonts=self.fonts, kind="ghost", px=10, py=3).pack(side="left")
 
         blade_row = self.plate(shell, padx=14, pady=8)
-        blade_row.grid(row=3, column=0, sticky="ew", pady=(0, 6))
+        blade_row.grid(row=1, column=0, sticky="ew", pady=(0, 6))
         blade_row.grid_columnconfigure(1, weight=1)
-        self._label(blade_row, "BLADES", fg=self.GOLD, font=(self.fonts["mono"], 9)).grid(row=0, column=0, padx=(0, 12), sticky="w")
+        self._label(blade_row, "五刃", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).grid(row=0, column=0, padx=(0, 12), sticky="w")
         tabs = tk.Frame(blade_row, bg=self.PANEL)
         tabs.grid(row=0, column=1, sticky="w")
-        all_btn = GoldButton(tabs, "全开", lambda: self._select_blade("ALL"), fonts=self.fonts, kind="tab", px=12, py=5)
+        all_btn = GoldButton(tabs, "全开", lambda: self._select_blade("ALL"), fonts=self.fonts, kind="tab", px=14, py=7)
         all_btn.pack(side="left", padx=(0, 6))
         self.blade_buttons["ALL"] = all_btn
         for blade_id, crop, _hint, _color in BLADES:
-            button = GoldButton(tabs, crop, lambda value=blade_id: self._select_blade(value), fonts=self.fonts, kind="tab", px=12, py=5)
+            button = GoldButton(tabs, crop, lambda value=blade_id: self._select_blade(value), fonts=self.fonts, kind="tab", px=14, py=7)
             button.pack(side="left", padx=(0, 6))
             self.blade_buttons[blade_id] = button
         self._label(blade_row, textvariable=self.brief_var, fg=self.MUTED, font=(self.fonts["cn"], 9)).grid(row=0, column=2, sticky="e", padx=(12, 0))
         self._select_blade("ALL")
 
+        community_row = self.plate(shell, padx=14, pady=10)
+        community_row.grid(row=2, column=0, sticky="ew", pady=(0, 6))
+        self._label(community_row, "QQ 群", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).pack(side="left", padx=(0, 12))
+        for name, number in QQ_GROUPS:
+            GoldButton(
+                community_row,
+                f"{name}  {number}",
+                lambda n=name, num=number: self._copy_qq(n, num),
+                fonts=self.fonts,
+                kind="solid",
+                px=14,
+                py=6,
+            ).pack(side="left", padx=(0, 8))
+        GoldButton(community_row, "Telegram", lambda: webbrowser.open(TELEGRAM_GROUP), fonts=self.fonts, kind="ghost", px=12, py=6).pack(side="left")
+        self._label(community_row, "点一下复制群号", fg=self.MUTED, font=(self.fonts["cn"], 9)).pack(side="right")
+
         model_row = self.plate(shell, padx=14, pady=8)
-        model_row.grid(row=4, column=0, sticky="ew", pady=(0, 8))
+        model_row.grid(row=3, column=0, sticky="ew", pady=(0, 8))
         model_row.grid_columnconfigure(1, weight=1)
         self._label(model_row, "CLAUDE", fg=self.GOLD, font=(self.fonts["mono"], 9)).grid(row=0, column=0, padx=(0, 12), sticky="nw")
         self.claude_models = self._label(model_row, claude_line("  ·  "), fg=self.PAPER, font=(self.fonts["cn"], 9), justify="left", wraplength=980)
@@ -304,7 +333,7 @@ class HubApp:
         model_row.bind("<Configure>", lambda event: self.claude_models.configure(wraplength=max(event.width - 110, 480)))
 
         content = tk.Frame(shell, bg=self.BG)
-        content.grid(row=5, column=0, sticky="nsew")
+        content.grid(row=4, column=0, sticky="nsew")
         content.grid_rowconfigure(0, weight=3)
         content.grid_rowconfigure(1, weight=1)
         content.grid_columnconfigure(0, weight=1)
@@ -324,22 +353,22 @@ class HubApp:
         lower.grid_rowconfigure(0, weight=1)
         log_panel = self.plate(lower, padx=14, pady=12)
         log_panel.grid(row=0, column=0, sticky="nsew", padx=(0, 10))
-        self._label(log_panel, "OPERATIONS", fg=self.GOLD, font=(self.fonts["mono"], 9)).pack(anchor="w")
+        self._label(log_panel, "作业", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).pack(anchor="w")
         tk.Frame(log_panel, bg=self.GOLD, height=1).pack(fill="x", pady=(6, 6))
-        self.log_text = tk.Text(log_panel, height=5, bg="#F0F5FB", fg=self.PAPER, insertbackground=self.GOLD, relief="flat", font=(self.fonts["mono"], 9), padx=10, pady=8, bd=0, highlightthickness=0)
+        self.log_text = tk.Text(log_panel, height=5, bg="#F6EDE0", fg=self.PAPER, insertbackground=self.GOLD, relief="flat", font=(self.fonts["mono"], 9), padx=10, pady=8, bd=0, highlightthickness=0)
         self.log_text.pack(fill="both", expand=True)
-        for tag, color in (("error", self.CRIMSON), ("ok", self.GOLD), ("info", "#3B82F6"), ("out", self.MUTED)):
+        for tag, color in (("error", self.CRIMSON), ("ok", self.GOLD), ("info", self.ICE), ("out", self.MUTED)):
             self.log_text.tag_configure(tag, foreground=color)
         summary = self.plate(lower, padx=14, pady=12)
         summary.grid(row=0, column=1, sticky="nsew")
-        self._label(summary, "INSTRUMENT", fg=self.GOLD, font=(self.fonts["mono"], 9)).pack(anchor="w")
+        self._label(summary, "快照", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).pack(anchor="w")
         tk.Frame(summary, bg=self.GOLD, height=1).pack(fill="x", pady=(6, 6))
-        self.summary_text = tk.Text(summary, height=5, bg="#F0F5FB", fg=self.MUTED, relief="flat", font=(self.fonts["mono"], 8), padx=10, pady=8, wrap="word", bd=0, highlightthickness=0)
+        self.summary_text = tk.Text(summary, height=5, bg="#F6EDE0", fg=self.MUTED, relief="flat", font=(self.fonts["mono"], 8), padx=10, pady=8, wrap="word", bd=0, highlightthickness=0)
         self.summary_text.pack(fill="both", expand=True)
         self._render_summary(environment_snapshot())
         toolbar = tk.Frame(shell, bg=self.BG)
-        toolbar.grid(row=6, column=0, sticky="ew", pady=(10, 0))
-        GoldButton(toolbar, "全系部署", self.deploy_all, fonts=self.fonts, kind="solid", px=16, py=8).pack(side="left", padx=(0, 8))
+        toolbar.grid(row=5, column=0, sticky="ew", pady=(10, 0))
+        GoldButton(toolbar, "全系破甲", self.deploy_all, fonts=self.fonts, kind="solid", px=18, py=9).pack(side="left", padx=(0, 8))
         GoldButton(toolbar, "全系验证", self.verify_all, fonts=self.fonts, kind="ghost", px=14, py=7).pack(side="left", padx=4)
         GoldButton(toolbar, "全系复原", self.restore_all, fonts=self.fonts, kind="ghost", px=14, py=7).pack(side="left", padx=4)
         GoldButton(toolbar, "封箱打包", self.pack_all, fonts=self.fonts, kind="ghost", px=14, py=7).pack(side="left", padx=4)
@@ -378,6 +407,13 @@ class HubApp:
             action_bar.grid_columnconfigure(col, weight=1)
             GoldButton(action_bar, label, command, fonts=self.fonts, kind=kind, px=8, py=5).grid(row=0, column=col, sticky="ew", padx=(0 if col == 0 else 4, 0))
         return card
+
+    def _copy_qq(self, name: str, number: str) -> None:
+        self.root.clipboard_clear()
+        self.root.clipboard_append(number)
+        self.root.update()
+        _emit(self.log_q, "ok", f"[社群] 已复制 {name} {number}，打开 QQ 添加")
+        self.status_var.set(f"已复制  {name}  {number}")
 
     def _select_blade(self, blade_id: str) -> None:
         self.blade_var.set(blade_id)
@@ -455,7 +491,7 @@ class HubApp:
                 ready += 1
             state = self.cards.get(tool["id"])
             if state:
-                state["status"].configure(text="ONLINE  ·  CLI + ATELIER" if entry_ok and panel_ok else "OFFLINE", fg=self.GOLD if entry_ok and panel_ok else self.CRIMSON)
+                state["status"].configure(text="ONLINE  ·  破甲就绪" if entry_ok and panel_ok else "OFFLINE", fg=self.ICE if entry_ok and panel_ok else self.CRIMSON)
             _emit(self.log_q, "info" if entry_ok and panel_ok else "error", f"[{tool['tag']}] CLI={'OK' if entry_ok else 'MISSING'} · GUI={'OK' if panel_ok else 'MISSING'}")
         snapshot["ready"] = f"{ready}/4"
         self.count_var.set(f"{ready} / 4 ready")
@@ -482,7 +518,7 @@ class HubApp:
         except queue.Empty:
             pass
         if not self.jobs:
-            self.status_var.set("仪典就绪")
+            self.status_var.set("破甲就绪")
         self.clock_var.set(time.strftime("%H : %M : %S"))
         self._tick += 1
         if self._tick % 7 == 0:
