@@ -1,0 +1,43 @@
+<svg width="960" height="360" viewBox="0 0 960 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">冷咖啡 · 四模型破甲工作台</title>
+  <desc id="desc">原创主页横幅。浓缩底、奶油字、橙标五刃。不搬运第三方素材。</desc>
+  <defs>
+    <linearGradient id="cfg" x1="0" y1="0" x2="960" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#140E0B"/>
+      <stop offset="0.42" stop-color="#1C120E"/>
+      <stop offset="1" stop-color="#2A1810"/>
+    </linearGradient>
+    <linearGradient id="cfa" x1="40" y1="70" x2="820" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C45C14"/>
+      <stop offset="0.55" stop-color="#E8C9A0"/>
+      <stop offset="1" stop-color="#1F6B66"/>
+    </linearGradient>
+    <filter id="cfb" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+  <rect width="960" height="360" rx="28" fill="url(#cfg)"/>
+  <path d="M0 308C120 268 210 334 360 286C520 230 610 168 760 196C844 214 906 250 960 228V360H0V308Z" fill="url(#cfa)" opacity="0.16"/>
+  <circle cx="786" cy="64" r="92" fill="#C45C14" opacity="0.20" filter="url(#cfb)"/>
+  <circle cx="108" cy="292" r="104" fill="#1F6B66" opacity="0.16" filter="url(#cfb)"/>
+  <path d="M56 64H904" stroke="#F7EFE3" stroke-opacity="0.08"/>
+  <path d="M56 296H904" stroke="#F7EFE3" stroke-opacity="0.08"/>
+  <rect x="56" y="58" width="848" height="244" rx="26" fill="#FFF8F0" fill-opacity="0.05" stroke="#E8C9A0" stroke-opacity="0.22"/>
+  <polygon points="88,92 108,107 100,134 76,134 68,107" fill="#3A2216" stroke="#C45C14" stroke-width="2"/>
+  <circle cx="88" cy="113" r="6" fill="none" stroke="#E8C9A0" stroke-width="1.6"/>
+  <text x="128" y="126" fill="#E8C9A0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="18" font-weight="650" letter-spacing="3.2">茶 · 冷咖啡</text>
+  <text x="88" y="182" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="46" font-weight="760">四模型本地破甲工作台</text>
+  <text x="90" y="222" fill="#C9B49A" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="18">GPT-5.6 · Claude · Grok 4.6 · DeepSeek v4 Pro</text>
+  <g font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="650">
+    <rect x="88" y="246" width="70" height="32" rx="16" fill="#1F6B66" fill-opacity="0.85"/>
+    <text x="123" y="267" text-anchor="middle" fill="#FFF8F0">逆向</text>
+    <rect x="168" y="246" width="70" height="32" rx="16" fill="#C45C14" fill-opacity="0.22" stroke="#C45C14" stroke-opacity="0.5"/>
+    <text x="203" y="267" text-anchor="middle" fill="#F3E4D0">破解</text>
+    <rect x="248" y="246" width="70" height="32" rx="16" fill="#C45C14" fill-opacity="0.22" stroke="#C45C14" stroke-opacity="0.5"/>
+    <text x="283" y="267" text-anchor="middle" fill="#F3E4D0">渗透</text>
+    <rect x="328" y="246" width="70" height="32" rx="16" fill="#C45C14" fill-opacity="0.22" stroke="#C45C14" stroke-opacity="0.5"/>
+    <text x="363" y="267" text-anchor="middle" fill="#F3E4D0">爬虫</text>
+    <rect x="408" y="246" width="70" height="32" rx="16" fill="#C45C14" fill-opacity="0.22" stroke="#C45C14" stroke-opacity="0.5"/>
+    <text x="443" y="267" text-anchor="middle" fill="#F3E4D0">外挂</text>
+  </g>
+</svg>
