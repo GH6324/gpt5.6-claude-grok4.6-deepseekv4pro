@@ -1,17 +1,20 @@
-<svg width="470" height="196" viewBox="0 0 470 196" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-  <title id="t">冷咖啡社群</title>
-  <desc id="d">原创社群卡。双 QQ 群与 Telegram。</desc>
-  <rect x="1" y="1" width="468" height="194" rx="20" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <rect x="22" y="22" width="52" height="52" rx="16" fill="#C45C14"/>
-  <text x="48" y="56" text-anchor="middle" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="22" font-weight="760">群</text>
-  <text x="90" y="46" fill="#2A1810" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="21" font-weight="760">社群入口</text>
-  <text x="90" y="72" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="13">交流群 · 专题群 · Telegram</text>
-  <text x="24" y="124" fill="#2A1810" font-family="Consolas,ui-monospace,monospace" font-size="22" font-weight="700">1057540028</text>
-  <rect x="24" y="146" width="102" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <text x="75" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">交流群</text>
-  <rect x="134" y="146" width="102" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <text x="185" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">专题群</text>
-  <rect x="244" y="146" width="72" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <text x="280" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">TG</text>
-  <path d="M412 150L434 128M434 128H416M434 128V146" stroke="#C45C14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="960" height="196" viewBox="0 0 960 196" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">两个 QQ 群</title>
+  <desc id="d">QQ 交流群 1057540028，QQ 专题群 1077074552。</desc>
+  <rect x="1" y="1" width="958" height="194" rx="20" fill="#FFF8F0" stroke="#E2D3C1"/>
+  <line x1="480" y1="24" x2="480" y2="172" stroke="#E2D3C1"/>
+  <rect x="24" y="24" width="52" height="52" rx="16" fill="#C45C14"/>
+  <text x="50" y="57" text-anchor="middle" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="16" font-weight="760">QQ</text>
+  <text x="92" y="46" fill="#2A1810" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="21" font-weight="760">QQ 交流群</text>
+  <text x="92" y="72" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="13">搜群号加入</text>
+  <text x="24" y="128" fill="#2A1810" font-family="Consolas,ui-monospace,monospace" font-size="32" font-weight="780">1057540028</text>
+  <rect x="24" y="148" width="92" height="26" rx="13" fill="#2A1810"/>
+  <text x="70" y="166" text-anchor="middle" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">QQ 群</text>
+  <rect x="504" y="24" width="52" height="52" rx="16" fill="#1F6B66"/>
+  <text x="530" y="57" text-anchor="middle" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="16" font-weight="760">QQ</text>
+  <text x="572" y="46" fill="#2A1810" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="21" font-weight="760">QQ 专题群</text>
+  <text x="572" y="72" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="13">Codex / Claude 破甲专题</text>
+  <text x="504" y="128" fill="#2A1810" font-family="Consolas,ui-monospace,monospace" font-size="32" font-weight="780">1077074552</text>
+  <rect x="504" y="148" width="92" height="26" rx="13" fill="#1F6B66"/>
+  <text x="550" y="166" text-anchor="middle" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">QQ 群</text>
 </svg>

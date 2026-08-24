@@ -27,7 +27,7 @@
 python coldbrew_hub.py
 ```
 
-QQ `1057540028` · `1077074552`  
+QQ group `1057540028` · QQ group `1077074552`  
 Telegram group [`@chachachacha99999`](https://t.me/chachachacha99999) · channel [`@chachacha99999999`](https://t.me/chachacha99999999)
 
 License: [LICENSE](LICENSE). Keep keys and local snapshots out of the public tree.

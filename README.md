@@ -44,7 +44,7 @@ Hub 管的是把指令落到本机配置。点一次：预览 → 部署 → 验
 | 锁一条刃 | `REV` 逆向 · `UNLOCK` 破解 · `INFIL` 渗透 · `HARVEST` 爬虫 · `TRAINER` 外挂 |
 | 文件级任务 | 改后文件 + 差分 + 验证 + 回滚，四件套一次给齐 |
 | 打包发布 | 固定文件顺序的源码 ZIP 和 SHA-256 清单 |
-| 社群入口 | 软件橙键复制群号，仓库页放二维码 |
+| 社群入口 | **QQ 交流群** `1057540028` · **QQ 专题群** `1077074552` |
 
 <p align="center">
   <img src="docs/images/blades-board.svg" width="980" alt="五刃">
@@ -76,11 +76,27 @@ Hub 管的是把指令落到本机配置。点一次：预览 → 部署 → 验
   <a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro">
     <img src="docs/images/card-product.svg" alt="冷咖啡项目卡" />
   </a>
+</div>
+
+## QQ 群
+
+两个 QQ 群，扫码或搜群号都能进。
+
+<div align="center">
+  <a href="#社群">
+    <img src="docs/images/card-qq-1.svg" alt="QQ 交流群 1057540028" />
+  </a>
   &nbsp;
   <a href="#社群">
-    <img src="docs/images/card-community.svg" alt="冷咖啡社群卡" />
+    <img src="docs/images/card-qq-2.svg" alt="QQ 专题群 1077074552" />
   </a>
 </div>
+
+<p align="center">
+  <strong>QQ 交流群</strong> <code>1057540028</code>
+  &nbsp;·&nbsp;
+  <strong>QQ 专题群</strong> <code>1077074552</code>
+</p>
 
 ## 快速开始
 
@@ -94,18 +110,18 @@ python coldbrew_hub.py
 
 ## 社群
 
-软件里的橙色按钮会复制群号。GitHub 主页也放在这里：
+软件里的橙色按钮会复制 QQ 群号。两个群的二维码：
 
 <table>
   <tr>
     <td align="center" width="50%">
       <a href="docs/images/qq-group-1.jpg"><img src="docs/images/qq-group-1.jpg" width="240" alt="QQ 交流群 1057540028"></a><br>
-      <strong>交流群</strong><br>
+      <strong>QQ 交流群</strong><br>
       <code>1057540028</code>
     </td>
     <td align="center" width="50%">
       <a href="docs/images/qq-group-2.jpg"><img src="docs/images/qq-group-2.jpg" width="240" alt="QQ 专题群 1077074552"></a><br>
-      <strong>专题群</strong><br>
+      <strong>QQ 专题群</strong><br>
       <code>1077074552</code>
     </td>
   </tr>
