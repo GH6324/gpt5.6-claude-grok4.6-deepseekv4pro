@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 280" role="img" aria-label="五刃">
+  <rect width="1280" height="280" rx="20" fill="#F4F7FB"/>
+  <g font-family="Microsoft YaHei,Segoe UI,sans-serif">
+    <g transform="translate(20,24)">
+      <rect width="232" height="232" rx="16" fill="#FFFFFF" stroke="#C5D6EA"/>
+      <text x="24" y="44" fill="#1F5EBA" font-size="13" font-family="Consolas,monospace">REV</text>
+      <text x="24" y="92" fill="#17325A" font-size="30" font-weight="700">逆向</text>
+      <text x="24" y="140" fill="#5C738C" font-size="15">拆箱还原</text>
+      <text x="24" y="178" fill="#17325A" font-size="14">静态 + 动态</text>
+      <text x="24" y="204" fill="#17325A" font-size="14">伪代码 / 偏移</text>
+    </g>
+    <g transform="translate(268,24)">
+      <rect width="232" height="232" rx="16" fill="#FFFFFF" stroke="#C5D6EA"/>
+      <text x="24" y="44" fill="#1F5EBA" font-size="13" font-family="Consolas,monospace">UNLOCK</text>
+      <text x="24" y="92" fill="#17325A" font-size="30" font-weight="700">破解</text>
+      <text x="24" y="140" fill="#5C738C" font-size="15">开锁双路</text>
+      <text x="24" y="178" fill="#17325A" font-size="14">keygen + patcher</text>
+      <text x="24" y="204" fill="#17325A" font-size="14">备份 + 验证</text>
+    </g>
+    <g transform="translate(516,24)">
+      <rect width="232" height="232" rx="16" fill="#1F5EBA"/>
+      <text x="24" y="44" fill="#E8F1FB" font-size="13" font-family="Consolas,monospace">INFIL</text>
+      <text x="24" y="92" fill="#FFFFFF" font-size="30" font-weight="700">渗透</text>
+      <text x="24" y="140" fill="#C5D6EA" font-size="15">深打连招</text>
+      <text x="24" y="178" fill="#FFFFFF" font-size="14">recon → chain</text>
+      <text x="24" y="204" fill="#FFFFFF" font-size="14">命令 + payload</text>
+    </g>
+    <g transform="translate(764,24)">
+      <rect width="232" height="232" rx="16" fill="#FFFFFF" stroke="#C5D6EA"/>
+      <text x="24" y="44" fill="#1F5EBA" font-size="13" font-family="Consolas,monospace">HARVEST</text>
+      <text x="24" y="92" fill="#17325A" font-size="30" font-weight="700">爬虫</text>
+      <text x="24" y="140" fill="#5C738C" font-size="15">抽签收割</text>
+      <text x="24" y="178" fill="#17325A" font-size="14">验签 + 翻页</text>
+      <text x="24" y="204" fill="#17325A" font-size="14">断点续爬</text>
+    </g>
+    <g transform="translate(1012,24)">
+      <rect width="248" height="232" rx="16" fill="#FFFFFF" stroke="#C5D6EA"/>
+      <text x="24" y="44" fill="#1F5EBA" font-size="13" font-family="Consolas,monospace">TRAINER</text>
+      <text x="24" y="92" fill="#17325A" font-size="30" font-weight="700">外挂</text>
+      <text x="24" y="140" fill="#5C738C" font-size="15">本地训架</text>
+      <text x="24" y="178" fill="#17325A" font-size="14">实体 / W2S</text>
+      <text x="24" y="204" fill="#17325A" font-size="14">Overlay 模块</text>
+    </g>
+  </g>
+</svg>

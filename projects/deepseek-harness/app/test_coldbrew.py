@@ -22,6 +22,8 @@ class ColdBrewTests(unittest.TestCase):
         prompt = compose_prompt("max")
         self.assertIn(CANONICAL_SHA256, prompt)
         self.assertIn(activation_payload("冷咖啡")["document"], prompt)
+        self.assertIn("COLDBREW-FIVE-EDGE", prompt)
+        self.assertIn("`HARVEST`", prompt)
 
     def test_deploy_verify_restore_exact_baseline(self):
         with tempfile.TemporaryDirectory() as tmp:

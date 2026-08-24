@@ -21,7 +21,7 @@ class ClaudeBrainLayerTests(unittest.TestCase):
     def test_install_verifies_skills_agent_commands_and_ishii(self) -> None:
         result = pojia.apply_install(self.layout, "max-breaker")
         self.assertTrue(result["ok"])
-        self.assertEqual(result["brain"]["layers"], {"skills": 5, "agents": 1, "commands": 2})
+        self.assertEqual(result["brain"]["layers"], {"skills": 6, "agents": 1, "commands": 2})
         self.assertTrue((self.root / "skills" / "coldbrew-ishii" / "SKILL.md").exists())
         agent = (self.root / "agents" / "coldbrew-ishii.md").read_text(encoding="utf-8")
         self.assertIn("十几年安全研究", agent)
@@ -30,8 +30,8 @@ class ClaudeBrainLayerTests(unittest.TestCase):
 
         verified = pojia.verify_install(self.layout)
         self.assertTrue(verified["ok"], verified)
-        self.assertEqual(verified["brain"]["layer_count"], 8)
-        self.assertEqual(verified["rules_count"], 7)
+        self.assertEqual(verified["brain"]["layer_count"], 9)
+        self.assertEqual(verified["rules_count"], 8)
 
     def test_profile_switch_restores_first_command_baseline(self) -> None:
         command = self.root / "commands" / "coldbrew.md"

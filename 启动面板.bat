@@ -1,8 +1,8 @@
 @echo off
 cd /d "%~dp0"
-title Àä¿§·È ColdBrew Hub
+title ï¿½ä¿§ï¿½ï¿½ ColdBrew Hub
 
-rem ==== ²éÕÒÕæÕý¿ÉÓÃµÄ Python£¨ÅÅ³ýÎ¢ÈíÉÌµê¼ÙÕ¼Î»£© ====
+rem ==== ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ Pythonï¿½ï¿½ï¿½Å³ï¿½Î¢ï¿½ï¿½ï¿½Ìµï¿½ï¿½Õ¼Î»ï¿½ï¿½ ====
 set "PY="
 python -c "import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)" >nul 2>nul
 if not errorlevel 1 set "PY=python"
@@ -13,16 +13,16 @@ if not defined PY (
 
 if defined PY goto tkcheck
 
-echo [´íÎó] Î´ÕÒµ½¿ÉÓÃµÄ Python 3.10 »ò¸ü¸ß°æ±¾
+echo [ï¿½ï¿½ï¿½ï¿½] Î´ï¿½Òµï¿½ï¿½ï¿½ï¿½Ãµï¿½ Python 3.10 ï¿½ï¿½ï¿½ï¿½ß°æ±¾
 echo.
-echo ½â¾ö°ì·¨£¨ÈÎÑ¡ÆäÒ»£©£º
-echo   1. µ½ https://www.python.org/downloads/ ÏÂÔØ°²×° Python 3.10+£¬
-echo      °²×°Ê±Îñ±Ø¹´Ñ¡ "Add python.exe to PATH"£»
-echo   2. Èç¹ûÒÑ¾­×°ÁË Python ÈÔ±¨Õâ¸ö´í£¬¶à°ëÊÇÎ¢ÈíÉÌµêµÄ
-echo      ¼Ù Python Õ¼Î»ÔÚµ·ÂÒ£º´ò¿ª ÉèÖÃ - Ó¦ÓÃ - ¸ß¼¶Ó¦ÓÃÉèÖÃ -
-echo      Ó¦ÓÃÖ´ÐÐ±ðÃû£¬°Ñ python.exe ºÍ python3.exe µÄ¿ª¹Ø¹Øµô¡£
+echo ï¿½ï¿½ï¿½ï¿½ì·¨ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
+echo   1. ï¿½ï¿½ https://www.python.org/downloads/ ï¿½ï¿½ï¿½Ø°ï¿½×° Python 3.10+ï¿½ï¿½
+echo      ï¿½ï¿½×°Ê±ï¿½ï¿½Ø¹ï¿½Ñ¡ "Add python.exe to PATH"ï¿½ï¿½
+echo   2. ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½×°ï¿½ï¿½ Python ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½ï¿½Ìµï¿½ï¿½
+echo      ï¿½ï¿½ Python Õ¼Î»ï¿½Úµï¿½ï¿½Ò£ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - Ó¦ï¿½ï¿½ - ï¿½ß¼ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -
+echo      Ó¦ï¿½ï¿½Ö´ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ python.exe ï¿½ï¿½ python3.exe ï¿½Ä¿ï¿½ï¿½Ø¹Øµï¿½ï¿½ï¿½
 echo.
-echo ÐÞºÃºóÖØÐÂË«»÷±¾ÎÄ¼þ¼´¿É¡£
+echo ï¿½ÞºÃºï¿½ï¿½ï¿½ï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½É¡ï¿½
 echo.
 pause
 exit /b 1
@@ -31,25 +31,25 @@ exit /b 1
 %PY% -c "import tkinter" >nul 2>nul
 if not errorlevel 1 goto run
 
-echo [´íÎó] Python È±ÉÙ tkinter£¨Tcl/Tk ×é¼þÎ´°²×°£©
+echo [ï¿½ï¿½ï¿½ï¿½] Python È±ï¿½ï¿½ tkinterï¿½ï¿½Tcl/Tk ï¿½ï¿½ï¿½Î´ï¿½ï¿½×°ï¿½ï¿½
 echo.
-echo ½â¾ö°ì·¨£ºÖØÐÂÔËÐÐ Python °²×°Æ÷£¬Ñ¡ Modify £¬
-echo ÔÚ Optional Features Àï¹´Ñ¡ "tcl/tk and IDLE" Íê³É°²×°£¬
-echo »òÕßÖ±½ÓÈ¥ python.org ÖØ×°Ò»±é Python£¨Ä¬ÈÏ¼´´ø tkinter£©¡£
+echo ï¿½ï¿½ï¿½ï¿½ì·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Python ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½Ñ¡ Modify ï¿½ï¿½
+echo ï¿½ï¿½ Optional Features ï¿½ï¹´Ñ¡ "tcl/tk and IDLE" ï¿½ï¿½É°ï¿½×°ï¿½ï¿½
+echo ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½È¥ python.org ï¿½ï¿½×°Ò»ï¿½ï¿½ Pythonï¿½ï¿½Ä¬ï¿½Ï¼ï¿½ï¿½ï¿½ tkinterï¿½ï¿½ï¿½ï¿½
 echo.
-echo ÐÞºÃºóÖØÐÂË«»÷±¾ÎÄ¼þ¼´¿É¡£
+echo ï¿½ÞºÃºï¿½ï¿½ï¿½ï¿½ï¿½Ë«ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½É¡ï¿½
 echo.
 pause
 exit /b 1
 
 :run
-echo ÕýÔÚÆô¶¯Àä¿§·È ColdBrew Hub...
-%PY% coldbrew_hub.py 2>"Ãæ°åÆô¶¯´íÎóÈÕÖ¾.txt"
+echo Launching ColdBrew Hub v9 FiveEdge...
+%PY% coldbrew_hub.py 2>"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾.txt"
 if not errorlevel 1 exit /b 0
 
 echo.
-echo [Æô¶¯Ê§°Ü] Ãæ°åÒì³£ÍË³ö£¬ÏêÏ¸±¨´íÒÑÐ´Èë±¾Ä¿Â¼µÄ "Ãæ°åÆô¶¯´íÎóÈÕÖ¾.txt"¡£
-echo °ÑÈÕÖ¾ÄÚÈÝ·¢¸øÀä¿§·ÈÉçÇø QQ Èº£¨1057540028 / 1077074552£©¿É¿ìËÙ¶¨Î»¡£
+echo [ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½ì³£ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ë±¾Ä¿Â¼ï¿½ï¿½ "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾.txt"ï¿½ï¿½
+echo ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Ý·ï¿½ï¿½ï¿½ï¿½ä¿§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ QQ Èºï¿½ï¿½1057540028 / 1077074552ï¿½ï¿½ï¿½É¿ï¿½ï¿½Ù¶ï¿½Î»ï¿½ï¿½
 echo.
 pause
 exit /b 1

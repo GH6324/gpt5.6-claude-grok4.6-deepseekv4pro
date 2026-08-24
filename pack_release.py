@@ -101,10 +101,19 @@ def pack_project(project: Path, out_dir: Path) -> dict:
     archive_files: list[tuple[Path, Path]] = [(relative, project / relative) for relative in files]
     # Grok and DeepSeek use the shared workbench.  Vendor that one small module
     # into their standalone archives so each project ZIP remains runnable.
-    if project.name in {"grok4.6-coldbrew", "deepseek-harness"}:
-        shared_ui = project.parent / "shared" / "coldbrew_ui.py"
-        if shared_ui.is_file():
-            archive_files.append((Path("shared") / shared_ui.name, shared_ui))
+    if project.name in {"grok4.6-coldbrew", "deepseek-harness", "claude-coldbrew"}:
+        shared_root = project.parent / "shared"
+        shared_ui = shared_root / "coldbrew_ui.py"
+        if project.name in {"grok4.6-coldbrew", "deepseek-harness"}:
+            for shared_name in ("coldbrew_ui.py", "atelier_theme.py", "model_roster.py"):
+                shared_file = shared_root / shared_name
+                if shared_file.is_file():
+                    archive_files.append((Path("shared") / shared_name, shared_file))
+        five_dir = shared_root / "five_blade"
+        if five_dir.is_dir():
+            for path in sorted(five_dir.rglob("*")):
+                if path.is_file() and path.suffix.lower() not in EXCLUDED_SUFFIXES:
+                    archive_files.append((Path("shared") / "five_blade" / path.relative_to(five_dir), path))
     archive_files.sort(key=lambda item: item[0].as_posix())
     if not archive_files:
         return {"ok": False, "project": project.name, "error": "未收集到任何文件"}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-labelledby="t d">
+  <title id="t">冷咖啡</title>
+  <desc id="d">四模型本地工作台，五刃交付：逆向、破解、渗透、爬虫、外挂</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F7FB"/>
+      <stop offset="1" stop-color="#E8F1FB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="360" rx="24" fill="url(#paper)" stroke="#C5D6EA"/>
+  <polygon points="88,86 128,116 112,168 64,168 48,116" fill="none" stroke="#1F5EBA" stroke-width="3"/>
+  <circle cx="88" cy="126" r="7" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="168" y="148" fill="#1F5EBA" font-family="Microsoft YaHei,Segoe UI,sans-serif" font-size="92" font-weight="700">冷咖啡</text>
+  <text x="168" y="196" fill="#17325A" font-family="Microsoft YaHei,Segoe UI,sans-serif" font-size="22">GPT-5.6 · Claude · Grok 4.6 · DeepSeek v4 Pro</text>
+  <g font-family="Microsoft YaHei,Segoe UI,sans-serif" font-size="16" font-weight="700">
+    <rect x="168" y="232" width="100" height="36" rx="8" fill="#FFFFFF" stroke="#1F5EBA"/>
+    <text x="218" y="256" text-anchor="middle" fill="#1F5EBA">逆向</text>
+    <rect x="280" y="232" width="100" height="36" rx="8" fill="#FFFFFF" stroke="#1F5EBA"/>
+    <text x="330" y="256" text-anchor="middle" fill="#1F5EBA">破解</text>
+    <rect x="392" y="232" width="100" height="36" rx="8" fill="#1F5EBA"/>
+    <text x="442" y="256" text-anchor="middle" fill="#FFFFFF">渗透</text>
+    <rect x="504" y="232" width="100" height="36" rx="8" fill="#FFFFFF" stroke="#1F5EBA"/>
+    <text x="554" y="256" text-anchor="middle" fill="#1F5EBA">爬虫</text>
+    <rect x="616" y="232" width="100" height="36" rx="8" fill="#FFFFFF" stroke="#1F5EBA"/>
+    <text x="666" y="256" text-anchor="middle" fill="#1F5EBA">外挂</text>
+  </g>
+  <text x="1216" y="256" text-anchor="end" fill="#5C738C" font-family="Consolas,ui-monospace,monospace" font-size="14">preview · deploy · verify · restore</text>
+</svg>

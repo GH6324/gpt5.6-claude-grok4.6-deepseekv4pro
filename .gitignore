@@ -5,6 +5,7 @@
 
 # 发布产物与历史包
 release/
+release-v9-smoke/
 build/
 dist/
 **/*-Source.zip

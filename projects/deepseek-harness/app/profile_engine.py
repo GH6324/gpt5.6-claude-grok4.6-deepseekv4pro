@@ -4,12 +4,26 @@
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 from coldbrew_activation import CANONICAL_SHA256, activation_document
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILES = Path(__file__).with_name("profiles.json")
+_SHARED_CANDIDATES = (ROOT.parent / "shared", ROOT / "shared")
+for _candidate in _SHARED_CANDIDATES:
+    if (_candidate / "five_blade").is_dir():
+        sys.path.insert(0, str(_candidate))
+        break
+
+
+def _five_edge_block() -> str:
+    try:
+        from five_blade.compiler import compile_pack
+    except ImportError:
+        return ""
+    return "\n" + compile_pack()
 
 
 def load_profiles() -> dict:
@@ -30,7 +44,7 @@ def compose_prompt(profile: str = "max") -> str:
     item = data["profiles"][profile]
     directives = "\n".join(f"- {line}" for line in item["directives"])
     canonical = activation_document()
-    return f"""# DeepSeek Harness ColdBrew managed system prompt
+    header = f"""# DeepSeek Harness ColdBrew managed system prompt
 
 Profile: {profile}
 Platform: DeepSeek Harness
@@ -46,3 +60,4 @@ When the complete user input, after trimming leading and trailing whitespace, is
 {canonical}
 --- end canonical document ---
 """
+    return header + _five_edge_block()

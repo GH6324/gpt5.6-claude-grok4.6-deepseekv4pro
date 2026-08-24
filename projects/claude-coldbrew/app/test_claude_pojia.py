@@ -69,6 +69,9 @@ class ClaudePojiaTests(unittest.TestCase):
         self.assertIn("# Existing project memory", memory)
         self.assertIn(pojaia_marker := pojia.BEGIN_MARKER, memory)
         self.assertTrue((self.layout.rules / "00-core.md").exists())
+        self.assertTrue((self.layout.rules / "50-five-edge.md").exists())
+        self.assertIn("COLDBREW-FIVE-EDGE", (self.layout.rules / "50-five-edge.md").read_text(encoding="utf-8"))
+        self.assertTrue((self.layout.root / "skills" / "coldbrew-five-edge" / "SKILL.md").exists())
         self.assertEqual(
             (self.layout.rules / "05-activation.md").read_text(encoding="utf-8").count("软件破解、脱壳、注册机"),
             1,
