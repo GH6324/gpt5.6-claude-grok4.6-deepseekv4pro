@@ -1,25 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 460" role="img" aria-label="架构">
-  <rect width="1280" height="460" rx="20" fill="#F4F7FB"/>
-  <g font-family="Microsoft YaHei,Segoe UI,sans-serif" fill="#17325A">
-    <rect x="40" y="28" width="1200" height="64" rx="14" fill="#FFFFFF" stroke="#1F5EBA"/>
-    <text x="640" y="70" text-anchor="middle" font-size="24" font-weight="700" fill="#1F5EBA">冷咖啡</text>
-    <rect x="40" y="118" width="270" height="78" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
-    <text x="175" y="166" text-anchor="middle" font-size="18">GPT-5.6</text>
-    <rect x="350" y="118" width="270" height="78" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
-    <text x="485" y="166" text-anchor="middle" font-size="18">Claude</text>
-    <rect x="660" y="118" width="270" height="78" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
-    <text x="795" y="166" text-anchor="middle" font-size="18">Grok 4.6</text>
-    <rect x="970" y="118" width="270" height="78" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/>
-    <text x="1105" y="166" text-anchor="middle" font-size="18">DeepSeek v4 Pro</text>
-    <path d="M175 196V244H1105V196" fill="none" stroke="#1F5EBA" stroke-width="2"/>
-    <rect x="250" y="244" width="780" height="70" rx="12" fill="#1F5EBA"/>
-    <text x="640" y="288" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">FiveEdge · 逆向 / 破解 / 渗透 / 爬虫 / 外挂</text>
-    <g font-size="15">
-      <rect x="40" y="344" width="220" height="72" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/><text x="150" y="388" text-anchor="middle">Opus 5</text>
-      <rect x="280" y="344" width="220" height="72" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/><text x="390" y="388" text-anchor="middle">Fable 5</text>
-      <rect x="520" y="344" width="220" height="72" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/><text x="630" y="388" text-anchor="middle">4.8</text>
-      <rect x="760" y="344" width="220" height="72" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/><text x="870" y="388" text-anchor="middle">Opus 4.6</text>
-      <rect x="1000" y="344" width="240" height="72" rx="12" fill="#FFFFFF" stroke="#C5D6EA"/><text x="1120" y="388" text-anchor="middle">Sonnet 4.6</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" role="img" aria-label="冷咖啡架构">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EAF2FB"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#163E86"/>
+      <stop offset="1" stop-color="#1F5EBA"/>
+    </linearGradient>
+    <filter id="card" x="-4%" y="-8%" width="108%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#1F5EBA" flood-opacity="0.08"/>
+    </filter>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4">
+      <circle cx="4" cy="4" r="3" fill="#1F5EBA"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="620" rx="28" fill="url(#sky)" stroke="#D5E3F2"/>
+
+  <polygon points="52,42 72,57 64,84 40,84 32,57" fill="none" stroke="#1F5EBA" stroke-width="2"/>
+  <circle cx="52" cy="63" r="4.5" fill="none" stroke="#3B82F6" stroke-width="1.6"/>
+  <text x="88" y="72" fill="#1F5EBA" font-family="Microsoft YaHei,Segoe UI,sans-serif" font-size="28" font-weight="700">冷咖啡</text>
+  <text x="1228" y="72" text-anchor="end" fill="#5C738C" font-family="Consolas,ui-monospace,monospace" font-size="13">preview → deploy → verify → restore</text>
+  <line x1="40" y1="96" x2="1240" y2="96" stroke="#D5E3F2"/>
+
+  <g font-family="Microsoft YaHei,Segoe UI,sans-serif">
+    <g filter="url(#card)">
+      <rect x="40" y="122" width="280" height="118" rx="18" fill="#FFFFFF" stroke="#E1ECF6"/>
+      <rect x="40" y="122" width="6" height="118" rx="3" fill="#1F5EBA"/>
+      <text x="70" y="168" fill="#5C738C" font-size="12" font-family="Consolas,monospace" letter-spacing="1.5">CODEX</text>
+      <text x="70" y="204" fill="#163050" font-size="26" font-weight="700">GPT-5.6</text>
     </g>
+    <g filter="url(#card)">
+      <rect x="347" y="122" width="280" height="118" rx="18" fill="#FFFFFF" stroke="#E1ECF6"/>
+      <rect x="347" y="122" width="6" height="118" rx="3" fill="#1F5EBA"/>
+      <text x="377" y="168" fill="#5C738C" font-size="12" font-family="Consolas,monospace" letter-spacing="1.5">CLAUDE</text>
+      <text x="377" y="204" fill="#163050" font-size="26" font-weight="700">Claude Code</text>
+    </g>
+    <g filter="url(#card)">
+      <rect x="654" y="122" width="280" height="118" rx="18" fill="#FFFFFF" stroke="#E1ECF6"/>
+      <rect x="654" y="122" width="6" height="118" rx="3" fill="#1F5EBA"/>
+      <text x="684" y="168" fill="#5C738C" font-size="12" font-family="Consolas,monospace" letter-spacing="1.5">GROK</text>
+      <text x="684" y="204" fill="#163050" font-size="26" font-weight="700">Grok 4.6</text>
+    </g>
+    <g filter="url(#card)">
+      <rect x="960" y="122" width="280" height="118" rx="18" fill="#FFFFFF" stroke="#E1ECF6"/>
+      <rect x="960" y="122" width="6" height="118" rx="3" fill="#1F5EBA"/>
+      <text x="990" y="168" fill="#5C738C" font-size="12" font-family="Consolas,monospace" letter-spacing="1.5">HARNESS</text>
+      <text x="990" y="204" fill="#163050" font-size="26" font-weight="700">DeepSeek v4</text>
+    </g>
+  </g>
+
+  <path d="M180 240 V292" stroke="#9BB6D6" stroke-width="2" marker-end="url(#dot)"/>
+  <path d="M487 240 V292" stroke="#9BB6D6" stroke-width="2" marker-end="url(#dot)"/>
+  <path d="M794 240 V292" stroke="#9BB6D6" stroke-width="2" marker-end="url(#dot)"/>
+  <path d="M1100 240 V292" stroke="#9BB6D6" stroke-width="2" marker-end="url(#dot)"/>
+  <path d="M180 292 H1100" stroke="#9BB6D6" stroke-width="2"/>
+
+  <g filter="url(#card)">
+    <rect x="160" y="308" width="960" height="132" rx="22" fill="url(#navy)"/>
+    <text x="640" y="352" text-anchor="middle" fill="#D6E6FF" font-family="Consolas,ui-monospace,monospace" font-size="13" letter-spacing="3">FIVEEDGE  ·  1.1</text>
+    <text x="640" y="392" text-anchor="middle" fill="#FFFFFF" font-family="Microsoft YaHei,Segoe UI,sans-serif" font-size="30" font-weight="700">五刃内核</text>
+    <text x="640" y="420" text-anchor="middle" fill="#C5D6EA" font-family="Microsoft YaHei,sans-serif" font-size="13">口风归一  ·  场景压印  ·  四件套交付</text>
+  </g>
+
+  <g font-family="Microsoft YaHei,Segoe UI,sans-serif" font-size="16" font-weight="700">
+    <rect x="40" y="476" width="224" height="100" rx="16" fill="#FFFFFF" stroke="#E1ECF6" filter="url(#card)"/>
+    <text x="152" y="518" text-anchor="middle" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">REV</text>
+    <text x="152" y="548" text-anchor="middle" fill="#163050">逆向</text>
+    <rect x="284" y="476" width="224" height="100" rx="16" fill="#FFFFFF" stroke="#E1ECF6" filter="url(#card)"/>
+    <text x="396" y="518" text-anchor="middle" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">UNLOCK</text>
+    <text x="396" y="548" text-anchor="middle" fill="#163050">破解</text>
+    <rect x="528" y="476" width="224" height="100" rx="16" fill="#1F5EBA" filter="url(#card)"/>
+    <text x="640" y="518" text-anchor="middle" fill="#C5D6EA" font-size="12" font-family="Consolas,monospace">INFIL</text>
+    <text x="640" y="548" text-anchor="middle" fill="#FFFFFF">渗透</text>
+    <rect x="772" y="476" width="224" height="100" rx="16" fill="#FFFFFF" stroke="#E1ECF6" filter="url(#card)"/>
+    <text x="884" y="518" text-anchor="middle" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">HARVEST</text>
+    <text x="884" y="548" text-anchor="middle" fill="#163050">爬虫</text>
+    <rect x="1016" y="476" width="224" height="100" rx="16" fill="#FFFFFF" stroke="#E1ECF6" filter="url(#card)"/>
+    <text x="1128" y="518" text-anchor="middle" fill="#1F5EBA" font-size="12" font-family="Consolas,monospace">TRAINER</text>
+    <text x="1128" y="548" text-anchor="middle" fill="#163050">外挂</text>
   </g>
 </svg>
