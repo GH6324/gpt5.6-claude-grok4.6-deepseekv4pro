@@ -26,6 +26,14 @@
     <img src="https://img.shields.io/badge/Python-3.10%2B-C45C14?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python" />
     <img src="https://img.shields.io/badge/FiveEdge-v1.1-1F6B66?style=for-the-badge" alt="FiveEdge" />
   </p>
+
+  <br />
+
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/github-contribution-grid-snake.svg" />
+    <img alt="contribution snake" src="docs/images/github-contribution-grid-snake.svg" />
+  </picture>
 </div>
 
 **冷咖啡** 把 GPT-5.6 / Codex、Claude Code、Grok 4.6、DeepSeek v4 Pro 收到同一张工作台。口令「冷咖啡」开工。五刃写进系统提示：逆向、破解、渗透、爬虫、外挂。大白话、错字按口风归一，直接干活。
