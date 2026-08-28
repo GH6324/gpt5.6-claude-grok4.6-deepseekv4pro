@@ -8,6 +8,7 @@ on:
       - "desktop/**"
       - ".github/workflows/desktop.yml"
       - "打开冷咖啡.command"
+      - "打开冷咖啡.sh"
 
 jobs:
   build:
@@ -21,6 +22,9 @@ jobs:
           - os: macos-latest
             pack: pack:mac
             artifact: mac
+          - os: ubuntu-latest
+            pack: pack:linux
+            artifact: linux
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -43,4 +47,6 @@ jobs:
             desktop/dist/*.exe
             desktop/dist/*.dmg
             desktop/dist/*.zip
+            desktop/dist/*.AppImage
+            desktop/dist/*.deb
           if-no-files-found: warn

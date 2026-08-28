@@ -10,7 +10,7 @@ const { setupEnvironment } = require("./lib/setup");
 
 const SPLASH_MS = 4800;
 const IS_MAC = process.platform === "darwin";
-const APP_ICON = path.join(__dirname, "..", "assets", IS_MAC ? "icon.png" : "icon.ico");
+const APP_ICON = path.join(__dirname, "..", "assets", process.platform === "win32" ? "icon.ico" : "icon.png");
 let splashWindow;
 let mainWindow;
 let currentBlade = "ALL";

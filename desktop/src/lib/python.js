@@ -36,6 +36,7 @@ function pythonExecutable() {
       "/usr/local/bin/python3",
       "/usr/bin/python3",
       path.join(home, ".local", "bin", "python3"),
+      path.join(home, ".linuxbrew", "bin", "python3"),
     ];
   return firstExisting(extras);
 }

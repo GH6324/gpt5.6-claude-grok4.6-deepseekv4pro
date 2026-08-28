@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=冷咖啡
+Comment=一键破甲越狱
+Exec=bash -lc '"$(dirname "$0")/start.sh"'
+Icon=icon.png
+Terminal=false
+Categories=Development;
+StartupNotify=true

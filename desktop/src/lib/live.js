@@ -74,6 +74,9 @@ function locateCodexCli() {
     process.platform === "darwin" ? macRes : null,
     process.platform === "darwin" ? "/opt/homebrew/bin/codex" : null,
     process.platform === "darwin" ? "/usr/local/bin/codex" : null,
+    process.platform === "linux" ? path.join(home, ".local", "bin", "codex") : null,
+    process.platform === "linux" ? "/usr/local/bin/codex" : null,
+    process.platform === "linux" ? "/usr/bin/codex" : null,
   ]);
 }
 
@@ -81,6 +84,10 @@ function openCodexThread(cli, threadId) {
   const url = `codex://threads/${threadId}`;
   if (process.platform === "darwin") {
     spawn("open", [url], { detached: true, stdio: "ignore" }).unref();
+    return;
+  }
+  if (process.platform === "linux") {
+    spawn("xdg-open", [url], { detached: true, stdio: "ignore" }).unref();
     return;
   }
   spawn(cli, [url], { detached: true, stdio: "ignore", windowsHide: false }).unref();

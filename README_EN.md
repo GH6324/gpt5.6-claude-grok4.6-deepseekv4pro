@@ -38,6 +38,15 @@ npm install
 npm start
 ```
 
+Linux: <code>bash 打开冷咖啡.sh</code>
+
+```bash
+cd desktop
+npm install
+npm start
+npm run pack:linux
+```
+
 Python panel: <code>python coldbrew_hub.py</code>
 
 <p>

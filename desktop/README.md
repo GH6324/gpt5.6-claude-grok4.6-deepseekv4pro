@@ -36,7 +36,7 @@
 
 ## 运行
 
-Windows 10 / 11 和 macOS 12+。需要本机 **Node.js** 和 **Python 3.10+**。
+Windows 10 / 11、macOS 12+、Linux x64。需要本机 **Node.js** 和 **Python 3.10+**。
 
 ```bash
 cd desktop
@@ -44,11 +44,11 @@ npm install
 npm start
 ```
 
-Windows 双击 `start.bat`。Mac 双击仓库根目录 `打开冷咖啡.command` 或 `desktop/start.sh`。
+Windows 双击 `start.bat`。Mac 双击仓库根目录 `打开冷咖啡.command`。Linux 跑 `bash ../打开冷咖啡.sh` 或 `desktop/start.sh`。
 
 先开一次 Codex，让 `~/.codex/config.toml` 出现，再点一键破甲。
 
-打 dmg / portable：`npm run pack:mac`（在苹果机或 GitHub Actions）· `npm run pack:win`
+打包：`npm run pack:win` · `npm run pack:mac` · `npm run pack:linux`（AppImage / deb）
 
 ## 目录
 

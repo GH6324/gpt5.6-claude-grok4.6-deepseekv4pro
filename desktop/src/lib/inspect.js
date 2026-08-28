@@ -25,6 +25,13 @@ function codexCandidates(requested) {
       path.join(home, "Library", "Application Support", "com.openai.codex"),
     );
   }
+  if (process.platform === "linux") {
+    list.push(
+      path.join(home, ".config", "codex"),
+      path.join(home, ".local", "share", "codex"),
+      path.join(process.env.XDG_CONFIG_HOME || path.join(home, ".config"), "codex"),
+    );
+  }
   return unique(list);
 }
 
