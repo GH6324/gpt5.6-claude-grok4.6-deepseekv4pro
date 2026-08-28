@@ -214,7 +214,7 @@ npm start
 
 双击 <code>打开冷咖啡.command</code> / <code>desktop/start.sh</code>
 
-第一次双击 command 被拦时：右键 → 打开。GitHub Actions 会交 <code>冷咖啡-*.dmg</code>。
+第一次双击 command 被拦时：右键 → 打开。打 dmg 的 Actions 配方在 <code>desktop/github-actions-desktop.yml</code>，拷到 <code>.github/workflows/</code> 后由 macOS runner 出品。
 
 Python 面板：
 
