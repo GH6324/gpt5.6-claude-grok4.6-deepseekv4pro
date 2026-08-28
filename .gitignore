@@ -19,6 +19,10 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Electron
+node_modules/
+desktop/node_modules/
+
 # 杂项
 *.bak
 *.log

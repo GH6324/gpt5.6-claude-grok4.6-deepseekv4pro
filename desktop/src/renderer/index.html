@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;" />
+    <title>冷咖啡 · 一键破甲越狱</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <header class="titlebar">
+      <div class="brand">
+        <span class="seal">破</span>
+        <strong>冷咖啡</strong>
+        <small>一键破甲越狱</small>
+      </div>
+      <div class="title-spacer"></div>
+      <span id="clockChip" class="chip">--:--:--</span>
+      <div class="win-btns">
+        <button id="minBtn" type="button" aria-label="最小化"></button>
+        <button id="maxBtn" type="button" aria-label="最大化"></button>
+        <button id="closeBtn" type="button" aria-label="关闭"></button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside>
+        <p class="nav-kicker">破甲</p>
+        <button class="nav is-on" data-jump="pulse" type="button"><b>01</b><span>总览</span></button>
+        <button class="nav" data-jump="hearths" type="button"><b>02</b><span>模型</span></button>
+        <button class="nav" data-jump="launch" type="button"><b>03</b><span>一键破甲</span></button>
+        <button class="nav" data-jump="runtime" type="button"><b>04</b><span>环境</span></button>
+        <button class="nav" data-jump="stream" type="button"><b>05</b><span>记录</span></button>
+        <div class="aside-foot">
+          <span>LOCAL / OPEN</span>
+          <span>无卡密门</span>
+        </div>
+      </aside>
+
+      <div class="stage">
+        <section id="pulse" class="pulse" tabindex="-1">
+          <div>
+            <p class="eyebrow">BREAK STATUS</p>
+            <h1 id="statusTitle">破甲软件正在点火</h1>
+            <p id="statusDetail">读指令、技能、工具桥、恢复清单、四个模型入口</p>
+          </div>
+          <div class="orb"><i id="statusDot"></i></div>
+        </section>
+
+        <section class="blade-row">
+          <p class="eyebrow">五刃</p>
+          <div id="bladeBar" class="blades"></div>
+          <span id="bladeHint" class="hint">五刃全开 · 按动词自动锁刃</span>
+        </section>
+
+        <section class="community">
+          <p class="eyebrow">社群</p>
+          <div id="communityBar" class="community-bar"></div>
+        </section>
+
+        <section id="hearths" class="hearths" tabindex="-1">
+          <div class="heading">
+            <div>
+              <p class="eyebrow">02 / MODELS</p>
+              <h2>四个模型</h2>
+            </div>
+            <span id="readyChip" class="chip">0 / 4</span>
+          </div>
+          <div id="hearthGrid" class="hearth-grid"></div>
+        </section>
+
+        <section id="launch" class="panel" tabindex="-1">
+          <div class="heading">
+            <div>
+              <p class="eyebrow">03 / ONE SHOT</p>
+              <h2>一键破甲</h2>
+            </div>
+            <button id="chooseBtn" class="ghost" type="button">选择 Codex 目录</button>
+          </div>
+          <div class="path-row">
+            <code id="codexPath">自动检测中</code>
+            <span id="targetLocale" class="locale">语言 · 检测中</span>
+            <button id="openBtn" class="text" type="button">打开</button>
+          </div>
+          <div id="codexFacts" class="facts"></div>
+          <div class="actions">
+            <button id="deployAllBtn" class="solid" type="button">
+              <span>一键破甲</span>
+              <small>中文、指令、技能、工具桥、四个模型挂钩一次写完</small>
+            </button>
+            <button id="restoreAllBtn" class="warn" type="button" disabled>
+              <span>恢复默认</span>
+              <small>只撤走冷咖啡托管文件，漂移项留下</small>
+            </button>
+            <button id="verifyAllBtn" class="ghost-block" type="button">
+              <span>完整验收</span>
+              <small>SHA-256、挂钩体检、四个模型校验、Desktop 真人任务</small>
+            </button>
+            <button id="envBtn" class="ghost-block" type="button">
+              <span id="envBtnTitle">安装运行环境</span>
+              <small id="envBtnDetail">扫描后把逆向 Python 依赖装进本机</small>
+            </button>
+          </div>
+        </section>
+
+        <div class="split">
+          <section id="runtime" class="panel" tabindex="-1">
+            <div class="heading compact">
+              <div>
+                <p class="eyebrow">04 / RUNTIME</p>
+                <h2>本机状态</h2>
+              </div>
+            </div>
+            <div id="envFacts" class="facts"><span>等待检测</span></div>
+          </section>
+          <section id="stream" class="panel" tabindex="-1">
+            <div class="heading compact">
+              <div>
+                <p class="eyebrow">05 / STREAM</p>
+                <h2>活动流</h2>
+              </div>
+              <button id="clearBtn" class="text" type="button">清空</button>
+            </div>
+            <div id="log" class="log" role="log"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

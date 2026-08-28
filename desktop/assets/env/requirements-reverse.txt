@@ -1,0 +1,7 @@
+androguard==4.1.4
+pefile==2024.8.26
+capstone==5.0.9
+lief==0.17.6
+pyelftools==0.33
+cryptography>=43.0.0
+xdis==6.3.0

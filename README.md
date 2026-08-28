@@ -184,6 +184,21 @@ Hub 把指令落到本机配置。点一次：预览 → 部署 → 验证 → �
 ```powershell
 git clone https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro.git
 cd gpt5.6-claude-grok4.6-deepseekv4pro
+```
+
+原生窗口（一键破甲越狱，开场锁盘五刃）：
+
+```powershell
+cd desktop
+npm install
+npm start
+```
+
+或双击仓库根目录 <code>打开冷咖啡.bat</code> / <code>desktop\start.bat</code>
+
+Python 面板：
+
+```powershell
 python coldbrew_hub.py
 ```
 
@@ -191,7 +206,7 @@ python coldbrew_hub.py
 
 或双击 <code>open_hub.bat</code> / <code>启动面板.bat</code>
 
-环境自检 → 选刃口 → 开模型卡 → 预览 → 部署 → 验证
+环境自检 → 选刃口 → 开模型卡 → 预览 → 部署 → 验证。原生窗口点「一键破甲」一次写完中文、指令、技能、工具桥和四个模型挂钩。
 
 </div>
 

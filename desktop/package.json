@@ -1,0 +1,17 @@
+{
+  "name": "coldbrew-atelier",
+  "productName": "冷咖啡",
+  "version": "1.0.0",
+  "private": true,
+  "description": "冷咖啡焙台 — 四模型破甲原生窗口。开场、部署、验收、复原。",
+  "main": "src/main.js",
+  "author": "3641397194-wq",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "start": "electron .",
+    "atelier": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^35.2.1"
+  }
+}

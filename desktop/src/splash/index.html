@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; object-src 'none'" />
+    <title>冷咖啡</title>
+    <link rel="stylesheet" href="splash.css" />
+  </head>
+  <body>
+    <main class="break-stage" aria-label="冷咖啡一键破甲越狱">
+      <svg class="break-canvas" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="voidGlow" cx="50%" cy="48%" r="52%">
+            <stop offset="0%" stop-color="#3a1b12" stop-opacity=".95" />
+            <stop offset="55%" stop-color="#140c09" stop-opacity=".98" />
+            <stop offset="100%" stop-color="#070504" stop-opacity="1" />
+          </radialGradient>
+          <linearGradient id="goldEdge" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f3d2a0" />
+            <stop offset="50%" stop-color="#c45c14" />
+            <stop offset="100%" stop-color="#7a2e10" />
+          </linearGradient>
+          <filter id="sparkBlur">
+            <feGaussianBlur stdDeviation="2.4" />
+          </filter>
+        </defs>
+
+        <rect class="void" width="1440" height="820" fill="url(#voidGlow)" />
+
+        <g class="lock">
+          <circle class="lock-outer" cx="720" cy="430" r="168" />
+          <circle class="lock-mid" cx="720" cy="430" r="126" />
+          <circle class="lock-core" cx="720" cy="430" r="78" />
+          <rect class="lock-keyway" x="702" y="402" width="36" height="54" rx="8" />
+          <circle class="lock-pin" cx="720" cy="392" r="10" />
+        </g>
+
+        <g class="blades">
+          <path class="blade blade-rev" d="M720 430 L720 78" />
+          <path class="blade blade-unlock" d="M720 430 L1158 262" />
+          <path class="blade blade-infil" d="M720 430 L1074 722" />
+          <path class="blade blade-harvest" d="M720 430 L366 722" />
+          <path class="blade blade-trainer" d="M720 430 L282 262" />
+        </g>
+
+        <g class="cracks">
+          <path class="crack" d="M720 262 L688 210 L742 168 L710 112" />
+          <path class="crack" d="M862 370 L930 332 L1004 356 L1088 300" />
+          <path class="crack" d="M812 534 L868 590 L814 656 L900 710" />
+          <path class="crack" d="M628 534 L560 602 L610 678 L520 724" />
+          <path class="crack" d="M578 370 L508 318 L448 354 L372 292" />
+        </g>
+
+        <g class="shards">
+          <polygon class="shard s1" points="720,262 688,210 742,232" />
+          <polygon class="shard s2" points="862,370 930,332 890,404" />
+          <polygon class="shard s3" points="812,534 868,590 760,580" />
+          <polygon class="shard s4" points="628,534 560,602 604,486" />
+          <polygon class="shard s5" points="578,370 508,318 612,348" />
+        </g>
+
+        <g class="sparks" filter="url(#sparkBlur)">
+          <circle class="spark p1" cx="720" cy="210" r="5" />
+          <circle class="spark p2" cx="980" cy="320" r="4" />
+          <circle class="spark p3" cx="920" cy="620" r="5" />
+          <circle class="spark p4" cx="500" cy="620" r="4" />
+          <circle class="spark p5" cx="460" cy="310" r="5" />
+        </g>
+
+        <g class="seal">
+          <circle class="seal-disk" cx="720" cy="430" r="58" />
+          <text class="seal-glyph" x="720" y="448" text-anchor="middle">破</text>
+        </g>
+
+        <g class="word-mark">
+          <text class="brand-cn" x="720" y="118" text-anchor="middle">冷咖啡</text>
+          <text class="brand-en" x="720" y="158" text-anchor="middle">ONE-SHOT JAILBREAK</text>
+        </g>
+      </svg>
+      <div class="break-vignette" aria-hidden="true"></div>
+      <p class="break-caption">一键破甲越狱</p>
+    </main>
+  </body>
+</html>
