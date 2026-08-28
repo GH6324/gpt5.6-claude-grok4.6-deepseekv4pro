@@ -1,5 +1,5 @@
 <svg width="960" height="360" viewBox="0 0 960 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">冷咖啡 · 四模型破甲工作台</title>
+  <title id="title">冷咖啡 · 一键破甲越狱</title>
   <desc id="desc">原创主页横幅。浓缩底、奶油字、橙标五刃。不搬运第三方素材。</desc>
   <defs>
     <linearGradient id="cfg" x1="0" y1="0" x2="960" y2="360" gradientUnits="userSpaceOnUse">
@@ -26,7 +26,7 @@
   <polygon points="88,92 108,107 100,134 76,134 68,107" fill="#3A2216" stroke="#C45C14" stroke-width="2"/>
   <circle cx="88" cy="113" r="6" fill="none" stroke="#E8C9A0" stroke-width="1.6"/>
   <text x="128" y="126" fill="#E8C9A0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="18" font-weight="650" letter-spacing="3.2">茶 · 冷咖啡</text>
-  <text x="88" y="182" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="46" font-weight="760">四模型本地破甲工作台</text>
+  <text x="88" y="182" fill="#FFF8F0" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="46" font-weight="760">一键破甲越狱</text>
   <text x="90" y="222" fill="#C9B49A" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="18">GPT-5.6 · Claude · Grok 4.6 · DeepSeek v4 Pro</text>
   <g font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="650">
     <rect x="88" y="246" width="70" height="32" rx="16" fill="#1F6B66" fill-opacity="0.85"/>

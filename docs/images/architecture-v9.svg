@@ -4,7 +4,7 @@
   <text x="88" y="72" fill="#2A1810" font-family="Microsoft YaHei,sans-serif" font-size="28" font-weight="700">冷咖啡</text>
   <rect x="248" y="48" width="132" height="28" rx="4" fill="#C45C14"/>
   <text x="314" y="68" text-anchor="middle" fill="#FFF8F0" font-family="Microsoft YaHei,sans-serif" font-size="13" font-weight="700">AI 破甲越狱</text>
-  <text x="1228" y="72" text-anchor="end" fill="#7A6554" font-family="Consolas,monospace" font-size="13">preview → deploy → verify → restore</text>
+  <text x="1228" y="72" text-anchor="end" fill="#7A6554" font-family="Consolas,monospace" font-size="13">native window  ·  one-shot jailbreak</text>
   <line x1="40" y1="96" x2="1240" y2="96" stroke="#E2D3C1"/>
   <g font-family="Microsoft YaHei,sans-serif">
     <rect x="40" y="122" width="280" height="118" rx="18" fill="#FFF8F0" stroke="#E2D3C1"/>

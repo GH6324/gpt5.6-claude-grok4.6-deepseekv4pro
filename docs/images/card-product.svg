@@ -1,6 +1,6 @@
 <svg width="470" height="196" viewBox="0 0 470 196" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-  <title id="t">冷咖啡工作台</title>
-  <desc id="d">原创项目卡。四合一破甲正式版。</desc>
+  <title id="t">冷咖啡 · 一键破甲越狱</title>
+  <desc id="d">原创项目卡。原生窗口一键破甲越狱。</desc>
   <rect x="1" y="1" width="468" height="194" rx="20" fill="#FFF8F0" stroke="#E2D3C1"/>
   <rect x="22" y="22" width="52" height="52" rx="16" fill="#2A1810"/>
   <polygon points="39,36 57,49 50,72 28,72 21,49" fill="#3A2216" stroke="#C45C14" stroke-width="2"/>
@@ -9,11 +9,11 @@
   <text x="90" y="72" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="13">GPT-5.6 / Claude / Grok 4.6 / DeepSeek v4 Pro</text>
   <text x="24" y="124" fill="#2A1810" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="34" font-weight="780">197</text>
   <text x="104" y="124" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="650">stars</text>
-  <rect x="24" y="146" width="62" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <text x="55" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">Hub</text>
-  <rect x="94" y="146" width="78" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <text x="133" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">五刃</text>
-  <rect x="180" y="146" width="88" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <text x="224" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">Python</text>
+  <rect x="24" y="146" width="86" height="26" rx="13" fill="#2A1810"/>
+  <text x="67" y="164" text-anchor="middle" fill="#F7EFE3" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">一键破甲</text>
+  <rect x="118" y="146" width="86" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
+  <text x="161" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">原生窗口</text>
+  <rect x="212" y="146" width="62" height="26" rx="13" fill="#FFF8F0" stroke="#E2D3C1"/>
+  <text x="243" y="164" text-anchor="middle" fill="#7A6554" font-family="Segoe UI,PingFang SC,Noto Sans SC,Microsoft YaHei,sans-serif" font-size="12" font-weight="650">五刃</text>
   <path d="M412 150L434 128M434 128H416M434 128V146" stroke="#C45C14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

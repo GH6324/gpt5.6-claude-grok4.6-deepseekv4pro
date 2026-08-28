@@ -14,10 +14,10 @@
   <path d="M120 160H1080M190 466H1010" stroke="#72ffe4" stroke-opacity=".18"/>
   <circle cx="600" cy="306" r="214" fill="none" stroke="#5fffe0" stroke-opacity=".1" stroke-width="2"/>
   <g font-family="Segoe UI,Microsoft YaHei,sans-serif" text-anchor="middle">
-    <text x="600" y="122" fill="#83bdb4" font-size="17" letter-spacing="8">COLD BREW · 四合一破甲</text>
+    <text x="600" y="122" fill="#83bdb4" font-size="17" letter-spacing="8">COLD BREW · 一键破甲越狱</text>
     <text x="600" y="267" fill="#ecfffb" font-size="92" font-weight="700">冷咖啡 <tspan fill="#72ffe4">ColdBrew</tspan></text>
     <text x="600" y="322" fill="#b9cfcb" font-size="23" letter-spacing="4">GPT-5.6 · Claude · Grok 4.6 · DeepSeek v4 Pro</text>
-    <text x="600" y="540" fill="#638783" font-size="14" letter-spacing="4">COFFEE FOR EVERY MODEL</text>
+    <text x="600" y="540" fill="#638783" font-size="14" letter-spacing="4">ONE-SHOT JAILBREAK  ·  NATIVE WINDOW</text>
   </g>
   <g transform="translate(255 381)" fill="none" stroke="#8ff5df" stroke-width="3">
     <path d="M20 25H180L165 108Q158 133 100 137Q42 133 35 108Z" fill="#38231a" stroke="#b6fff0" stroke-width="4"/>

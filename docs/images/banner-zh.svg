@@ -19,9 +19,9 @@
   <circle cx="1040" cy="90" r="190" fill="#66d9ff" opacity=".10"/>
   <circle cx="1110" cy="90" r="120" fill="none" stroke="#9fe9ff" stroke-opacity=".24" stroke-width="2"/>
   <g font-family="Microsoft YaHei,Noto Sans CJK SC,Segoe UI,sans-serif">
-    <text x="74" y="78" fill="#a7f4df" font-size="20" letter-spacing="4">冷咖啡 · 本地工作台</text>
+    <text x="74" y="78" fill="#a7f4df" font-size="20" letter-spacing="4">冷咖啡 · 一键破甲越狱</text>
     <text x="70" y="200" fill="#f7e8c7" font-size="112" font-weight="700">冷咖啡</text>
-    <text x="78" y="252" fill="#c9e6ee" font-size="30">四模型统一启动 · 部署 · 验证 · 回滚</text>
+    <text x="78" y="252" fill="#c9e6ee" font-size="30">原生窗口一键破甲 · 部署 · 验证 · 回滚</text>
     <rect x="78" y="292" width="1040" height="1" fill="#9fe9ff" opacity=".45"/>
     <g font-size="18" font-weight="700">
       <rect x="78" y="330" width="225" height="44" rx="22" fill="#9fd8ff" fill-opacity=".18" stroke="#9fd8ff" stroke-opacity=".7"/>

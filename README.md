@@ -2,7 +2,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=28&amp;duration=2800&amp;pause=1000&amp;color=C45C14&amp;center=true&amp;vCenter=true&amp;width=820&amp;lines=%E2%98%95+%E5%86%B7%E5%92%96%E5%95%A1;Hi%2C+%E6%88%91%E6%98%AF%E8%8C%B6;GPT-5.6+%C2%B7+Claude+%C2%B7+Grok+4.6+%C2%B7+DeepSeek+v4+Pro" alt="Typing SVG" />
 
-<img src="docs/images/hero-v10.svg" width="900" alt="冷咖啡 · 四模型破甲工作台">
+<img src="docs/images/hero-v10.svg" width="900" alt="冷咖啡 · 一键破甲越狱">
 
 <p>
   <a href="README.md"><img src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E5%BD%93%E5%89%8D-C45C14?style=for-the-badge&amp;labelColor=2A1810" alt="中文" /></a>
@@ -13,12 +13,13 @@
   <img src="https://img.shields.io/github/stars/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro?style=for-the-badge&amp;label=TOTAL%20GITHUB%20STARS&amp;color=FFD700&amp;labelColor=111827&amp;logo=github&amp;logoColor=white" alt="total GitHub stars" height="56" />
 </a>
 
-<p><strong>本地四模型破甲工作台 · 一键预览 / 部署 / 验证 / 回滚</strong></p>
+<p><strong>冷咖啡 · 一键破甲越狱 · 原生窗口 / 四个模型 / 五刃</strong></p>
 
 <p>
   <img src="https://img.shields.io/github/forks/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro?style=for-the-badge&amp;color=orange&amp;labelColor=111827" alt="Forks" />
   <img src="https://img.shields.io/badge/Windows-10%2F11-2A1810?style=for-the-badge&amp;logo=windows&amp;logoColor=F7EFE3" alt="Windows" />
   <img src="https://img.shields.io/badge/Python-3.10%2B-C45C14?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Electron-Native-C45C14?style=for-the-badge" alt="Electron" />
   <img src="https://img.shields.io/badge/FiveEdge-v1.1-1F6B66?style=for-the-badge" alt="FiveEdge" />
 </p>
 
@@ -34,9 +35,9 @@
 
 <div align="center">
 
-**冷咖啡** 把 GPT-5.6 / Codex、Claude Code、Grok 4.6、DeepSeek v4 Pro 收到同一张工作台。
+**冷咖啡** 是一键破甲越狱软件。原生窗口开场锁盘五刃，一点写完四个模型的挂钩。
 
-口令「冷咖啡」开工。五刃写入系统提示：逆向、破解、渗透、爬虫、外挂。
+口令「冷咖啡」开工。五刃：逆向、破解、渗透、爬虫、外挂。
 
 大白话、错字按口风归一，直接干活。
 
@@ -50,12 +51,16 @@
 
 ## 这是什么
 
-Hub 把指令落到本机配置。点一次：预览 → 部署 → 验证 → 恢复。
+原生窗口在 `desktop/`：开场动画 → 一键破甲 → 完整验收 → 恢复默认。Python Hub 仍可开四张模型卡。点一次：预览 → 部署 → 验证 → 恢复。
 
 <table>
   <tr>
     <th align="center">你想做的事</th>
     <th align="center">冷咖啡交出来</th>
+  </tr>
+  <tr>
+    <td align="center">开原生窗口</td>
+    <td align="center">一键破甲越狱 · 锁盘五刃开场 · 无卡密门</td>
   </tr>
   <tr>
     <td align="center">开四张模型卡</td>
