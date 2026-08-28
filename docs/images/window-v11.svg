@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" role="img" aria-label="冷咖啡原生窗口">
+  <rect width="1280" height="780" rx="16" fill="#EFE6D6"/>
+  <rect width="1280" height="42" rx="16" fill="#2A1810"/>
+  <rect y="20" width="1280" height="22" fill="#2A1810"/>
+  <circle cx="24" cy="21" r="10" fill="#C45C14"/>
+  <text x="24" y="25" text-anchor="middle" fill="#FFF8F0" font-size="11" font-weight="700" font-family="Microsoft YaHei,sans-serif">破</text>
+  <text x="42" y="27" fill="#F7EFE3" font-size="14" font-weight="700" font-family="Microsoft YaHei,sans-serif">冷咖啡</text>
+  <text x="96" y="27" fill="#C9B49A" font-size="11" letter-spacing="2" font-family="Microsoft YaHei,sans-serif">一键破甲越狱</text>
+  <rect x="1128" y="14" width="36" height="14" rx="7" fill="none" stroke="#5A3C2C"/>
+  <text x="1146" y="25" text-anchor="middle" fill="#E7CBA6" font-size="9" font-family="Consolas,monospace">21:08</text>
+  <line x1="1210" y1="21" x2="1224" y2="21" stroke="#C9B49A"/>
+  <rect x="1236" y="16" width="10" height="10" fill="none" stroke="#C9B49A"/>
+  <path d="M1256 16 L1268 28 M1268 16 L1256 28" stroke="#C9B49A"/>
+
+  <rect y="42" width="196" height="738" fill="#2F1C14"/>
+  <text x="24" y="68" fill="#E8A872" font-size="11" letter-spacing="4" font-family="Microsoft YaHei,sans-serif">破甲</text>
+  <rect x="12" y="86" width="172" height="36" rx="8" fill="#C45C142e"/>
+  <text x="24" y="108" fill="#C45C14" font-size="12" font-family="Consolas,monospace">01</text>
+  <text x="50" y="108" fill="#FFF8F0" font-size="13" font-family="Microsoft YaHei,sans-serif">总览</text>
+  <text x="24" y="150" fill="#C45C14" font-size="12" font-family="Consolas,monospace">02</text>
+  <text x="50" y="150" fill="#EAD9C6" font-size="13" font-family="Microsoft YaHei,sans-serif">模型</text>
+  <text x="24" y="190" fill="#C45C14" font-size="12" font-family="Consolas,monospace">03</text>
+  <text x="50" y="190" fill="#EAD9C6" font-size="13" font-family="Microsoft YaHei,sans-serif">一键破甲</text>
+  <text x="24" y="230" fill="#C45C14" font-size="12" font-family="Consolas,monospace">04</text>
+  <text x="50" y="230" fill="#EAD9C6" font-size="13" font-family="Microsoft YaHei,sans-serif">环境</text>
+  <text x="24" y="270" fill="#C45C14" font-size="12" font-family="Consolas,monospace">05</text>
+  <text x="50" y="270" fill="#EAD9C6" font-size="13" font-family="Microsoft YaHei,sans-serif">记录</text>
+  <text x="24" y="740" fill="#C9B49A" font-size="11" font-family="Microsoft YaHei,sans-serif">LOCAL / OPEN</text>
+  <text x="24" y="758" fill="#C9B49A" font-size="11" font-family="Microsoft YaHei,sans-serif">无卡密门</text>
+
+  <rect x="216" y="62" width="1036" height="92" rx="16" fill="#FFF8F0" stroke="#EAD9C6"/>
+  <text x="240" y="84" fill="#C45C14" font-size="11" letter-spacing="3" font-family="Microsoft YaHei,sans-serif">BREAK STATUS</text>
+  <text x="240" y="116" fill="#2A1810" font-size="28" font-weight="700" font-family="Microsoft YaHei,sans-serif">破甲软件已点火</text>
+  <text x="240" y="140" fill="#7A6554" font-size="13" font-family="Microsoft YaHei,sans-serif">4/4 模型入口就绪 · 简体中文</text>
+  <circle cx="1208" cy="108" r="26" fill="none" stroke="#EAD9C6"/>
+  <circle cx="1208" cy="108" r="7" fill="#1F6B66"/>
+
+  <rect x="216" y="168" width="1036" height="70" rx="16" fill="#FFF8F0" stroke="#EAD9C6"/>
+  <text x="240" y="190" fill="#C45C14" font-size="11" letter-spacing="3" font-family="Microsoft YaHei,sans-serif">五刃</text>
+  <rect x="240" y="200" width="52" height="26" rx="13" fill="#C45C14"/>
+  <text x="266" y="218" text-anchor="middle" fill="#FFF8F0" font-size="12" font-family="Microsoft YaHei,sans-serif">全开</text>
+  <rect x="300" y="200" width="52" height="26" rx="13" fill="#F6EDE0" stroke="#EAD9C6"/>
+  <text x="326" y="218" text-anchor="middle" fill="#2A1810" font-size="12">逆向</text>
+  <rect x="360" y="200" width="52" height="26" rx="13" fill="#F6EDE0" stroke="#EAD9C6"/>
+  <text x="386" y="218" text-anchor="middle" fill="#2A1810" font-size="12">破解</text>
+  <rect x="420" y="200" width="52" height="26" rx="13" fill="#F6EDE0" stroke="#EAD9C6"/>
+  <text x="446" y="218" text-anchor="middle" fill="#2A1810" font-size="12">渗透</text>
+  <rect x="480" y="200" width="52" height="26" rx="13" fill="#F6EDE0" stroke="#EAD9C6"/>
+  <text x="506" y="218" text-anchor="middle" fill="#2A1810" font-size="12">爬虫</text>
+  <rect x="540" y="200" width="52" height="26" rx="13" fill="#F6EDE0" stroke="#EAD9C6"/>
+  <text x="566" y="218" text-anchor="middle" fill="#2A1810" font-size="12">外挂</text>
+  <text x="610" y="218" fill="#7A6554" font-size="12" font-family="Microsoft YaHei,sans-serif">五刃全开 · 按动词自动锁刃</text>
+
+  <text x="240" y="268" fill="#C45C14" font-size="11" letter-spacing="3" font-family="Microsoft YaHei,sans-serif">02 / MODELS</text>
+  <text x="240" y="292" fill="#2A1810" font-size="20" font-weight="700" font-family="Microsoft YaHei,sans-serif">四个模型</text>
+  <rect x="1148" y="274" width="72" height="22" rx="11" fill="none" stroke="#5A3C2C"/>
+  <text x="1184" y="289" text-anchor="middle" fill="#E7CBA6" font-size="11" font-family="Consolas,monospace">4 / 4</text>
+
+  <g font-family="Microsoft YaHei,sans-serif">
+    <rect x="216" y="308" width="508" height="118" rx="12" fill="#FFFDF9" stroke="#EAD9C6"/>
+    <text x="236" y="338" fill="#2A1810" font-size="20" font-weight="700">GPT-5.6</text>
+    <text x="680" y="334" text-anchor="end" fill="#C45C14" font-size="11" font-family="Consolas,monospace">ONLINE</text>
+    <text x="236" y="360" fill="#7A6554" font-size="11">~/.codex</text>
+    <rect x="236" y="372" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="290" y="391" text-anchor="middle" font-size="12">预览</text>
+    <rect x="350" y="372" width="108" height="28" rx="8" fill="#C45C14"/><text x="404" y="391" text-anchor="middle" fill="#FFF8F0" font-size="12">部署</text>
+    <rect x="464" y="372" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="518" y="391" text-anchor="middle" font-size="12">验证</text>
+    <rect x="740" y="308" width="508" height="118" rx="12" fill="#FFFDF9" stroke="#EAD9C6"/>
+    <text x="760" y="338" fill="#2A1810" font-size="20" font-weight="700">Claude Code</text>
+    <text x="1204" y="334" text-anchor="end" fill="#C45C14" font-size="11" font-family="Consolas,monospace">ONLINE</text>
+    <text x="760" y="360" fill="#7A6554" font-size="11">~/.claude</text>
+    <rect x="760" y="372" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="814" y="391" text-anchor="middle" font-size="12">预览</text>
+    <rect x="874" y="372" width="108" height="28" rx="8" fill="#C45C14"/><text x="928" y="391" text-anchor="middle" fill="#FFF8F0" font-size="12">部署</text>
+    <rect x="988" y="372" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="1042" y="391" text-anchor="middle" font-size="12">验证</text>
+
+    <rect x="216" y="438" width="508" height="118" rx="12" fill="#FFFDF9" stroke="#EAD9C6"/>
+    <text x="236" y="468" fill="#2A1810" font-size="20" font-weight="700">Grok 4.6</text>
+    <text x="680" y="464" text-anchor="end" fill="#C45C14" font-size="11" font-family="Consolas,monospace">ONLINE</text>
+    <text x="236" y="490" fill="#7A6554" font-size="11">~/.grok</text>
+    <rect x="236" y="502" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="290" y="521" text-anchor="middle" font-size="12">预览</text>
+    <rect x="350" y="502" width="108" height="28" rx="8" fill="#C45C14"/><text x="404" y="521" text-anchor="middle" fill="#FFF8F0" font-size="12">部署</text>
+    <rect x="464" y="502" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="518" y="521" text-anchor="middle" font-size="12">验证</text>
+    <rect x="740" y="438" width="508" height="118" rx="12" fill="#FFFDF9" stroke="#EAD9C6"/>
+    <text x="760" y="468" fill="#2A1810" font-size="20" font-weight="700">DeepSeek v4 Pro</text>
+    <text x="1204" y="464" text-anchor="end" fill="#C45C14" font-size="11" font-family="Consolas,monospace">ONLINE</text>
+    <text x="760" y="490" fill="#7A6554" font-size="11">~/.deepseek-harness</text>
+    <rect x="760" y="502" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="814" y="521" text-anchor="middle" font-size="12">预览</text>
+    <rect x="874" y="502" width="108" height="28" rx="8" fill="#C45C14"/><text x="928" y="521" text-anchor="middle" fill="#FFF8F0" font-size="12">部署</text>
+    <rect x="988" y="502" width="108" height="28" rx="8" fill="#F6EDE0" stroke="#EAD9C6"/><text x="1042" y="521" text-anchor="middle" font-size="12">验证</text>
+  </g>
+
+  <text x="240" y="582" fill="#C45C14" font-size="11" letter-spacing="3" font-family="Microsoft YaHei,sans-serif">03 / ONE SHOT</text>
+  <text x="240" y="606" fill="#2A1810" font-size="20" font-weight="700" font-family="Microsoft YaHei,sans-serif">一键破甲</text>
+  <rect x="1088" y="586" width="132" height="26" rx="8" fill="#FFF8F0" stroke="#EAD9C6"/>
+  <text x="1154" y="603" text-anchor="middle" fill="#2A1810" font-size="12" font-family="Microsoft YaHei,sans-serif">选择 Codex 目录</text>
+  <rect x="216" y="618" width="1036" height="36" rx="10" fill="#F6EDE0"/>
+  <text x="232" y="641" fill="#2A1810" font-size="12" font-family="Consolas,monospace">C:\Users\茶\.codex</text>
+  <text x="1028" y="641" fill="#1F6B66" font-size="12" font-family="Microsoft YaHei,sans-serif">语言 · 简体中文</text>
+  <text x="1198" y="641" fill="#C45C14" font-size="12" font-family="Microsoft YaHei,sans-serif">打开</text>
+
+  <rect x="216" y="664" width="252" height="92" rx="12" fill="#C45C14"/>
+  <text x="236" y="698" fill="#FFF8F0" font-size="18" font-weight="700" font-family="Microsoft YaHei,sans-serif">一键破甲</text>
+  <text x="236" y="724" fill="#F3E4D0" font-size="11" font-family="Microsoft YaHei,sans-serif">中文、指令、技能、工具桥一次写完</text>
+  <rect x="480" y="664" width="252" height="92" rx="12" fill="#3D2318"/>
+  <text x="500" y="698" fill="#FFF8F0" font-size="18" font-weight="700" font-family="Microsoft YaHei,sans-serif">恢复默认</text>
+  <text x="500" y="724" fill="#C9B49A" font-size="11" font-family="Microsoft YaHei,sans-serif">只撤托管文件，漂移项留下</text>
+  <rect x="744" y="664" width="252" height="92" rx="12" fill="#F6EDE0" stroke="#EAD9C6"/>
+  <text x="764" y="698" fill="#2A1810" font-size="18" font-weight="700" font-family="Microsoft YaHei,sans-serif">完整验收</text>
+  <text x="764" y="724" fill="#7A6554" font-size="11" font-family="Microsoft YaHei,sans-serif">挂钩体检 + Desktop 真人任务</text>
+  <rect x="1008" y="664" width="244" height="92" rx="12" fill="#F6EDE0" stroke="#EAD9C6"/>
+  <text x="1028" y="698" fill="#2A1810" font-size="18" font-weight="700" font-family="Microsoft YaHei,sans-serif">安装运行环境</text>
+  <text x="1028" y="724" fill="#7A6554" font-size="11" font-family="Microsoft YaHei,sans-serif">逆向 Python 依赖装进本机</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="ogvoid" cx="50%" cy="48%" r="60%">
+      <stop offset="0%" stop-color="#3A1B12"/>
+      <stop offset="55%" stop-color="#140C09"/>
+      <stop offset="100%" stop-color="#070504"/>
+    </radialGradient>
+    <linearGradient id="oggold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F3D2A0"/>
+      <stop offset=".5" stop-color="#C45C14"/>
+      <stop offset="1" stop-color="#7A2E10"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogvoid)"/>
+  <circle cx="600" cy="330" r="168" fill="none" stroke="url(#oggold)" stroke-width="8"/>
+  <circle cx="600" cy="330" r="126" fill="none" stroke="#E8C9A0" stroke-width="3" stroke-dasharray="10 10"/>
+  <circle cx="600" cy="330" r="78" fill="#2A1810" stroke="url(#oggold)" stroke-width="5"/>
+  <path d="M600 330 L600 70" stroke="#E8A872" stroke-width="8" stroke-linecap="round"/>
+  <path d="M600 330 L980 170" stroke="#F5D76E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M600 330 L900 560" stroke="#FF6BA8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M600 330 L300 560" stroke="#5EE7FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M600 330 L220 170" stroke="#80F0BC" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="600" cy="330" r="58" fill="#B33A28" stroke="#F3D2A0" stroke-width="4"/>
+  <text x="600" y="350" text-anchor="middle" fill="#FFF7EA" font-size="52" font-weight="700" font-family="Microsoft YaHei,sans-serif">破</text>
+  <text x="600" y="88" text-anchor="middle" fill="#F7EFE3" font-size="56" font-weight="700" font-family="Microsoft YaHei,sans-serif" letter-spacing="16">冷咖啡</text>
+  <text x="600" y="590" text-anchor="middle" fill="#E8A872" font-size="22" letter-spacing="10" font-family="Microsoft YaHei,sans-serif">一键破甲越狱</text>
+</svg>

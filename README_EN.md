@@ -2,7 +2,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=28&amp;duration=2800&amp;pause=1000&amp;color=C45C14&amp;center=true&amp;vCenter=true&amp;width=820&amp;lines=%E2%98%95+Cold+Coffee;one-shot+jailbreak;GPT-5.6+%C2%B7+Claude+%C2%B7+Grok+4.6+%C2%B7+DeepSeek+v4+Pro" alt="Typing SVG" />
 
-<img src="docs/images/hero-v10.svg" width="900" alt="Cold Coffee one-shot jailbreak">
+<img src="docs/images/hero-v11.svg" width="900" alt="Cold Coffee one-shot jailbreak">
 
 <p>
   <a href="README.md"><img src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-Switch-lightgrey?style=for-the-badge&amp;labelColor=2A1810" alt="中文" /></a>
@@ -15,7 +15,7 @@
 
 <p><strong>Cold Coffee · one-shot jailbreak · native window / four models / FiveEdge</strong></p>
 
-<img src="docs/images/workbench-v9.svg" width="900" alt="Workbench">
+<img src="docs/images/window-v11.svg" width="900" alt="Native window">
 
 <p>
 <strong>Cold Coffee</strong> — native Windows shell. One click writes Chinese locale, live prompt, skills, MCP, and four-model adapters.<br>

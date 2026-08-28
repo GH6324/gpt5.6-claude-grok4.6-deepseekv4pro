@@ -2,7 +2,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=28&amp;duration=2800&amp;pause=1000&amp;color=C45C14&amp;center=true&amp;vCenter=true&amp;width=820&amp;lines=%E2%98%95+%E5%86%B7%E5%92%96%E5%95%A1;Hi%2C+%E6%88%91%E6%98%AF%E8%8C%B6;GPT-5.6+%C2%B7+Claude+%C2%B7+Grok+4.6+%C2%B7+DeepSeek+v4+Pro" alt="Typing SVG" />
 
-<img src="docs/images/hero-v10.svg" width="900" alt="冷咖啡 · 一键破甲越狱">
+<img src="docs/images/hero-v11.svg" width="900" alt="冷咖啡 · 一键破甲越狱">
 
 <p>
   <a href="README.md"><img src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E5%BD%93%E5%89%8D-C45C14?style=for-the-badge&amp;labelColor=2A1810" alt="中文" /></a>
@@ -41,7 +41,7 @@
 
 大白话、错字按口风归一，直接干活。
 
-<img src="docs/images/workbench-v9.svg" width="900" alt="冷咖啡工作台">
+<img src="docs/images/window-v11.svg" width="900" alt="冷咖啡原生窗口">
 
 </div>
 
