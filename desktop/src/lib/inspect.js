@@ -13,10 +13,16 @@ function codexCandidates(requested) {
   if (requested) return unique([requested]);
   const home = os.homedir();
   const list = [process.env.CODEX_HOME, path.join(home, ".codex")];
-  if (process.env.LOCALAPPDATA) {
+  if (process.platform === "win32" && process.env.LOCALAPPDATA) {
     list.push(
       path.join(process.env.LOCALAPPDATA, "OpenAI", "Codex"),
       path.join(process.env.LOCALAPPDATA, "Codex"),
+    );
+  }
+  if (process.platform === "darwin") {
+    list.push(
+      path.join(home, "Library", "Application Support", "Codex"),
+      path.join(home, "Library", "Application Support", "com.openai.codex"),
     );
   }
   return unique(list);

@@ -22,6 +22,7 @@ __pycache__/
 # Electron
 node_modules/
 desktop/node_modules/
+desktop/dist/
 
 # 杂项
 *.bak

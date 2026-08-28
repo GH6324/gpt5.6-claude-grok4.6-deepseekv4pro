@@ -2,7 +2,19 @@ const path = require("node:path");
 const os = require("node:os");
 
 const ROOT = path.resolve(__dirname, "..", "..");
-const CORE = path.resolve(ROOT, "..");
+
+function resolveCore() {
+  if (!process.versions.electron) return path.resolve(ROOT, "..");
+  try {
+    const { app } = require("electron");
+    if (app && app.isPackaged) return path.join(process.resourcesPath, "core");
+  } catch {
+    // node tests
+  }
+  return path.resolve(ROOT, "..");
+}
+
+const CORE = resolveCore();
 
 const QQ_GROUPS = [
   { name: "交流群", number: "1057540028" },

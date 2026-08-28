@@ -22,13 +22,23 @@
 Phrase <code>冷咖啡</code> starts the session. FiveEdge: reverse, unlock, infiltrate, harvest, trainer.
 </p>
 
+Windows: double-click <code>打开冷咖啡.bat</code>
+
 ```powershell
 cd desktop
 npm install
 npm start
 ```
 
-or run <code>打开冷咖啡.bat</code> at the repo root. Python panel: <code>python coldbrew_hub.py</code>
+macOS: double-click <code>打开冷咖啡.command</code>
+
+```bash
+cd desktop
+npm install
+npm start
+```
+
+Python panel: <code>python coldbrew_hub.py</code>
 
 <p>
 <strong>QQ group</strong> <code>1057540028</code>

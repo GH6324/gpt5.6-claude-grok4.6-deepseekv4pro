@@ -143,7 +143,15 @@ function countSkillEntrypoints(root) {
 }
 
 function localColdBrewRoot() {
-  const base = process.env.LOCALAPPDATA || path.join(require("node:os").homedir(), "AppData", "Local");
+  const os = require("node:os");
+  const home = os.homedir();
+  if (process.platform === "darwin") {
+    return path.join(home, "Library", "Application Support", "ColdBrew");
+  }
+  if (process.platform === "linux") {
+    return path.join(process.env.XDG_DATA_HOME || path.join(home, ".local", "share"), "ColdBrew");
+  }
+  const base = process.env.LOCALAPPDATA || path.join(home, "AppData", "Local");
   return path.join(base, "ColdBrew");
 }
 

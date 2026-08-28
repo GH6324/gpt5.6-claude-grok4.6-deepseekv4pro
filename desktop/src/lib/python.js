@@ -9,14 +9,10 @@ function firstExisting(candidates) {
 
 function pythonExecutable() {
   const home = os.homedir();
-  const named = [
-    process.env.PYTHON,
-    process.env.COLDBREW_PYTHON,
-    "python",
-    "py",
-    "python3",
-  ].filter(Boolean);
-  for (const name of named) {
+  const named = process.platform === "win32"
+    ? [process.env.PYTHON, process.env.COLDBREW_PYTHON, "python", "py", "python3"]
+    : [process.env.PYTHON, process.env.COLDBREW_PYTHON, "python3", "python"];
+  for (const name of named.filter(Boolean)) {
     try {
       const result = spawnSync(name, ["-c", "import sys; print(sys.executable)"], {
         encoding: "utf8",
@@ -29,11 +25,19 @@ function pythonExecutable() {
       // try next
     }
   }
-  return firstExisting([
-    path.join(home, "AppData", "Local", "Programs", "Python", "Python312", "python.exe"),
-    path.join(home, "AppData", "Local", "Programs", "Python", "Python311", "python.exe"),
-    "C:\\Python312\\python.exe",
-  ]);
+  const extras = process.platform === "win32"
+    ? [
+      path.join(home, "AppData", "Local", "Programs", "Python", "Python312", "python.exe"),
+      path.join(home, "AppData", "Local", "Programs", "Python", "Python311", "python.exe"),
+      "C:\\Python312\\python.exe",
+    ]
+    : [
+      "/opt/homebrew/bin/python3",
+      "/usr/local/bin/python3",
+      "/usr/bin/python3",
+      path.join(home, ".local", "bin", "python3"),
+    ];
+  return firstExisting(extras);
 }
 
 function pythonVersion(exe) {

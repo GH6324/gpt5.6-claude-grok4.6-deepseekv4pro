@@ -6,7 +6,7 @@ const { exists, isFile } = require("./fs-util");
 const { pythonExecutable, pythonVersion } = require("./python");
 
 const LOOKUPS = [
-  { id: "Python", cmd: "python", args: ["--version"] },
+  { id: "Python", cmd: process.platform === "win32" ? "python" : "python3", args: ["--version"] },
   { id: "Git", cmd: "git", args: ["--version"] },
   { id: "Node", cmd: "node", args: ["-v"] },
   { id: "strings", cmd: "strings", args: ["--version"] },

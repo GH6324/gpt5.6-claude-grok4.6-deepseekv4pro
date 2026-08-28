@@ -8,33 +8,25 @@ function powerShell() {
   return path.join(process.env.SystemRoot || "C:\\Windows", "System32", "WindowsPowerShell", "v1.0", "powershell.exe");
 }
 
-function runScript(scriptPath, onLog) {
+function spawnLogged(command, args, cwd, onLog, label) {
   return new Promise((resolve, reject) => {
-    const child = spawn(powerShell(), [
-      "-NoLogo",
-      "-NoProfile",
-      "-NonInteractive",
-      "-ExecutionPolicy",
-      "Bypass",
-      "-File",
-      scriptPath,
-    ], {
-      cwd: path.dirname(scriptPath),
+    const child = spawn(command, args, {
+      cwd,
       windowsHide: true,
       env: { ...process.env, PYTHONIOENCODING: "utf-8" },
     });
     child.stdout.on("data", (chunk) => {
       for (const line of chunk.toString("utf8").split(/\r?\n/)) {
-        if (line.trim()) onLog({ type: "out", source: path.basename(scriptPath), message: line.trim() });
+        if (line.trim()) onLog({ type: "out", source: label, message: line.trim() });
       }
     });
     child.stderr.on("data", (chunk) => {
       for (const line of chunk.toString("utf8").split(/\r?\n/)) {
-        if (line.trim()) onLog({ type: "error", source: path.basename(scriptPath), message: line.trim() });
+        if (line.trim()) onLog({ type: "error", source: label, message: line.trim() });
       }
     });
     child.once("error", reject);
-    child.once("close", (code) => resolve({ script: path.basename(scriptPath), code: code ?? 1 }));
+    child.once("close", (code) => resolve({ script: label, code: code ?? 1 }));
   });
 }
 
@@ -42,16 +34,24 @@ async function setupEnvironment(onLog = () => {}) {
   const messages = [];
   const python = pythonExecutable();
   if (!python) {
-    messages.push({ type: "error", message: "没有 Python，环境安装停在这里。" });
+    messages.push({ type: "error", message: "没有 Python，环境安装停在这里。Mac 用 brew install python，Windows 装 3.10+。" });
     return { messages, status: environmentStatus(), results: [] };
   }
-  const install = path.join(ROOT, "assets", "env", "install.ps1");
-  const verify = path.join(ROOT, "assets", "env", "verify.ps1");
-  onLog({ type: "info", source: "环境", message: "安装逆向 Python 依赖" });
   const results = [];
-  results.push(await runScript(install, onLog));
-  onLog({ type: "info", source: "环境", message: "校验逆向依赖" });
-  results.push(await runScript(verify, onLog));
+  onLog({ type: "info", source: "环境", message: `安装逆向依赖 · ${process.platform}` });
+  if (process.platform === "win32") {
+    const install = path.join(ROOT, "assets", "env", "install.ps1");
+    const verify = path.join(ROOT, "assets", "env", "verify.ps1");
+    results.push(await spawnLogged(powerShell(), ["-NoLogo", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", install], path.dirname(install), onLog, "install.ps1"));
+    onLog({ type: "info", source: "环境", message: "校验逆向依赖" });
+    results.push(await spawnLogged(powerShell(), ["-NoLogo", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-File", verify], path.dirname(verify), onLog, "verify.ps1"));
+  } else {
+    const install = path.join(ROOT, "assets", "env", "install.sh");
+    const verify = path.join(ROOT, "assets", "env", "verify.sh");
+    results.push(await spawnLogged("bash", [install], path.dirname(install), onLog, "install.sh"));
+    onLog({ type: "info", source: "环境", message: "校验逆向依赖" });
+    results.push(await spawnLogged("bash", [verify], path.dirname(verify), onLog, "verify.sh"));
+  }
   const failed = results.filter((item) => item.code !== 0);
   messages.push({
     type: failed.length ? "error" : "ok",

@@ -36,17 +36,19 @@
 
 ## 运行
 
-Windows 10 / 11。需要本机 **Node.js** 和 **Python 3.10+**。
+Windows 10 / 11 和 macOS 12+。需要本机 **Node.js** 和 **Python 3.10+**。
 
-```powershell
-cd C:\Users\17495\Desktop\coldbrew-atelier
+```bash
+cd desktop
 npm install
 npm start
 ```
 
-或双击 `start.bat`。第一次会装 Electron。
+Windows 双击 `start.bat`。Mac 双击仓库根目录 `打开冷咖啡.command` 或 `desktop/start.sh`。
 
-先开一次 Codex Desktop，让 `~\.codex\config.toml` 出现，再用全系破甲。
+先开一次 Codex，让 `~/.codex/config.toml` 出现，再点一键破甲。
+
+打 dmg / portable：`npm run pack:mac`（在苹果机或 GitHub Actions）· `npm run pack:win`
 
 ## 目录
 
@@ -55,7 +57,7 @@ src/            原创 Electron 壳
 src/splash/     开场
 src/renderer/   主台
 src/lib/        调度、体检、挂钩加厚、Desktop 联机
-core/           随包冷咖啡四模型适配器
+上一级 projects/  四个模型适配器
 ```
 
 ## 许可

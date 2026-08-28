@@ -9,7 +9,8 @@ const { oneClickBreak, oneClickRestore } = require("./lib/oneshot");
 const { setupEnvironment } = require("./lib/setup");
 
 const SPLASH_MS = 4800;
-const APP_ICON = path.join(__dirname, "..", "assets", "icon.ico");
+const IS_MAC = process.platform === "darwin";
+const APP_ICON = path.join(__dirname, "..", "assets", IS_MAC ? "icon.png" : "icon.ico");
 let splashWindow;
 let mainWindow;
 let currentBlade = "ALL";
@@ -31,6 +32,7 @@ function createSplash() {
     backgroundColor: "#090705",
     autoHideMenuBar: true,
     icon: APP_ICON,
+    titleBarStyle: IS_MAC ? "hidden" : "default",
   });
   splashWindow.loadFile(path.join(__dirname, "splash", "index.html"));
   splashWindow.once("ready-to-show", () => splashWindow.show());
@@ -47,6 +49,8 @@ function createMain() {
     backgroundColor: "#EFE6D6",
     autoHideMenuBar: true,
     icon: APP_ICON,
+    titleBarStyle: IS_MAC ? "hiddenInset" : "default",
+    trafficLightPosition: IS_MAC ? { x: 14, y: 12 } : undefined,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
@@ -72,6 +76,7 @@ ipcMain.handle("brew:meta", () => ({
   tools: TOOLS.map((tool) => ({ id: tool.id, tag: tool.tag, short: tool.short, accent: tool.accent })),
   qq: QQ_GROUPS,
   telegram: TELEGRAM,
+  platform: process.platform,
 }));
 ipcMain.handle("brew:catalog", () => catalogStatus());
 ipcMain.handle("brew:inspect", (_event, home) => inspectTarget(home));

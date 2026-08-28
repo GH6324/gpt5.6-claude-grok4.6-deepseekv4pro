@@ -240,6 +240,7 @@ async function runSeat(id, verb) {
 
 async function boot() {
   meta = await window.brew.meta();
+  document.body.dataset.platform = meta.platform || "";
   renderBlades();
   renderCommunity();
   window.brew.onLog((entry) => line(entry.type || "out", entry.source, entry.message));

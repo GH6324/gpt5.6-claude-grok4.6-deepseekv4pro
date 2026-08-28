@@ -30,6 +30,8 @@ body {
   color: var(--cream);
   -webkit-app-region: drag;
 }
+body[data-platform="darwin"] .titlebar { padding-left: 78px; }
+body[data-platform="darwin"] .win-btns { display: none; }
 .brand { display: flex; align-items: center; gap: 10px; }
 .seal {
   width: 24px; height: 24px; border-radius: 50%;

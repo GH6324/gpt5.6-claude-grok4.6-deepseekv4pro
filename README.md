@@ -18,6 +18,7 @@
 <p>
   <img src="https://img.shields.io/github/forks/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro?style=for-the-badge&amp;color=orange&amp;labelColor=111827" alt="Forks" />
   <img src="https://img.shields.io/badge/Windows-10%2F11-2A1810?style=for-the-badge&amp;logo=windows&amp;logoColor=F7EFE3" alt="Windows" />
+  <img src="https://img.shields.io/badge/macOS-12%2B-2A1810?style=for-the-badge&amp;logo=apple&amp;logoColor=F7EFE3" alt="macOS" />
   <img src="https://img.shields.io/badge/Python-3.10%2B-C45C14?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Electron-Native-C45C14?style=for-the-badge" alt="Electron" />
   <img src="https://img.shields.io/badge/FiveEdge-v1.1-1F6B66?style=for-the-badge" alt="FiveEdge" />
@@ -191,7 +192,9 @@ git clone https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro.g
 cd gpt5.6-claude-grok4.6-deepseekv4pro
 ```
 
-原生窗口（一键破甲越狱，开场锁盘五刃）：
+原生窗口（一键破甲越狱，开场锁盘五刃），Windows 和 Mac 都能开：
+
+Windows：
 
 ```powershell
 cd desktop
@@ -199,7 +202,19 @@ npm install
 npm start
 ```
 
-或双击仓库根目录 <code>打开冷咖啡.bat</code> / <code>desktop\start.bat</code>
+双击 <code>打开冷咖啡.bat</code> / <code>desktop\start.bat</code>
+
+Mac：
+
+```bash
+cd desktop
+npm install
+npm start
+```
+
+双击 <code>打开冷咖啡.command</code> / <code>desktop/start.sh</code>
+
+第一次双击 command 被拦时：右键 → 打开。GitHub Actions 会交 <code>冷咖啡-*.dmg</code>。
 
 Python 面板：
 

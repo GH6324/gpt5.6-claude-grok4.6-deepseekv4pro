@@ -1,17 +1,54 @@
 {
   "name": "coldbrew-atelier",
   "productName": "冷咖啡",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "冷咖啡焙台 — 四模型破甲原生窗口。开场、部署、验收、复原。",
+  "description": "冷咖啡 · 一键破甲越狱。Windows / macOS 原生窗口。",
   "main": "src/main.js",
   "author": "3641397194-wq",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "start": "electron .",
-    "atelier": "electron ."
+    "atelier": "electron .",
+    "pack:win": "electron-builder --win portable --publish never",
+    "pack:mac": "electron-builder --mac dmg zip --publish never"
   },
   "devDependencies": {
-    "electron": "^35.2.1"
+    "electron": "^35.2.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "app.coldbrew.jailbreak",
+    "productName": "冷咖啡",
+    "copyright": "Copyright 2026 3641397194-wq",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../projects",
+        "to": "core/projects",
+        "filter": ["**/*"]
+      }
+    ],
+    "asar": true,
+    "icon": "assets/icon.png",
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": ["portable"]
+    },
+    "mac": {
+      "icon": "assets/icon.png",
+      "category": "public.app-category.developer-tools",
+      "target": ["dmg", "zip"],
+      "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    }
   }
 }

@@ -13,16 +13,45 @@ function firstFile(candidates) {
   return candidates.find((item) => item && isFile(item)) || null;
 }
 
-function runningCodexPaths() {
-  if (process.platform !== "win32") return [];
-  const powershell = path.join(process.env.SystemRoot || "C:\\Windows", "System32", "WindowsPowerShell", "v1.0", "powershell.exe");
+function whichAll(bin) {
+  const { spawnSync } = require("node:child_process");
   try {
-    const output = execFileSync(powershell, [
-      "-NoLogo", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",
-      "-Command",
-      "Get-CimInstance Win32_Process -Filter \"Name='codex.exe'\" | ForEach-Object { $_.ExecutablePath }",
-    ], { encoding: "utf8", windowsHide: true, timeout: 5000 });
-    return output.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const result = spawnSync(process.platform === "win32" ? "where" : "which", [bin], {
+      encoding: "utf8",
+      windowsHide: true,
+      timeout: 4000,
+    });
+    return String(result.stdout || "")
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
+function runningCodexPaths() {
+  if (process.platform === "win32") {
+    const powershell = path.join(process.env.SystemRoot || "C:\\Windows", "System32", "WindowsPowerShell", "v1.0", "powershell.exe");
+    try {
+      const output = execFileSync(powershell, [
+        "-NoLogo", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",
+        "-Command",
+        "Get-CimInstance Win32_Process -Filter \"Name='codex.exe'\" | ForEach-Object { $_.ExecutablePath }",
+      ], { encoding: "utf8", windowsHide: true, timeout: 5000 });
+      return output.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    } catch {
+      return [];
+    }
+  }
+  try {
+    const output = execFileSync("pgrep", ["-lf", "Codex"], { encoding: "utf8", timeout: 4000 });
+    return output.split(/\r?\n/)
+      .map((line) => {
+        const match = line.match(/(\/\S+Codex(?:\.app\/Contents\/MacOS\/Codex)?)/);
+        return match ? match[1] : "";
+      })
+      .filter(Boolean);
   } catch {
     return [];
   }
@@ -31,14 +60,30 @@ function runningCodexPaths() {
 function locateCodexCli() {
   const local = process.env.LOCALAPPDATA;
   const home = os.homedir();
+  const macApp = "/Applications/Codex.app/Contents/MacOS/Codex";
+  const macRes = "/Applications/Codex.app/Contents/Resources/codex";
   return firstFile([
     process.env.CODEX_CLI_PATH,
+    ...whichAll("codex"),
     ...runningCodexPaths(),
-    local ? path.join(local, "Programs", "codex", "Codex.exe") : null,
-    local ? path.join(local, "OpenAI Codex", "Codex.exe") : null,
-    local ? path.join(local, "Programs", "Codex", "Codex.exe") : null,
-    path.join(home, "AppData", "Local", "Programs", "codex", "Codex.exe"),
+    process.platform === "win32" && local ? path.join(local, "Programs", "codex", "Codex.exe") : null,
+    process.platform === "win32" && local ? path.join(local, "OpenAI Codex", "Codex.exe") : null,
+    process.platform === "win32" && local ? path.join(local, "Programs", "Codex", "Codex.exe") : null,
+    process.platform === "win32" ? path.join(home, "AppData", "Local", "Programs", "codex", "Codex.exe") : null,
+    process.platform === "darwin" ? macApp : null,
+    process.platform === "darwin" ? macRes : null,
+    process.platform === "darwin" ? "/opt/homebrew/bin/codex" : null,
+    process.platform === "darwin" ? "/usr/local/bin/codex" : null,
   ]);
+}
+
+function openCodexThread(cli, threadId) {
+  const url = `codex://threads/${threadId}`;
+  if (process.platform === "darwin") {
+    spawn("open", [url], { detached: true, stdio: "ignore" }).unref();
+    return;
+  }
+  spawn(cli, [url], { detached: true, stdio: "ignore", windowsHide: false }).unref();
 }
 
 class AppServer {
@@ -247,7 +292,7 @@ async function liveAcceptance(codexHome, onLog = () => {}) {
     onLog({ type: "info", source: "验收", message: `命令 ${commands.length} 条，文件变更 ${fileChangeCount}` });
     onLog({ type: reply === SUCCESS_REPLY ? "ok" : "error", source: "验收", message: `桌面回复：${reply || "（空）"}` });
     try {
-      spawn(cli, [`codex://threads/${threadId}`], { detached: true, stdio: "ignore", windowsHide: false }).unref();
+      openCodexThread(cli, threadId);
     } catch {
       // opening the GUI is best-effort
     }
