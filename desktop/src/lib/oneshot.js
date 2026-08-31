@@ -13,7 +13,7 @@ const { entry, writeManifest } = require("./manifest");
 const { restoreFromManifest } = require("./manifest");
 
 async function oneClickBreak(options) {
-  const { python, home, blade, onLog } = options;
+  const { python, home, blade, profile, onLog } = options;
   if (!home) throw new Error("未找到 Codex 配置目录。先启动一次 Codex，或手动选含 config.toml 的目录。");
   const logs = onLog || (() => {});
   const managed = [];
@@ -62,6 +62,7 @@ async function oneClickBreak(options) {
       python,
       home: tool.id === "codex" ? home : null,
       blade,
+      profile,
       onLog,
     });
     adapters.push({ id: tool.id, ok: result.ok, code: result.code });
@@ -75,7 +76,7 @@ async function oneClickBreak(options) {
 }
 
 async function oneClickRestore(options) {
-  const { python, home, onLog } = options;
+  const { python, home, profile, onLog } = options;
   if (!home) throw new Error("未找到 Codex 配置目录。");
   const logs = onLog || (() => {});
   const adapters = [];
@@ -84,6 +85,7 @@ async function oneClickRestore(options) {
     const result = await runTool(tool.id, "restore", {
       python,
       home: tool.id === "codex" ? home : null,
+      profile,
       onLog,
     });
     adapters.push({ id: tool.id, ok: result.ok, code: result.code });

@@ -1,67 +1,49 @@
-# 冷咖啡 · 一键破甲越狱（原生窗口）
+# 冷咖啡 · Command Center
 
-产品名就是 **冷咖啡 · 一键破甲越狱**。开场是锁盘被五刃劈开。按钮叫一键破甲。
+Electron 桌面工作台，产品主线是 **破甲 / 越狱 / MAXIMUM CORE**。它把 GPT-5.6、Claude Code、Grok 4.6 和 DeepSeek v4 Pro 四个适配器放进同一窗口，统一提供预览、部署、验证和恢复。
 
-这一目录是 GitHub 仓里的 Electron 壳。四个模型适配器在上一级 `projects/`。窗口壳、开场、图标、挂钩加厚都是为本仓新写的。
+## 新版工作台
 
-口令「冷咖啡」。QQ 交流群 `1057540028` · 专题群 `1077074552`。
+- 指挥台：当前状态、MAX 启动和验收入口
+- 越狱档位：MAX、FOCUS、BUILDER、RESEARCH、CREATIVE
+- 模型席位：四个适配器的独立状态与动作
+- 执行中心：目标目录、配置层、恢复点和环境检查
+- 活动流：实时日志、结果复制和可继续的阶段记录
+- 社群入口：QQ 群号复制、Telegram 群/频道直达
 
-## 它干什么
+界面文案和布局围绕“破甲 / 越狱”重做，原有社群宣传、二维码文件和适配器接口继续保留。
 
-| 你点 | 软件交出来 |
-| --- | --- |
-| 开场 | 原创 4.8 秒破甲动画，然后进无框主窗 |
-| 四个模型 | GPT-5.6 / Codex、Claude Code、Grok 4.6、DeepSeek v4 Pro |
-| 五刃 | 逆向 / 破解 / 渗透 / 爬虫 / 外挂，部署时写入 `COLDBREW_BLADE` |
-| 全系破甲 | 四个模型适配器 deploy，再给 Codex 加厚挂钩 |
-| 完整验收 | 适配器 verify + 静态挂钩体检 + 尝试连 Codex Desktop |
-| 全系复原 | 各席自己的 restore 契约，部署后你改过的文件跟适配器规则走 |
-| 环境扫描 | Python / Node / Git / jadx / frida / adb |
-| 选目录 | 手动指定含 `config.toml` 的 Codex 家 |
-| 社群 | 一点复制 QQ 群号 |
-
-没有卡密门。公开发 GitHub 直接用。
-
-## Codex 挂钩加厚（相对只挂一份 MD 的桌面壳）
-
-部署 Codex 之后，软件会再写一层：
-
-- `model_instructions_file` 指到**现场活着的** `eni-jailbreak-*.md`（有文件才挂，不留死文件）
-- `approval_policy = "never"`
-- `sandbox_mode = "danger-full-access"`
-- `[desktop] localeOverride = "zh-CN"`
-- **不禁用** `hooks.json`。UserPromptSubmit 那条自动路由继续每轮回灌
-
-所以它比「只拷提示词、把别人的 hooks 整份改名 disabled」更深：指令活挂钩 + 审批/沙箱写进配置 + hook 占住压缩后的回合。
-
-## 运行
-
-Windows 10 / 11、macOS 12+、Linux x64。需要本机 **Node.js** 和 **Python 3.10+**。
+## 启动
 
 ```bash
-cd desktop
 npm install
 npm start
 ```
 
-Windows 双击 `start.bat`。Mac 双击仓库根目录 `打开冷咖啡.command`。Linux 跑 `bash ../打开冷咖啡.sh` 或 `desktop/start.sh`。
+Windows 双击 `start.bat`；macOS/Linux 使用 `start.sh`。需要 Node.js 和 Python 3.10+。
 
-先开一次 Codex，让 `~/.codex/config.toml` 出现，再点一键破甲。
+## 打包
 
-打包：`npm run pack:win` · `npm run pack:mac` · `npm run pack:linux`（AppImage / deb）
+```bash
+npm run pack:win
+npm run pack:mac
+npm run pack:linux
+```
 
 ## 目录
 
+```text
+src/main.js          主进程、IPC、窗口生命周期
+src/preload.js       受限渲染桥
+src/renderer/        Command Center 页面
+src/splash/          MAXIMUM CORE 启动页
+src/lib/             适配器、目录发现、恢复与环境模块
+../projects/         四个模型适配器与共享 Tk 工作台
 ```
-src/            原创 Electron 壳
-src/splash/     开场
-src/renderer/   主台
-src/lib/        调度、体检、挂钩加厚、Desktop 联机
-上一级 projects/  四个模型适配器
-```
 
-## 许可
+## 社群
 
-`LICENSE`（冷咖啡社区许可）。禁止倒卖、禁止闭源衍生。
-
-不要把本机密钥、卡密、快照推进公开仓库。
+- QQ 交流群：`1057540028`
+- QQ 专题群：`1077074552`
+- Telegram 群：`@chachachacha99999`
+- Telegram 频道：`@chachachacha99999999`

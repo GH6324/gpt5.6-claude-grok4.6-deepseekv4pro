@@ -77,8 +77,8 @@ macOS / Linux:
     sh ./install.sh
     sh ./start-claude-pojia.sh
 
-Project: https://github.com/茶/claude-coldbrew
-Release: https://github.com/茶/claude-coldbrew/releases/tag/v{VERSION}
+Project: https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro
+Release: https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/releases/tag/v{VERSION}
 
 ColdBrew community:
     WeChat group QR docs/images/codex-group-qr.png

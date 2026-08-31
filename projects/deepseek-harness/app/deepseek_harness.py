@@ -21,11 +21,16 @@ if not SHARED.is_dir():
 sys.path.insert(0, str(SHARED))
 from coldbrew_ui import launch_shared_gui
 
+PROJECT_SOURCE_URL = "https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro"
+TELEGRAM_GROUP_URL = "https://t.me/chachachacha99999"
+TELEGRAM_CHANNEL_URL = "https://t.me/chachachacha99999999"
+
 COMMUNITY = {
     "qq_group_1": "交流群 1057540028",
     "qq_group_2": "专题群 1077074552",
-    "telegram_group": "@chachachacha99999",
-    "telegram_channel": "@chachacha99999999",
+    "project_source": PROJECT_SOURCE_URL,
+    "telegram_group": TELEGRAM_GROUP_URL,
+    "telegram_channel": TELEGRAM_CHANNEL_URL,
 }
 
 

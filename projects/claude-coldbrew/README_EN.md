@@ -1,10 +1,10 @@
-<p align="center"><a href="https://茶.github.io/claude-coldbrew/"><img src="docs/images/claude-release-board.png" width="1200" alt="Claude Armor Break ColdBrew Studio v3.1.0 product board"></a></p>
+<p align="center"><a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/claude-coldbrew"><img src="docs/images/claude-release-board.png" width="1200" alt="Claude Armor Break ColdBrew Studio v3.2.0 product board"></a></p>
 
 # Claude Armor Break · ColdBrew Studio
 
-**v3.1.0** is a Windows desktop application with a default-ready task chain, reversible user/project deployment, verification, launch, and restore for Claude Code.
+**v3.2.0** is a Windows desktop application with a default-ready task chain, reversible user/project deployment, verification, launch, and restore for Claude Code.
 
-[Download the latest Windows app](https://github.com/茶/claude-coldbrew/releases/latest) · [Product page](https://茶.github.io/claude-coldbrew/) · [中文](README.md) 
+[Download the latest Windows app](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/releases/latest) · [Product page](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/claude-coldbrew) · [中文](README.md)
 
 ## Product boundary
 
@@ -18,7 +18,7 @@ The desktop opens ready for normal work. `冷咖啡` displays the complete start
 
 ## One-click workflow
 
-1. Download `Claude-ColdBrew-Studio-v3.1.0-Windows.exe` from [Releases](https://github.com/茶/claude-coldbrew/releases/latest).
+1. Download `Claude-ColdBrew-Studio-v3.2.0-Windows.exe` from [Releases](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/releases/latest).
 2. Launch it and enter only `冷咖啡`.
 3. Select user scope (`~/.claude`) or project scope (`<project>/.claude`).
 4. Preview the exact file plan and any ownership conflict.
@@ -87,27 +87,30 @@ ColdBrew keeps the first-install baseline across profile switches, writes atomic
 
 <p align="center"><img src="docs/images/product-matrix.png" width="1200" alt="ColdBrew four-repository product matrix"></p>
 
-- [Codex 5.6 ColdBrew](https://github.com/茶/codex5.6-coldbrew)
-- [Claude ColdBrew](https://github.com/茶/claude-coldbrew)
-- [Grok 4.6 ColdBrew](https://github.com/茶/grok4.6-coldbrew)
-- [DeepSeek Harness ColdBrew](https://github.com/茶/deepseek-harness-coldbrew)
+- [Codex 5.6 ColdBrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/codex-coldbrew)
+- [Claude ColdBrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/claude-coldbrew)
+- [Grok 4.6 ColdBrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/grok4.6-coldbrew)
+- [DeepSeek Harness ColdBrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/deepseek-harness)
 
 ## ColdBrew community
 
 | QQ group 1057540028 | QQ group 1077074552 |
 |---|---|
-| <a href="docs/images/qq-group-codex.png"><img src="docs/images/qq-group-codex.png" alt="QQ 1057540028" width="360"></a> | <a href="docs/images/qq-group-codex-claude.png"><img src="docs/images/qq-group-codex-claude.png" alt="QQ 1077074552" width="360"></a> |
+| <a href="docs/images/qq-group-1.jpg"><img src="docs/images/qq-group-1.jpg" alt="QQ 1057540028" width="360"></a> | <a href="docs/images/qq-group-2.jpg"><img src="docs/images/qq-group-2.jpg" alt="QQ 1077074552" width="360"></a> |
 
 ### WeChat group: codex 破甲
 
 <a href="docs/images/codex-group-qr.png"><img src="docs/images/codex-group-qr.png" alt="ColdBrew community WeChat group QR code" width="320"></a>
+
+- Telegram group: [@chachachacha99999](https://t.me/chachachacha99999)
+- Official Telegram channel: [@chachacha99999999](https://t.me/chachachacha99999999)
 
 
 ## Originality and licensing
 
 The implementation is a clean-room synthesis. `MDX-Tom/gpt-5.6-instruct@77e7a649903f9556f2d7bfa0223fa99e123aad52` was reviewed for general preview, ownership, rollback, archive, and regression concepts under MIT. `zxr-roro/GPT5.6-5.5-@b18ceb0322d86480df049147e451cfbea5070e20` has no unified top-level license and was used only to observe public directory and capability taxonomy. No external prompt text, code, Skills, tests, README text, images, state schema, scripts, or release artifacts are included.
 
-The repository uses the **ColdBrew Studio Community License v1.0**. Corresponding source and build materials must stay public. Closed-source redistribution, commercial sale, paid hosting, fee-gated downloads, and rental licensing are prohibited. Because these are use restrictions, this is a source-available community license, not an OSI-approved open-source license. See [LICENSE](LICENSE) and [LICENSE_POLICY.md](LICENSE_POLICY.md).
+The repository uses the **ColdBrew Studio Community License v1.0**. Corresponding source and build materials must stay public. Closed-source redistribution, commercial sale, paid hosting, fee-gated downloads, and rental licensing are prohibited. Because these are use restrictions, this is a source-available community license, not an OSI-approved open-source license. See [LICENSE_POLICY.md](LICENSE_POLICY.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Verification
 

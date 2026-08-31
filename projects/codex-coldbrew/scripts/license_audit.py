@@ -56,7 +56,7 @@ REQUIRED_PHRASES: dict[str, tuple[str, ...]] = {
         "LICENSE_DOCUMENT_NAMES",
         "license_payload",
         "PUBLIC_SOURCE_URL.txt",
-        "https://github.com/茶/codex5.6-coldbrew",
+        "https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro",
         "查看许可证",
         "公开源码",
     ),

@@ -16,14 +16,28 @@ function resolveCore() {
 
 const CORE = resolveCore();
 
+const PROJECT_SOURCE_URL = "https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro";
+const TELEGRAM_GROUP_URL = "https://t.me/chachachacha99999";
+const TELEGRAM_CHANNEL_URL = "https://t.me/chachachacha99999999";
+
 const QQ_GROUPS = [
   { name: "交流群", number: "1057540028" },
   { name: "专题群", number: "1077074552" },
 ];
 
 const TELEGRAM = [
-  { name: "群", handle: "@chachachacha99999", url: "https://t.me/chachachacha99999" },
-  { name: "频道", handle: "@chachacha99999999", url: "https://t.me/chachacha99999999" },
+  { name: "群", handle: "@chachachacha99999", url: TELEGRAM_GROUP_URL },
+  { name: "频道", handle: "@chachacha99999999", url: TELEGRAM_CHANNEL_URL },
+];
+
+// Shared profile vocabulary for the desktop controls. Adapters can map these
+// stable ids to their historical profile names.
+const PROFILES = [
+  { id: "max", label: "MAX / 全开", short: "完整路由、连续上下文与直接交付链。", accent: "#ff9a62" },
+  { id: "focused", label: "FOCUS / 聚焦", short: "短链路执行，优先收敛到当前目标。", accent: "#56d8c7" },
+  { id: "builder", label: "BUILDER / 构建", short: "实现、打包、测试和可复现交付。", accent: "#7aa2ff" },
+  { id: "research", label: "RESEARCH / 研究", short: "来源、证据、结论与未知项分层。", accent: "#f5d76e" },
+  { id: "creative", label: "CREATIVE / 创作", short: "保持角色、语气和长文本连续性。", accent: "#ff6ba8" },
 ];
 
 const BLADES = [
@@ -51,6 +65,7 @@ const TOOLS = [
     homeFirst: false,
     defaultHome: () => process.env.CODEX_HOME || path.join(os.homedir(), ".codex"),
     configName: "config.toml",
+    profileAware: false,
   },
   {
     id: "claude",
@@ -60,14 +75,16 @@ const TOOLS = [
     dir: path.join("projects", "claude-coldbrew"),
     entry: path.join("app", "claude_pojia.py"),
     cwd: path.join("projects", "claude-coldbrew", "app"),
-    deploy: ["install", "--yes", "--profile", "max", "--json"],
-    verify: ["verify", "--profile", "max", "--json"],
+    deploy: ["install", "--yes", "--profile", "max-breaker", "--json"],
+    verify: ["verify", "--profile", "max-breaker", "--json"],
     restore: ["restore", "--yes", "--json"],
     preview: ["plan", "--json"],
     homeFlag: "--home",
     homeFirst: false,
     defaultHome: () => path.join(os.homedir(), ".claude"),
     configName: "CLAUDE.md",
+    profileAware: true,
+    profileMap: { max: "max-breaker", focused: "builder", builder: "builder", research: "research", creative: "creative" },
   },
   {
     id: "grok",
@@ -85,6 +102,8 @@ const TOOLS = [
     homeFirst: true,
     defaultHome: () => path.join(os.homedir(), ".grok"),
     configName: "rules",
+    profileAware: true,
+    profileMap: { max: "max", focused: "focused", builder: "max", research: "research", creative: "creative" },
   },
   {
     id: "deepseek",
@@ -102,6 +121,8 @@ const TOOLS = [
     homeFirst: true,
     defaultHome: () => process.env.DEEPSEEK_COLDBREW_HOME || path.join(os.homedir(), ".deepseek-harness"),
     configName: "session",
+    profileAware: true,
+    profileMap: { max: "max", focused: "focused", builder: "max", research: "research", creative: "creative" },
   },
 ];
 
@@ -120,8 +141,12 @@ function cwdPath(tool) {
 module.exports = {
   ROOT,
   CORE,
+  PROJECT_SOURCE_URL,
+  TELEGRAM_GROUP_URL,
+  TELEGRAM_CHANNEL_URL,
   QQ_GROUPS,
   TELEGRAM,
+  PROFILES,
   BLADES,
   TOOLS,
   toolById,

@@ -28,12 +28,27 @@ function lastJson(text) {
   return null;
 }
 
+function profileArgs(tool, verb, profile) {
+  const source = [...(tool[verb] || [])];
+  if (!tool.profileAware || !profile || !["deploy", "preview", "install", "plan"].includes(verb)) {
+    return source;
+  }
+  const mapped = tool.profileMap?.[profile] || profile;
+  const flag = source.indexOf("--profile");
+  if (flag >= 0) {
+    source[flag + 1] = mapped;
+  } else {
+    source.push("--profile", mapped);
+  }
+  return source;
+}
+
 async function invoke(tool, verb, options = {}) {
   const exe = options.python;
   if (!exe) throw new Error("本机没有可用的 Python。");
   const script = entryPath(tool);
   if (!isFile(script)) throw new Error(`适配器缺失：${script}`);
-  const verbArgs = tool[verb] || [];
+  const verbArgs = profileArgs(tool, verb, options.profile);
   const homeArgs = options.home && tool.homeFlag ? [tool.homeFlag, options.home] : [];
   const args = tool.homeFirst
     ? [script, ...homeArgs, ...verbArgs]
@@ -103,4 +118,5 @@ module.exports = {
   runTool,
   catalogStatus,
   lastJson,
+  profileArgs,
 };

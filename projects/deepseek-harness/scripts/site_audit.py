@@ -19,7 +19,12 @@ TOKENS = (
     "codex5.6-coldbrew", "claude-coldbrew", "grok4.6-coldbrew", "deepseek-harness-coldbrew",
 )
 TEXTS = ("README.md", "README_EN.md", "docs/index.html")
-METADATA_TOKENS = ("DeepSeek Harness ColdBrew", "deepseek-harness-coldbrew", "", "", "Telegram")
+EXPECTED_METADATA = {
+    "description": "DeepSeek Harness ColdBrew | 冷咖啡启动合同 | 可逆本地部署 | 微信群：冷咖啡破甲社区 | QQ：1057540028 / 1077074552 | Telegram 交流群：@chachachacha99999 | 官方频道：@chachacha99999999",
+    "homepage": "https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/deepseek-harness",
+    "name": "deepseek-harness-coldbrew",
+}
+REQUIRED_TOPICS = ("deepseek", "harness", "coldbrew")
 ASSETS = {
     "docs/images/release-board.png": (1600, 900),
     "docs/images/product-matrix.png": (1600, 650),
@@ -46,11 +51,19 @@ def main() -> int:
             checks += 1
             if token not in text:
                 failures.append(f"{relative}: missing {token}")
-    metadata = (ROOT / ".github/repository-metadata.json").read_text(encoding="utf-8")
-    for token in METADATA_TOKENS:
+    try:
+        metadata = json.loads((ROOT / ".github/repository-metadata.json").read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        failures.append(f".github/repository-metadata.json: parse {exc.__class__.__name__}")
+    else:
+        for field, expected in EXPECTED_METADATA.items():
+            checks += 1
+            if metadata.get(field) != expected:
+                failures.append(f".github/repository-metadata.json: {field} mismatch")
+        topics = metadata.get("topics")
         checks += 1
-        if token not in metadata:
-            failures.append(f".github/repository-metadata.json: missing {token}")
+        if not isinstance(topics, list) or not all(topic in topics for topic in REQUIRED_TOPICS):
+            failures.append(".github/repository-metadata.json: required topics missing")
     for relative, expected in ASSETS.items():
         data = (ROOT / relative).read_bytes()
         checks += 2

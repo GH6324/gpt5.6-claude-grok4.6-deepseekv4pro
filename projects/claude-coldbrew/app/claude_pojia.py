@@ -79,7 +79,7 @@ if not all(path.exists() for path in COMMUNITY_IMAGE_PATHS):
     )
 APP_NAME = "Claude 破甲"
 BRAND = "冷咖啡 / ColdBrew"
-PROJECT_SOURCE_URL = "https://github.com/茶/claude-coldbrew"
+PROJECT_SOURCE_URL = "https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro"
 TELEGRAM_GROUP_URL = "https://t.me/chachachacha99999"
 TELEGRAM_CHANNEL_URL = "https://t.me/chachacha99999999"
 TELEGRAM_URL = TELEGRAM_CHANNEL_URL
@@ -357,7 +357,7 @@ def _render_five_edge_rule() -> str:
     try:
         from five_blade.compiler import compile_pack
     except ImportError:
-        return "# FiveEdge\n\n共享五刃内核未随包分发。重新从完整仓库部署。\n"
+        return "# MAXIMUM CORE\n\n共享破甲内核未随包分发。重新从完整仓库部署。\n"
     return compile_pack()
 
 
@@ -1190,7 +1190,7 @@ class StudioWindow:
         tk.Label(hero, text="CLAUDE CODE / INSTRUCTION ENHANCEMENT", bg=self.PANEL, fg=self.LIME, font=("Consolas", 8, "bold")).pack(anchor="w")
         tk.Label(hero, text="Claude\n破甲", bg=self.PANEL, fg=self.TEXT, justify="left", font=(self.UI_FONT, 45, "bold"), pady=0).pack(anchor="w", pady=(16, 14))
         tk.Label(hero, text="输入“冷咖啡”，开启完整任务工作台。", bg=self.PANEL, fg=self.TEXT, font=(self.UI_FONT, 17), justify="left").pack(anchor="w")
-        tk.Label(hero, text="精确口令解锁后，一键部署 CLAUDE.md、8 rules、6 skills、石井 agent、2 commands 和 FiveEdge 五刃内核。", bg=self.PANEL, fg=self.DIM, font=(self.UI_FONT, 10), justify="left", wraplength=680).pack(anchor="w", pady=(8, 8))
+        tk.Label(hero, text="精确口令解锁后，一键部署 CLAUDE.md、8 rules、6 skills、石井 agent、2 commands 和 MAXIMUM CORE 破甲内核。", bg=self.PANEL, fg=self.DIM, font=(self.UI_FONT, 10), justify="left", wraplength=680).pack(anchor="w", pady=(8, 8))
         tk.Label(hero, text="可打型号  Opus 5  ·  Fable 5  ·  4.8  ·  Opus 4.6 / 4.5  ·  Fable 4.6  ·  Sonnet 4.6 / 4.5  ·  Haiku 4.6 / 4.5  ·  Thinking 变体", bg=self.PANEL, fg=self.LIME, font=(self.UI_FONT, 10), justify="left", wraplength=720).pack(anchor="w", pady=(0, 24))
         guide = tk.Frame(hero, bg=self.PANEL_ALT, highlightbackground=self.LINE, highlightthickness=1)
         guide.pack(fill="x")

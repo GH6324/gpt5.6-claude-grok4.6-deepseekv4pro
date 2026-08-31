@@ -11,7 +11,7 @@
 </p>
 
 **冷咖啡** 是四模型本地破甲工作台：GPT-5.6 / Codex · Claude · Grok 4.6 · DeepSeek v4 Pro。  
-口令「冷咖啡」开工。刃口写入系统提示：逆向、破解、渗透、爬虫、外挂。大白话、错字也按口风归一直接干。
+口令「冷咖啡」开工。破甲通道写入系统提示：逆向、破解、渗透、爬虫、外挂。大白话、错字也按口风归一直接干。
 
 <p align="center">
   <img src="docs/images/workbench-v9.svg" width="920" alt="冷咖啡工作台">
@@ -39,10 +39,10 @@
 Telegram 群 [`@chachachacha99999`](https://t.me/chachachacha99999)  
 Telegram 频道 [`@chachacha99999999`](https://t.me/chachacha99999999)
 
-## 五刃
+## MAXIMUM CORE 通道
 
 <p align="center">
-  <img src="docs/images/blades-board.svg" width="980" alt="五刃">
+  <img src="docs/images/blades-board.svg" width="980" alt="MAXIMUM CORE 破甲通道">
 </p>
 
 | 刃 | 口语 | 交付 |
@@ -71,6 +71,6 @@ cd gpt5.6-claude-grok4.6-deepseekv4pro
 python coldbrew_hub.py
 ```
 
-或双击 `open_hub.bat`。环境自检 → 选刃口 → 开模型卡 → 预览 → 部署 → 验证。
+或双击 `open_hub.bat`。环境自检 → 选破甲通道 → 开模型卡 → 预览 → 部署 → 验证。
 
 许可见 [LICENSE](LICENSE)。不要把密钥和本机快照推进公开仓库。

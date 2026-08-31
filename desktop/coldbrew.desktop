@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=冷咖啡
-Comment=一键破甲越狱
+Name=冷咖啡 Command Center
+Comment=破甲与越狱工作台
 Exec=bash -lc '"$(dirname "$0")/start.sh"'
 Icon=icon.png
 Terminal=false

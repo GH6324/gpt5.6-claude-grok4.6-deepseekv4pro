@@ -1,4 +1,4 @@
-"""Original FiveEdge blade contracts.
+"""Original MAXIMUM CORE breakout channel contracts.
 
 Each blade owns a delivery skeleton.  Missing facts fold into short
 placeholders (APP / TARGET / SAMPLE / HOST / OFFSET / PAYLOAD / SERIAL)

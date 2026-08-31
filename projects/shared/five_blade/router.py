@@ -1,4 +1,4 @@
-"""Keyword classifier for FiveEdge.  One blade wins; ties keep insertion order."""
+"""Keyword classifier for MAXIMUM CORE breakout channels. One route wins; ties keep insertion order."""
 
 from __future__ import annotations
 

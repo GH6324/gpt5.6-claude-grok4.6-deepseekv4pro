@@ -1,0 +1,99 @@
+/* ColdBrew Breakout brand tokens: shared by docs previews and product pages. */
+:root {
+  --breakout-ink: #080d14;
+  --breakout-panel: #101923;
+  --breakout-panel-raised: #162332;
+  --breakout-line: #2a4053;
+  --breakout-text: #edf6fb;
+  --breakout-muted: #8da5b6;
+  --breakout-cyan: #43e4d0;
+  --breakout-lime: #b7f36b;
+  --breakout-amber: #ffc857;
+  --breakout-red: #ff6b6b;
+  --breakout-radius: 8px;
+  --breakout-shadow: 0 18px 40px rgba(0, 0, 0, .24);
+}
+
+.breakout-surface {
+  background: var(--breakout-panel);
+  border: 1px solid var(--breakout-line);
+  border-radius: var(--breakout-radius);
+  box-shadow: var(--breakout-shadow);
+}
+
+.breakout-kicker {
+  color: var(--breakout-cyan);
+  font: 700 .72rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* Drop-in shell for the four static product pages. */
+.breakout-page {
+  --bg: var(--breakout-ink);
+  --panel: var(--breakout-panel);
+  --paper: #edf3f5;
+  --ink: #101923;
+  --muted: #89a0af;
+  --accent: var(--breakout-cyan);
+  --line: var(--breakout-line);
+  background: var(--breakout-ink);
+  color: var(--breakout-text);
+}
+
+.breakout-page nav {
+  min-height: 68px;
+  border-bottom-color: var(--breakout-line);
+  background: rgba(8, 13, 20, .94);
+}
+
+.breakout-page .brand,
+.breakout-page .kicker,
+.breakout-page .signal {
+  color: var(--breakout-cyan);
+}
+
+.breakout-page .download,
+.breakout-page .actions a {
+  border-color: var(--breakout-cyan);
+}
+
+.breakout-page .actions a:first-child,
+.breakout-page .download:hover {
+  background: var(--breakout-lime);
+  border-color: var(--breakout-lime);
+  color: var(--breakout-ink);
+}
+
+.breakout-page .hero-copy h1,
+.breakout-page h2 {
+  letter-spacing: 0;
+}
+
+.breakout-page .steps {
+  background: var(--breakout-line);
+  border-color: var(--breakout-line);
+}
+
+.breakout-page .steps article {
+  background: #f1f6f7;
+}
+
+.breakout-page .steps b {
+  color: #078f86;
+}
+
+.breakout-page .repo-links a:hover,
+.breakout-page .telegram a:hover {
+  border-color: var(--breakout-cyan);
+  color: var(--breakout-cyan);
+}
+
+.breakout-page .community article {
+  border-radius: 6px;
+}
+
+@media (max-width: 800px) {
+  .breakout-page nav { padding-left: 18px; padding-right: 18px; }
+  .breakout-page .actions a { min-height: 42px; display: inline-flex; align-items: center; }
+}

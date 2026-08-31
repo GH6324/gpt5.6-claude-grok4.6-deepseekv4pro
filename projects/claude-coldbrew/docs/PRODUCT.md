@@ -53,6 +53,6 @@ only that local files, state, hashes or tests passed.
 
 The app, README and Pages must show both QQ groups (`1057540028`, `1077074552`),
 the Telegram group `https://t.me/chachachacha99999`, the official channel
-`https://t.me/chachacha99999999`, the owner-provided WeChat group QR, real application
+`https://t.me/chachachacha99999999`, the owner-provided WeChat group QR, real application
 captures, the owner portrait and the exact activation document without UTF-8
 replacement characters or repeated ASCII question-mark corruption.

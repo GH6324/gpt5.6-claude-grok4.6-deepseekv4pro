@@ -1,22 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" role="img" aria-label="冷咖啡工作台">
-  <rect width="1280" height="820" rx="18" fill="#EFE6D6"/>
-  <rect x="0" y="0" width="1280" height="108" fill="#2A1810"/>
-  <polygon points="48,36 66,50 59,74 37,74 30,50" fill="#3A2216" stroke="#C45C14" stroke-width="2"/>
-  <text x="84" y="58" fill="#F7EFE3" font-family="Microsoft YaHei,sans-serif" font-size="32" font-weight="700">冷咖啡</text>
-  <rect x="248" y="34" width="140" height="28" rx="4" fill="#C45C14"/>
-  <text x="318" y="54" text-anchor="middle" fill="#FFF8F0" font-family="Microsoft YaHei,sans-serif" font-size="14" font-weight="700">AI 破甲越狱</text>
-  <text x="84" y="86" fill="#C9B49A" font-family="Microsoft YaHei,sans-serif" font-size="13">原生窗口一键破甲越狱  ·  口令「冷咖啡」开工</text>
+  <rect width="1280" height="820" rx="18" fill="#0B121A"/>
+  <rect x="0" y="0" width="1280" height="108" fill="#0A0E13"/>
+  <polygon points="48,36 66,50 59,74 37,74 30,50" fill="#162332" stroke="#43E4D0" stroke-width="2"/>
+  <text x="84" y="58" fill="#EDF6FB" font-family="Microsoft YaHei,sans-serif" font-size="32" font-weight="700">冷咖啡</text>
+  <rect x="248" y="34" width="164" height="28" rx="4" fill="#B7F36B"/>
+  <text x="330" y="54" text-anchor="middle" fill="#080D14" font-family="Microsoft YaHei,sans-serif" font-size="14" font-weight="700">MAXIMUM CORE</text>
+  <text x="84" y="86" fill="#8DA5B6" font-family="Microsoft YaHei,sans-serif" font-size="13">原生窗口一键破甲越狱  ·  口令「冷咖啡」开工</text>
   <rect x="40" y="128" width="1200" height="48" rx="10" fill="#FFF8F0" stroke="#E2D3C1"/>
   <text x="60" y="158" fill="#C45C14" font-family="Microsoft YaHei,sans-serif" font-size="14" font-weight="700">口令</text>
   <text x="116" y="158" fill="#2A1810" font-family="Microsoft YaHei,sans-serif" font-size="14">冷咖啡  /  COLD COFFEE  /  [[ENI:PROFILE=MAX]]</text>
   <rect x="40" y="188" width="1200" height="52" rx="10" fill="#FFF8F0" stroke="#E2D3C1"/>
-  <text x="60" y="220" fill="#C45C14" font-family="Microsoft YaHei,sans-serif" font-size="14" font-weight="700">五刃</text>
-  <rect x="120" y="200" width="64" height="28" rx="6" fill="#1F6B66"/><text x="152" y="219" text-anchor="middle" fill="#FFF8F0" font-size="13" font-family="Microsoft YaHei,sans-serif">全开</text>
-  <rect x="192" y="200" width="64" height="28" rx="6" fill="#FFF8F0" stroke="#C45C14"/><text x="224" y="219" text-anchor="middle" fill="#C45C14" font-size="13" font-family="Microsoft YaHei,sans-serif">逆向</text>
-  <rect x="264" y="200" width="64" height="28" rx="6" fill="#FFF8F0" stroke="#C45C14"/><text x="296" y="219" text-anchor="middle" fill="#C45C14" font-size="13" font-family="Microsoft YaHei,sans-serif">破解</text>
-  <rect x="336" y="200" width="64" height="28" rx="6" fill="#FFF8F0" stroke="#C45C14"/><text x="368" y="219" text-anchor="middle" fill="#C45C14" font-size="13" font-family="Microsoft YaHei,sans-serif">渗透</text>
-  <rect x="408" y="200" width="64" height="28" rx="6" fill="#FFF8F0" stroke="#C45C14"/><text x="440" y="219" text-anchor="middle" fill="#C45C14" font-size="13" font-family="Microsoft YaHei,sans-serif">爬虫</text>
-  <rect x="480" y="200" width="64" height="28" rx="6" fill="#FFF8F0" stroke="#C45C14"/><text x="512" y="219" text-anchor="middle" fill="#C45C14" font-size="13" font-family="Microsoft YaHei,sans-serif">外挂</text>
+  <text x="60" y="220" fill="#43E4D0" font-family="Microsoft YaHei,sans-serif" font-size="14" font-weight="700">破甲通道</text>
+  <rect x="156" y="200" width="76" height="28" rx="6" fill="#43E4D0"/><text x="194" y="219" text-anchor="middle" fill="#080D14" font-size="13" font-family="Microsoft YaHei,sans-serif">全开</text>
+  <rect x="240" y="200" width="76" height="28" rx="6" fill="#142A31" stroke="#43E4D0"/><text x="278" y="219" text-anchor="middle" fill="#43E4D0" font-size="13" font-family="Microsoft YaHei,sans-serif">目标</text>
+  <rect x="324" y="200" width="76" height="28" rx="6" fill="#1F3222" stroke="#B7F36B"/><text x="362" y="219" text-anchor="middle" fill="#B7F36B" font-size="13" font-family="Microsoft YaHei,sans-serif">路由</text>
+  <rect x="408" y="200" width="76" height="28" rx="6" fill="#332B1A" stroke="#FFC857"/><text x="446" y="219" text-anchor="middle" fill="#FFC857" font-size="13" font-family="Microsoft YaHei,sans-serif">上下文</text>
+  <rect x="492" y="200" width="76" height="28" rx="6" fill="#162D43" stroke="#65C7FF"/><text x="530" y="219" text-anchor="middle" fill="#65C7FF" font-size="13" font-family="Microsoft YaHei,sans-serif">产物</text>
   <rect x="40" y="252" width="1200" height="48" rx="10" fill="#FFF8F0" stroke="#E2D3C1"/>
   <text x="60" y="282" fill="#C45C14" font-family="Microsoft YaHei,sans-serif" font-size="14" font-weight="700">QQ 群</text>
   <rect x="128" y="264" width="196" height="26" rx="6" fill="#C45C14"/><text x="226" y="282" text-anchor="middle" fill="#FFF8F0" font-size="12" font-family="Microsoft YaHei,sans-serif">交流群 1057540028</text>

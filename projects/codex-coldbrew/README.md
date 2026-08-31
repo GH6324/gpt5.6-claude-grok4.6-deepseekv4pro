@@ -1,12 +1,12 @@
-<p align="center"><a href="https://茶.github.io/codex5.6-coldbrew/"><img src="docs/images/codex-release-board.png" width="1200" alt="Codex 破甲 ColdBrew Studio v6.1.0 工作台与产品视觉板"></a></p>
+<p align="center"><a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/codex-coldbrew"><img src="docs/images/codex-release-board.png" width="1200" alt="Codex 破甲 ColdBrew Studio v7.1.0 工作台与产品视觉板"></a></p>
 
 <h1 align="center">Codex 破甲 · 冷咖啡</h1>
 
-<p align="center"><strong>Codex ColdBrew Studio v6.1.0</strong><br>默认任务链直接就绪，保留多层部署、预览、验证、启动与完整恢复。</p>
+<p align="center"><strong>Codex ColdBrew Studio v7.1.0</strong><br>默认任务链直接就绪，保留多层部署、预览、验证、启动与完整恢复。</p>
 
 <p align="center">
-  <a href="https://github.com/茶/codex5.6-coldbrew/releases/latest"><strong>下载 Windows 软件</strong></a> ·
-  <a href="https://茶.github.io/codex5.6-coldbrew/"><strong>查看宣传页</strong></a> ·
+  <a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/releases/latest"><strong>下载 Windows 软件</strong></a> ·
+  <a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/codex-coldbrew"><strong>查看宣传页</strong></a> ·
   <a href="README_EN.md"><strong>English</strong></a> ·
    ·
   
@@ -39,8 +39,8 @@ Windows 用户打开软件后，预览、部署、验证、恢复与启动控制
 
 ### Windows
 
-1. 打开 [Releases](https://github.com/茶/codex5.6-coldbrew/releases/latest)。
-2. 下载 `Codex-ColdBrew-Studio-v6.1.0-Windows.exe`。
+1. 打开 [Releases](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/releases/latest)。
+2. 下载 `Codex-ColdBrew-Studio-v7.1.0-Windows.exe`。
 3. 双击软件后先点“预览变更”，确认目标为自己的 Codex Home。
 4. 需要完整启动文案时，在顶部输入框输入 `冷咖啡`；已有旧工作流可使用 `cold coffee` 或 `[[ENI:PROFILE=MAX]]`。
 5. 点“一键部署”，完成后运行“验证部署”。
@@ -146,10 +146,10 @@ eni-solo v4.0.0 包（89 个技能、确定性路由器、石井人格清单与 
 
 | 产品 | 仓库 | 用途 |
 |---|---|---|
-| Codex 5.6 ColdBrew | [codex5.6-coldbrew](https://github.com/茶/codex5.6-coldbrew) | Codex 多层本地指令部署工作台 |
-| Claude ColdBrew | [claude-coldbrew](https://github.com/茶/claude-coldbrew) | Claude Code 多层规则部署工作台 |
-| Grok 4.6 ColdBrew | [grok4.6-coldbrew](https://github.com/茶/grok4.6-coldbrew) | Grok 会话模板与系统提示词工作台 |
-| DeepSeek Harness ColdBrew | [deepseek-harness-coldbrew](https://github.com/茶/deepseek-harness-coldbrew) | DeepSeek 本地 Harness 配置工作台 |
+| Codex 5.6 ColdBrew | [codex5.6-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/codex-coldbrew) | Codex 多层本地指令部署工作台 |
+| Claude ColdBrew | [claude-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/claude-coldbrew) | Claude Code 多层规则部署工作台 |
+| Grok 4.6 ColdBrew | [grok4.6-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/grok4.6-coldbrew) | Grok 会话模板与系统提示词工作台 |
+| DeepSeek Harness ColdBrew | [deepseek-harness-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/deepseek-harness) | DeepSeek 本地 Harness 配置工作台 |
 
 
 ## 原创与来源
@@ -167,16 +167,16 @@ eni-solo v4.0.0 包（89 个技能、确定性路由器、石井人格清单与 
 
 本仓库使用 **ColdBrew Studio Community License v1.0**。源代码、构建材料和项目自有资源必须保持公开；禁止闭源再发布、商业销售、付费托管、收费下载、租赁授权或把修改版放在付费墙后。该许可证包含使用限制，因此不是 OSI 认可的开源许可证；准确分类是**源码公开 / source-available 社区许可证**。
 
-详见 [LICENSE](LICENSE) 与 [LICENSE_POLICY.md](LICENSE_POLICY.md)。第三方商标和素材权利不因本许可证转让。
+详见 [LICENSE_POLICY.md](LICENSE_POLICY.md)。第三方商标和素材权利不因本许可证转让。
 
 ## 发布与验证
 
-v6.1.0 发布资产：
+v7.1.0 发布资产：
 
-- `Codex-ColdBrew-Studio-v6.1.0-Windows.exe`
-- `Codex-ColdBrew-Studio-v6.1.0-Windows.sha256`
-- `Codex-ColdBrew-Studio-v6.1.0-Source.zip`
-- `Codex-ColdBrew-Studio-v6.1.0-Source.sha256`
+- `Codex-ColdBrew-Studio-v7.1.0-Windows.exe`
+- `Codex-ColdBrew-Studio-v7.1.0-Windows.sha256`
+- `Codex-ColdBrew-Studio-v7.1.0-Source.zip`
+- `Codex-ColdBrew-Studio-v7.1.0-Source.sha256`
 
 开发者回归：
 
@@ -210,7 +210,7 @@ docs/            GitHub Pages、产品文档、截图与社区图片
 | QQ 群：codex 破甲 | QQ 群：codex claude 破甲 |
 |---|---|
 | 群号 **1057540028** | 群号 **1077074552** |
-| <img src="docs/images/qq-group-codex.png" alt="QQ群 1057540028" width="300"> | <img src="docs/images/qq-group-codex-claude.png" alt="QQ群 1077074552" width="300"> |
+| <img src="docs/images/qq-group-1.jpg" alt="QQ群 1057540028" width="300"> | <img src="docs/images/qq-group-2.jpg" alt="QQ群 1077074552" width="300"> |
 
 - 微信群：**冷咖啡破甲社区**
 

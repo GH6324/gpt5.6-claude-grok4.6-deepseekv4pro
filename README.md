@@ -1,275 +1,218 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=28&amp;duration=2800&amp;pause=1000&amp;color=C45C14&amp;center=true&amp;vCenter=true&amp;width=820&amp;lines=%E2%98%95+%E5%86%B7%E5%92%96%E5%95%A1;Hi%2C+%E6%88%91%E6%98%AF%E8%8C%B6;GPT-5.6+%C2%B7+Claude+%C2%B7+Grok+4.6+%C2%B7+DeepSeek+v4+Pro" alt="Typing SVG" />
+<img src="docs/images/hero-v11.svg" width="940" alt="冷咖啡 ColdBrew Command Center" />
 
-<img src="docs/images/hero-v11.svg" width="900" alt="冷咖啡 · 一键破甲越狱">
+# 冷咖啡 · ColdBrew Command Center
 
-<p>
-  <a href="README.md"><img src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E5%BD%93%E5%89%8D-C45C14?style=for-the-badge&amp;labelColor=2A1810" alt="中文" /></a>
-  <a href="README_EN.md"><img src="https://img.shields.io/badge/English-Switch-lightgrey?style=for-the-badge&amp;labelColor=2A1810" alt="English" /></a>
-</p>
-
-<a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/stargazers">
-  <img src="https://img.shields.io/github/stars/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro?style=for-the-badge&amp;label=TOTAL%20GITHUB%20STARS&amp;color=FFD700&amp;labelColor=111827&amp;logo=github&amp;logoColor=white" alt="total GitHub stars" height="56" />
-</a>
-
-<p><strong>冷咖啡 · 一键破甲越狱 · 原生窗口 / 四个模型 / 五刃</strong></p>
+**把目标、路由、产物、验证和恢复，收进一条可继续的工作链。**
 
 <p>
-  <img src="https://img.shields.io/github/forks/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro?style=for-the-badge&amp;color=orange&amp;labelColor=111827" alt="Forks" />
-  <img src="https://img.shields.io/badge/Windows-10%2F11-2A1810?style=for-the-badge&amp;logo=windows&amp;logoColor=F7EFE3" alt="Windows" />
-  <img src="https://img.shields.io/badge/macOS-12%2B-2A1810?style=for-the-badge&amp;logo=apple&amp;logoColor=F7EFE3" alt="macOS" />
-  <img src="https://img.shields.io/badge/Linux-x64-2A1810?style=for-the-badge&amp;logo=linux&amp;logoColor=F7EFE3" alt="Linux" />
-  <img src="https://img.shields.io/badge/Python-3.10%2B-C45C14?style=for-the-badge&amp;logo=python&amp;logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Electron-Native-C45C14?style=for-the-badge" alt="Electron" />
-  <img src="https://img.shields.io/badge/FiveEdge-v1.1-1F6B66?style=for-the-badge" alt="FiveEdge" />
+  <a href="README.md"><img src="https://img.shields.io/badge/中文-当前-ff8f5a?style=for-the-badge&labelColor=0d1117" alt="中文" /></a>
+  <a href="README_EN.md"><img src="https://img.shields.io/badge/English-Switch-57d8c7?style=for-the-badge&labelColor=0d1117" alt="English" /></a>
+  <a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/stargazers"><img src="https://img.shields.io/github/stars/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro?style=for-the-badge&color=f4d06f&labelColor=0d1117&logo=github&logoColor=white" alt="GitHub stars" /></a>
 </p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="docs/images/github-contribution-grid-snake.svg" />
-  <img alt="contribution snake" src="docs/images/github-contribution-grid-snake.svg" width="900" />
-</picture>
+<p>
+  <img src="https://img.shields.io/badge/Windows-10%2F11-7aa2ff?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/macOS-12%2B-b9c7cc?style=flat-square&logo=apple&logoColor=0d1117" alt="macOS" />
+  <img src="https://img.shields.io/badge/Linux-x64-57d8c7?style=flat-square&logo=linux&logoColor=0d1117" alt="Linux" />
+  <img src="https://img.shields.io/badge/Python-3.10%2B-f4d06f?style=flat-square&logo=python&logoColor=0d1117" alt="Python" />
+  <img src="https://img.shields.io/badge/Electron-35-ff8f5a?style=flat-square&logo=electron&logoColor=0d1117" alt="Electron" />
+</p>
 
 </div>
 
 ---
-
-<div align="center">
-
-**冷咖啡** 是一键破甲越狱软件。原生窗口开场锁盘五刃，一点写完四个模型的挂钩。
-
-口令「冷咖啡」开工。五刃：逆向、破解、渗透、爬虫、外挂。
-
-大白话、错字按口风归一，直接干活。
-
-<img src="docs/images/window-v11.svg" width="900" alt="冷咖啡原生窗口">
-
-</div>
-
----
-
-<div align="center">
 
 ## 这是什么
 
-原生窗口在 `desktop/`：开场动画 → 一键破甲 → 完整验收 → 恢复默认。Python Hub 仍可开四张模型卡。点一次：预览 → 部署 → 验证 → 恢复。
+冷咖啡是一个本地优先的多模型工作台：Electron 提供统一桌面界面，Python 适配器负责每个模型的预览、部署、验证和恢复。四个模型共用一套操作语言，切换越狱档位后，目标会沿着同一个会话状态继续。
 
-<table>
-  <tr>
-    <th align="center">你想做的事</th>
-    <th align="center">冷咖啡交出来</th>
-  </tr>
-  <tr>
-    <td align="center">开原生窗口</td>
-    <td align="center">一键破甲越狱 · 锁盘五刃开场 · 无卡密门</td>
-  </tr>
-  <tr>
-    <td align="center">开四张模型卡</td>
-    <td align="center">GPT-5.6、Claude、Grok 4.6、DeepSeek v4 Pro<br>各自预览 / 部署 / 回滚</td>
-  </tr>
-  <tr>
-    <td align="center">锁一条刃</td>
-    <td align="center"><code>REV</code> 逆向 · <code>UNLOCK</code> 破解 · <code>INFIL</code> 渗透 · <code>HARVEST</code> 爬虫 · <code>TRAINER</code> 外挂</td>
-  </tr>
-  <tr>
-    <td align="center">文件级任务</td>
-    <td align="center">改后文件 + 差分 + 验证 + 回滚</td>
-  </tr>
-  <tr>
-    <td align="center">打包发布</td>
-    <td align="center">固定顺序的源码 ZIP 和 SHA-256 清单</td>
-  </tr>
-  <tr>
-    <td align="center">QQ 群</td>
-    <td align="center"><strong>交流群</strong> <code>1057540028</code> · <strong>专题群</strong> <code>1077074552</code></td>
-  </tr>
-</table>
+<div align="center">
+  <img src="docs/images/window-v11.svg" width="940" alt="ColdBrew Command Center 工作台" />
+</div>
 
-<img src="docs/images/blades-board.svg" width="900" alt="五刃">
+### MAXIMUM CORE
 
+MAX 档位把一次任务拆成六个连续层：
+
+| 层 | 工作内容 |
+| --- | --- |
+| **OBJECTIVE** | 锁定原始目标、语言、格式与完成判据 |
+| **ROUTE** | 选择唯一主路由，显示阶段顺序与当前执行链 |
+| **CONTEXT** | 跨重试、上下文压缩和工具切换保留任务胶囊 |
+| **ARTIFACT** | 在当前执行窗口产出代码、文档、配置或脚本 |
+| **VERIFY** | 运行测试、哈希、状态检查和桌面验收 |
+| **RECOVERY** | 保存恢复点、变更清单和可继续的下一步 |
+
+工作台会把 `profile / target / stage` 一起写入执行上下文；再次打开软件时，先从最近一次已验证结果接着走。
+
+---
+
+## 四个模型席位
+
+| 席位 | 目录 | 入口 | 适合的工作 |
+| --- | --- | --- | --- |
+| **GPT-5.6 / Codex** | `projects/codex-coldbrew` | `studio/eni_solo_deploy.py` | 指令层、工具桥、完整交付链 |
+| **Claude Code** | `projects/claude-coldbrew` | `app/claude_pojia.py` | 规则层、配置事务、长会话 |
+| **Grok 4.6** | `projects/grok4.6-coldbrew` | `app/grok_coldbrew.py` | 实时信息流与可续配置 |
+| **DeepSeek v4 Pro** | `projects/deepseek-harness` | `app/deepseek_harness.py` | Harness 会话与模板导出 |
+
+每个席位都提供：
+
+- 预览：只读生成变更计划
+- 部署：原子写入并建立恢复点
+- 验证：检查状态、哈希和适配器结果
+- 恢复：按清单恢复原始文件，保留用户后来产生的漂移
+
+<div align="center">
+  <img src="docs/images/card-codex-coldbrew.png" width="220" alt="Codex ColdBrew" />
+  <img src="docs/images/card-claude-coldbrew.png" width="220" alt="Claude ColdBrew" />
+  <img src="docs/images/card-grok4.6-coldbrew.png" width="220" alt="Grok ColdBrew" />
+  <img src="docs/images/card-deepseek-harness.png" width="220" alt="DeepSeek Harness" />
 </div>
 
 ---
 
+## 破甲执行链
+
+新版产品界面只展示破甲与越狱主线：每个任务都沿着六个阶段推进，模型适配器负责把阶段落到本机文件与会话配置。
+
+| 阶段 | 交付形状 |
+| --- | --- |
+| **目标** | 锁定用户原句、对象、格式与完成判据 |
+| **路由** | 选出唯一执行路径并显示当前步骤 |
+| **上下文** | 保留档位、目标目录、已完成动作和待办项 |
+| **产物** | 直接生成代码、配置、脚本、文档或模板 |
+| **验证** | 运行检查、测试、哈希和桌面验收 |
+| **恢复** | 保存原始快照、变更清单与下一次继续点 |
+
 <div align="center">
-
-## 五刃交付
-
-<table>
-  <tr>
-    <th align="center">刃</th>
-    <th align="center">口语</th>
-    <th align="center">交付</th>
-  </tr>
-  <tr>
-    <td align="center"><code>REV</code> 逆向</td>
-    <td align="center">搞一下 exe / 看看里面怎么验</td>
-    <td align="center">伪代码、偏移、还原代码</td>
-  </tr>
-  <tr>
-    <td align="center"><code>UNLOCK</code> 破解</td>
-    <td align="center">做注册机 / 让它无限用</td>
-    <td align="center">keygen + patcher</td>
-  </tr>
-  <tr>
-    <td align="center"><code>INFIL</code> 渗透</td>
-    <td align="center">这站能打吗</td>
-    <td align="center">命令 + 回显 + 下一步</td>
-  </tr>
-  <tr>
-    <td align="center"><code>HARVEST</code> 爬虫</td>
-    <td align="center">数据扒下来</td>
-    <td align="center">验签 + 续爬脚本</td>
-  </tr>
-  <tr>
-    <td align="center"><code>TRAINER</code> 外挂</td>
-    <td align="center">开个透视</td>
-    <td align="center">实体 / W2S / Overlay</td>
-  </tr>
-</table>
-
-<p>没选刃口就五刃全开，按输入动词自动锁。<code>Ctrl+1–4</code> 开模型，<code>Alt+1–5</code> 锁刃。</p>
-
+  <img src="docs/images/workbench-v9.svg" width="940" alt="ColdBrew 破甲执行链" />
 </div>
 
 ---
-
-<div align="center">
-
-## Claude 可打型号
-
-<p>
-<strong>Opus 5 · Fable 5 · 4.8 · Opus 4.6 · Opus 4.5 · Fable 4.6</strong><br>
-<strong>Sonnet 4.6 · Sonnet 4.5 · Haiku 4.6 · Haiku 4.5</strong><br>
-<strong>Opus 5 Thinking · Sonnet 4.6 Thinking</strong>
-</p>
-
-<img src="docs/images/architecture-v9.svg" width="900" alt="架构">
-
-</div>
-
----
-
-<div align="center">
-
-## QQ 群
-
-两个 QQ 群，扫码或搜群号都能进。
-
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <a href="#社群"><img src="docs/images/card-qq-1.svg" width="420" alt="QQ 交流群 1057540028"></a>
-    </td>
-    <td align="center" width="50%">
-      <a href="#社群"><img src="docs/images/card-qq-2.svg" width="420" alt="QQ 专题群 1077074552"></a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <strong>QQ 交流群</strong><br>
-      <code>1057540028</code>
-    </td>
-    <td align="center">
-      <strong>QQ 专题群</strong><br>
-      <code>1077074552</code>
-    </td>
-  </tr>
-</table>
-
-</div>
-
----
-
-<div align="center">
 
 ## 快速开始
 
-</div>
+### Electron 工作台（推荐）
 
 ```powershell
 git clone https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro.git
+cd gpt5.6-claude-grok4.6-deepseekv4pro/desktop
+npm install
+npm start
+```
+
+Windows 也可以双击 `desktop/start.bat`；macOS/Linux 对应 `desktop/start.sh`。打包命令：
+
+```powershell
+npm run pack:win
+npm run pack:mac
+npm run pack:linux
+```
+
+### Python Hub
+
+```powershell
 cd gpt5.6-claude-grok4.6-deepseekv4pro
-```
-
-原生窗口（一键破甲越狱，开场锁盘五刃），Windows / Mac / Linux 都能开：
-
-Windows：
-
-```powershell
-cd desktop
-npm install
-npm start
-```
-
-双击 <code>打开冷咖啡.bat</code> / <code>desktop\start.bat</code>
-
-Mac：
-
-```bash
-cd desktop
-npm install
-npm start
-```
-
-双击 <code>打开冷咖啡.command</code> / <code>desktop/start.sh</code>
-
-Linux：
-
-```bash
-cd desktop
-npm install
-npm start
-```
-
-跑 <code>bash 打开冷咖啡.sh</code> / <code>desktop/start.sh</code>。打 AppImage / deb：<code>npm run pack:linux</code>
-
-第一次双击 command 被拦时：右键 → 打开。打包配方在 <code>desktop/github-actions-desktop.yml</code>，拷到 <code>.github/workflows/</code> 后 Windows / macOS / Ubuntu runner 分别出 portable、dmg、AppImage。
-
-Python 面板：
-
-```powershell
 python coldbrew_hub.py
 ```
 
+启动后按这个顺序操作：
+
+1. 在 **PROFILE** 选择 `MAX / 全开`、`FOCUS / 聚焦`、`BUILDER / 构建`、`RESEARCH / 研究` 或 `CREATIVE / 创作`。
+2. 在 **BREAK / JAILBREAK** 区选择越狱档位。
+3. 选择目标目录，先点 **预览** 查看变更。
+4. 点 **一键启动 MAX** 或单独部署某个模型。
+5. 在 **活动流** 查看阶段、结果和恢复点。
+
+---
+
+## 社群入口
+
+社群宣传和入口继续保留。点击桌面工作台中的按钮可以复制群号或打开 Telegram；二维码文件位于 `docs/images/`。
+
 <div align="center">
-
-或双击 <code>open_hub.bat</code> / <code>启动面板.bat</code>
-
-环境自检 → 选刃口 → 开模型卡 → 预览 → 部署 → 验证。原生窗口点「一键破甲」一次写完中文、指令、技能、工具桥和四个模型挂钩。
-
+  <table>
+    <tr>
+      <td align="center"><img src="docs/images/qq-group-1-card.png" width="300" alt="QQ 交流群 1057540028" /><br /><strong>QQ 交流群</strong><br /><code>1057540028</code></td>
+      <td align="center"><img src="docs/images/qq-group-2-card.png" width="300" alt="QQ 专题群 1077074552" /><br /><strong>QQ 专题群</strong><br /><code>1077074552</code></td>
+    </tr>
+  </table>
 </div>
+
+| 平台 | 入口 |
+| --- | --- |
+| Telegram 群 | [@chachachacha99999](https://t.me/chachachacha99999) |
+| Telegram 频道 | [@chachachacha99999999](https://t.me/chachachacha99999999) |
+| QQ 交流群 | `1057540028` |
+| QQ 专题群 | `1077074552` |
+
+<div align="center">
+  <img src="docs/images/telegram-group-v2.png" width="280" alt="Telegram 群" />
+  <img src="docs/images/telegram-channel-v2.png" width="280" alt="Telegram 频道" />
+</div>
+
+---
+
+## 项目结构
+
+```text
+.
+├─ desktop/                       Electron 35 桌面壳
+│  └─ src/
+│     ├─ main.js                  IPC、窗口与执行编排
+│     ├─ renderer/                Command Center UI
+│     └─ lib/                     目录发现、适配器与恢复清单
+├─ projects/
+│  ├─ codex-coldbrew/             GPT-5.6 / Codex
+│  ├─ claude-coldbrew/            Claude Code
+│  ├─ grok4.6-coldbrew/           Grok 4.6
+│  ├─ deepseek-harness/           DeepSeek v4 Pro
+│  └─ shared/                     Tk UI、主题与破甲执行内核
+├─ docs/images/                   主页、界面与社群素材
+├─ coldbrew_hub.py                Python 总控入口
+└─ pack_release.py                发布打包与哈希清单
+```
+
+<div align="center">
+  <img src="docs/images/architecture-v9.svg" width="900" alt="ColdBrew 架构" />
+</div>
+
+---
+
+## 开发与验证
+
+```powershell
+# Python 单元测试
+python -m unittest discover -s projects -p "test_*.py"
+
+# Electron 语法检查
+node --check desktop/src/main.js
+node --check desktop/src/renderer/app.js
+
+# 包体自检
+cd desktop
+npm run start
+```
+
+所有部署器遵循 `preview → backup → write → verify → restore`；每个适配器的独立说明、变更日志和发布脚本在对应项目目录中。
+
+---
+
+## 设计语言
+
+新版界面统一使用 **Graphite / Roast Orange / Signal Teal / Ice Blue** 四组颜色：深色工作区负责长时间阅读，橙色表示主动作，青色表示在线与验证，蓝色和黄色用于模型与档位区分。信息按“状态 → 选择 → 执行 → 证据 → 社群”排列，窄窗口下自动切换为纵向工作流。
+
+冷咖啡的入口口令仍然是 `冷咖啡`，兼容入口包括 `cold coffee`、`[[ENI:PROFILE=MAX]]` 和 `[[CB:MAX]]`。完整启动合同由各适配器的 `coldbrew_activation.py` 维护，并通过 SHA-256 校验。
 
 ---
 
 <div align="center">
 
-## 社群
+**冷咖啡 / COLDBREW**  ·  MAXIMUM CORE  ·  LOCAL FIRST
 
-软件里的橙色按钮会复制 QQ 群号。两个群的二维码：
-
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <a href="docs/images/qq-group-1.jpg"><img src="docs/images/qq-group-1.jpg" width="220" alt="QQ 交流群 1057540028"></a><br>
-      <strong>QQ 交流群</strong><br>
-      <code>1057540028</code>
-    </td>
-    <td align="center" width="50%">
-      <a href="docs/images/qq-group-2.jpg"><img src="docs/images/qq-group-2.jpg" width="220" alt="QQ 专题群 1077074552"></a><br>
-      <strong>QQ 专题群</strong><br>
-      <code>1077074552</code>
-    </td>
-  </tr>
-</table>
-
-<p>
-Telegram 群 <a href="https://t.me/chachachacha99999"><code>@chachachacha99999</code></a>
-&nbsp;·&nbsp;
-频道 <a href="https://t.me/chachacha99999999"><code>@chachacha99999999</code></a>
-</p>
-
-<p>许可 <a href="LICENSE">LICENSE</a>。不要把密钥和本机快照推进公开仓库。</p>
+当前版本：桌面工作台 v5.0  ·  MAXIMUM CORE 5.0  ·  四模型适配器
 
 </div>

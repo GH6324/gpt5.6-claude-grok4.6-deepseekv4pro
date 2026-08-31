@@ -1,8 +1,8 @@
-# Codex ColdBrew Studio v6 product contract
+# Codex ColdBrew Studio v7.1.0 product contract
 
 ## Product promise
 
-Codex ColdBrew Studio v6 is a dedicated desktop and command-line product. A
+Codex ColdBrew Studio v7.1.0 is a dedicated desktop and command-line product. A
 beginner can preview, deploy, verify, launch and restore a multi-layer Codex
 instruction pack from one visible application. The Windows release is a single
 executable; source launchers call the same Python core.
@@ -54,8 +54,8 @@ alter a remote service's server-side policy.
   fail; review self-test and bundled license export pass.
 - Source: deterministic stored ZIP, stable timestamps and permissions, internal
   manifest, external checksum sidecar and repository manifest.
-- Assets: `Codex-ColdBrew-Studio-v6.1.0-Windows.exe` and
-  `Codex-ColdBrew-Studio-v6.1.0-Source.zip`, each with a SHA-256 sidecar.
+- Assets: `Codex-ColdBrew-Studio-v7.1.0-Windows.exe` and
+  `Codex-ColdBrew-Studio-v7.1.0-Source.zip`, each with a SHA-256 sidecar.
 
 ## Acceptance criteria
 
@@ -64,7 +64,7 @@ alter a remote service's server-side policy.
 - Both real application captures render without clipping at desktop sizes.
 - Owner portrait, both QQ groups, the Telegram group
   `https://t.me/chachachacha99999` and official channel
-  `https://t.me/chachacha99999999` plus the owner-provided WeChat group QR
+  `https://t.me/chachachacha99999999` plus the owner-provided WeChat group QR
   appear in the app, README and Pages.
 - A temporary Codex home installs, switches profiles, verifies and restores
   without changing unrelated user content.

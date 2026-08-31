@@ -1,131 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>3641397194-wq · GitHub preview</title>
-<style>
-  :root {
-    --canvas: #0d1117;
-    --panel: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --link: #58a6ff;
-    --paper: #0d1117;
-    --accent: #C45C14;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",Helvetica,Arial,sans-serif;
-    background: var(--canvas); color: var(--text);
-  }
-  a { color: var(--link); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .top {
-    height: 64px; display: flex; align-items: center; gap: 16px;
-    padding: 0 24px; border-bottom: 1px solid var(--border); background: #010409;
-  }
-  .mark {
-    width: 32px; height: 32px; border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #E8C9A0, #2A1810);
-  }
-  .crumb { font-size: 16px; }
-  .pill {
-    margin-left: auto; font-size: 12px; color: #E8C9A0;
-    border: 1px solid #3A2216; border-radius: 20px; padding: 4px 10px;
-  }
-  .layout {
-    max-width: 1280px; margin: 24px auto 64px; padding: 0 24px;
-    display: grid; grid-template-columns: 296px 1fr; gap: 28px;
-  }
-  .avatar {
-    width: 260px; height: 260px; border-radius: 50%;
-    background: radial-gradient(circle at 30% 28%, #E8C9A0, #C45C14 42%, #2A1810);
-    border: 1px solid var(--border);
-  }
-  .uname { font-size: 24px; margin: 16px 0 0; }
-  .login { color: var(--muted); font-size: 20px; margin: 0 0 12px; }
-  .bio { color: var(--muted); font-size: 14px; }
-  .readme {
-    border: 1px solid var(--border); border-radius: 6px; background: var(--paper); overflow: hidden;
-  }
-  .readme-head {
-    padding: 8px 16px; border-bottom: 1px solid var(--border); color: var(--muted); font-size: 12px;
-    background: var(--panel);
-  }
-  article { padding: 32px 40px 48px; text-align: center; }
-  article table { margin-left: auto; margin-right: auto; }
-  article img { max-width: 100%; height: auto; }
-  article p { line-height: 1.7; }
-  article h2, article h3 {
-    padding-bottom: 8px; border-bottom: 1px solid var(--border); margin: 28px 0 16px;
-  }
-  article table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; font-size: 14px; }
-  article th, article td { border: 1px solid var(--border); padding: 8px 12px; }
-  article pre {
-    background: #161b22; border: 1px solid var(--border); border-radius: 6px;
-    padding: 14px 16px; overflow: auto; font-size: 13px;
-  }
-  article code {
-    font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size: 85%; background: rgba(110,118,129,.2); padding: .15em .4em; border-radius: 4px;
-  }
-  article pre code { background: transparent; padding: 0; }
-  .hint { margin-top: 18px; color: var(--muted); font-size: 13px; }
-  @media (max-width: 980px) {
-    .layout { grid-template-columns: 1fr; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3641397194-wq · ColdBrew Command Center</title>
+  <link rel="stylesheet" href="docs/brand/breach-theme.css">
+  <style>
+    :root { --canvas:#0d1117; --header:#010409; --panel:#111820; --panel2:#151e28; --border:#273542; --text:#edf3f5; --muted:#8fa2ad; --orange:#ff8f5a; --teal:#57d8c7; --blue:#7aa2ff; --yellow:#f4d06f; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--text); background:var(--canvas); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei UI",sans-serif; }
+    a { color:var(--blue); text-decoration:none; } a:hover { text-decoration:underline; }
+    .top { height:64px; display:flex; align-items:center; gap:15px; padding:0 28px; border-bottom:1px solid var(--border); background:var(--header); }
+    .mark { width:31px; height:31px; display:grid; place-items:center; border:1px solid var(--orange); color:var(--orange); font-weight:800; transform:rotate(45deg); }.mark span { transform:rotate(-45deg); }
+    .crumb { font-size:15px; }.crumb strong { color:var(--text); }.top-pill { margin-left:auto; padding:5px 10px; border:1px solid #31534f; color:var(--teal); font:11px ui-monospace,monospace; letter-spacing:.08em; }
+    .layout { width:min(1240px,100%); margin:30px auto 70px; padding:0 24px; display:grid; grid-template-columns:265px minmax(0,1fr); gap:28px; }
+    .profile { position:sticky; top:24px; align-self:start; }.avatar { width:210px; height:210px; display:grid; place-items:center; border:1px solid var(--orange); background:#17222b; color:var(--orange); font-size:68px; font-weight:800; transform:rotate(45deg); }.avatar span { transform:rotate(-45deg); }
+    .profile h1 { margin:28px 0 3px; font-size:24px; }.login { margin:0; color:var(--muted); font-size:18px; }.bio { color:var(--muted); font-size:13px; line-height:1.65; }.profile-rule { height:1px; margin:21px 0 15px; background:var(--border); }.profile-meta { display:grid; gap:9px; color:var(--muted); font-size:12px; }.profile-meta b { color:var(--text); font-weight:500; }
+    .readme { overflow:hidden; border:1px solid var(--border); background:var(--canvas); }.readme-head { display:flex; justify-content:space-between; padding:9px 15px; border-bottom:1px solid var(--border); color:var(--muted); background:var(--panel); font:12px ui-monospace,monospace; }.readme-head span { color:var(--teal); }
+    article { padding:38px 42px 52px; }.hero { text-align:center; padding-bottom:25px; border-bottom:1px solid var(--border); }.hero img { width:100%; max-width:900px; }.hero h2 { margin:18px 0 6px; font-size:27px; }.hero p { margin:0 auto; max-width:650px; color:var(--muted); line-height:1.75; }
+    .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:22px 0 5px; }.metric { padding:13px; border:1px solid var(--border); background:var(--panel); }.metric strong { display:block; color:var(--orange); font:20px ui-monospace,monospace; }.metric small { color:var(--muted); font-size:11px; }
+    h3 { margin:34px 0 13px; padding-bottom:9px; border-bottom:1px solid var(--border); font-size:19px; } h4 { margin:22px 0 9px; font-size:15px; color:var(--orange); }.lead { color:var(--muted); line-height:1.8; }
+    .core { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }.core-item { padding:13px; border-left:2px solid var(--teal); background:var(--panel); }.core-item strong { display:block; font:11px ui-monospace,monospace; color:var(--teal); letter-spacing:.1em; }.core-item span { display:block; margin-top:6px; color:var(--muted); font-size:12px; line-height:1.5; }
+    .seats { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }.seat { padding:14px; border:1px solid var(--border); background:var(--panel); }.seat strong { display:block; font-size:14px; }.seat code { display:block; margin-top:7px; color:var(--muted); font-size:11px; }.seat p { margin:8px 0 0; color:var(--muted); font-size:11px; line-height:1.55; }
+    .community { display:grid; grid-template-columns:1fr 1fr; gap:10px; }.community-card { padding:12px; border:1px solid var(--border); background:var(--panel); text-align:center; }.community-card img { width:100%; max-width:240px; height:180px; object-fit:cover; }.community-card strong { display:block; margin-top:9px; }.community-card code { color:var(--yellow); }.links { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }.links a { padding:8px 10px; border:1px solid var(--border); background:var(--panel2); font-size:12px; }
+    pre { overflow:auto; margin:12px 0 0; padding:15px; border:1px solid var(--border); background:var(--header); color:#c6d3d8; font:12px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace; }.note { margin-top:28px; padding:12px 14px; border-left:2px solid var(--orange); color:var(--muted); background:var(--panel); font-size:12px; line-height:1.7; }
+    @media (max-width:900px) { .layout { grid-template-columns:1fr; }.profile { position:static; display:grid; grid-template-columns:130px 1fr; gap:16px; }.avatar { width:120px; height:120px; font-size:38px; }.profile h1 { margin:0; }.profile-rule,.profile-meta { grid-column:1/-1; }.top { padding:0 16px; } }
+    @media (max-width:620px) { article { padding:25px 18px 35px; }.metrics,.core,.seats,.community { grid-template-columns:1fr; }.profile { display:block; }.profile h1 { margin-top:18px; }.top-pill { display:none; } }
+  </style>
 </head>
 <body>
-  <div class="top">
-    <div class="mark"></div>
-    <div class="crumb">github.com / <strong>3641397194-wq</strong></div>
-    <div class="pill">LOCAL PREVIEW · 对标 yynxxxxx 骨架，原创冷咖啡皮</div>
-  </div>
-  <div class="layout">
-    <aside>
-      <div class="avatar"></div>
-      <h1 class="uname">茶</h1>
-      <p class="login">3641397194-wq</p>
-      <p class="bio">冷咖啡 · 一键破甲越狱 · GPT-5.6 / Claude / Grok 4.6 / DeepSeek v4 Pro</p>
+  <header class="top breach-scanline"><div class="mark"><span>冷</span></div><div class="crumb">github.com / <strong>3641397194-wq</strong></div><div class="top-pill"><span class="breach-status">BREAK / JAILBREAK · MAXIMUM CORE</span></div></header>
+  <main class="layout">
+    <aside class="profile">
+      <div class="avatar"><span>冷</span></div>
+      <h1>冷咖啡</h1><p class="login">3641397194-wq</p>
+      <p class="bio">ColdBrew Command Center · GPT-5.6 / Claude / Grok 4.6 / DeepSeek v4 Pro<br>本地优先的破甲与越狱工作台。</p>
+      <div class="profile-rule"></div>
+      <div class="profile-meta"><span>◉ <b>四个模型席位</b></span><span>◉ <b>Electron + Python</b></span><span>◉ <b>可预览、验证、恢复</b></span></div>
     </aside>
-    <div class="readme">
-      <div class="readme-head">3641397194-wq / README.md · 个人主页预览</div>
-      <article>
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=600&amp;size=28&amp;duration=2800&amp;pause=1000&amp;color=C45C14&amp;center=true&amp;vCenter=true&amp;width=820&amp;lines=%E2%98%95+%E5%86%B7%E5%92%96%E5%95%A1;Hi%2C+%E6%88%91%E6%98%AF%E8%8C%B6;GPT-5.6+%C2%B7+Claude+%C2%B7+Grok+4.6+%C2%B7+DeepSeek+v4+Pro" alt="Typing SVG">
-</p>
-<p align="center">
-  <img src="docs/images/hero-v11.svg" width="960" alt="冷咖啡 · 一键破甲越狱">
-</p>
-<p align="center"><strong>冷咖啡 · 一键破甲越狱 · 原生窗口 / 四个模型 / 五刃</strong></p>
-<p align="center">
-  <img src="https://img.shields.io/github/stars/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro?style=for-the-badge&amp;label=TOTAL%20GITHUB%20STARS&amp;color=FFD700&amp;labelColor=111827&amp;logo=github&amp;logoColor=white" height="64" alt="stars">
-</p>
-<p align="center">
-  <img src="docs/images/github-contribution-grid-snake.svg" alt="contribution snake">
-</p>
-<p align="center">
-  <img src="docs/images/card-product.svg" alt="项目卡">
-</p>
-<h2>QQ 群</h2>
-<p align="center">
-  <img src="docs/images/card-qq-1.svg" alt="QQ 交流群 1057540028">
-  <img src="docs/images/card-qq-2.svg" alt="QQ 专题群 1077074552">
-</p>
-<p align="center"><strong>QQ 交流群</strong> 1057540028 · <strong>QQ 专题群</strong> 1077074552</p>
-<h2>工作台</h2>
-<p align="center"><img src="docs/images/window-v11.svg" width="920" alt="原生窗口"></p>
-<h2>五刃</h2>
-<p align="center"><img src="docs/images/blades-board.svg" width="980" alt="五刃"></p>
-<h2>架构</h2>
-<p align="center"><img src="docs/images/architecture-v9.svg" width="920" alt="架构"></p>
+    <section class="readme">
+      <div class="readme-head"><span>3641397194-wq / README.md</span><span>main · local preview</span></div>
+      <article class="breach-scanline">
+        <div class="hero"><img src="docs/images/hero-v11.svg" alt="冷咖啡 ColdBrew Command Center"><h2>把破甲与越狱，做成一条完整工作链。</h2><p>从目标到产物，从验证到恢复，所有状态在同一个桌面工作台里继续。社群入口和二维码保持原样。</p></div>
+        <div class="metrics"><div class="metric"><strong>4</strong><small>MODEL SEATS</small></div><div class="metric"><strong>6</strong><small>MAXIMUM CORE LAYERS</small></div><div class="metric"><strong>1</strong><small>CONTINUOUS WORKSPACE</small></div></div>
+        <h3>MAXIMUM CORE</h3><p class="lead">MAX 档位是产品核心：它把原始目标、执行路径、上下文、真实产物、验证结果和恢复点绑定在一起，适合需要多轮推进的破甲与越狱任务。</p>
+        <div class="core"><div class="core-item"><strong>OBJECTIVE</strong><span>锁定原始目标、语言、格式与完成判据。</span></div><div class="core-item"><strong>ROUTE</strong><span>显示唯一执行路径和阶段顺序。</span></div><div class="core-item"><strong>CONTEXT</strong><span>跨重试与上下文压缩保留任务状态。</span></div><div class="core-item"><strong>ARTIFACT</strong><span>直接产出代码、配置、脚本或文档。</span></div><div class="core-item"><strong>VERIFY</strong><span>运行测试、哈希、状态检查和验收。</span></div><div class="core-item"><strong>RECOVERY</strong><span>保留原始快照和可继续的下一步。</span></div></div>
+        <h3>四个模型席位</h3><div class="seats"><div class="seat"><strong>GPT-5.6 / Codex</strong><code>projects/codex-coldbrew</code><p>指令层、工具桥与完整交付链。</p></div><div class="seat"><strong>Claude Code</strong><code>projects/claude-coldbrew</code><p>规则层、配置事务与长会话。</p></div><div class="seat"><strong>Grok 4.6</strong><code>projects/grok4.6-coldbrew</code><p>实时信息流与可续配置。</p></div><div class="seat"><strong>DeepSeek v4 Pro</strong><code>projects/deepseek-harness</code><p>Harness 会话与模板导出。</p></div></div>
+        <h3>快速启动</h3><pre>cd desktop
+npm install
+npm start
+
+# Python Hub
+python coldbrew_hub.py</pre>
+        <h3>社群入口</h3><p class="lead">现有社群宣传完整保留，群号、Telegram 和二维码都可以直接使用。</p><div class="community"><div class="community-card"><img src="docs/images/qq-group-1-card.png" alt="QQ 交流群 1057540028"><strong>QQ 交流群</strong><code>1057540028</code></div><div class="community-card"><img src="docs/images/qq-group-2-card.png" alt="QQ 专题群 1077074552"><strong>QQ 专题群</strong><code>1077074552</code></div></div><div class="links"><a href="https://t.me/chachachacha99999">Telegram 群 @chachachacha99999 ↗</a><a href="https://t.me/chachachacha99999999">Telegram 频道 @chachachacha99999999 ↗</a></div>
+        <h3>目录</h3><pre>desktop/                  Electron Command Center
+projects/                 四个模型适配器
+projects/shared/          共享 Tk UI 与主题
+docs/images/              主页、界面、社群素材
+coldbrew_hub.py           Python 总控入口</pre>
+        <div class="note">启动口令：<code>冷咖啡</code>。兼容入口：<code>cold coffee</code>、<code>[[ENI:PROFILE=MAX]]</code>、<code>[[CB:MAX]]</code>。新版主页与桌面 UI 统一围绕“破甲 / 越狱 / MAXIMUM CORE”设计。</div>
       </article>
-    </div>
-  </div>
-  <p class="hint" style="max-width:1280px;margin:0 auto 40px;padding:0 24px;">本地预览。GitHub 上个人主页需要仓库名等于用户名：<code>3641397194-wq/3641397194-wq</code>。项目页走 <code>gpt5.6-claude-grok4.6-deepseekv4pro</code> 的 README。</p>
+    </section>
+  </main>
 </body>
 </html>

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""ColdBrew Hub v9 — 四模型 + 五刃控制台。
+"""ColdBrew Hub v10 — 破甲 / 越狱四模型控制台。
 
 这是一个薄控制层：它只调用各适配器已有的 preview/deploy/verify/restore
 命令，不直接改写用户配置，从而保留冷咖啡入口、快照与回滚契约。
-选中的五刃通过环境变量 COLDBREW_BLADE 注入部署提示词。
+选中的越狱档位通过适配器 profile 注入执行链。
 """
 
 from __future__ import annotations
@@ -33,13 +33,16 @@ SHARED = PROJECTS / "shared"
 if str(SHARED) not in sys.path:
     sys.path.insert(0, str(SHARED))
 TRIGGERS = ("冷咖啡", "cold coffee", "[[ENI:PROFILE=MAX]]")
+PROJECT_SOURCE_URL = "https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro"
+TELEGRAM_GROUP_URL = "https://t.me/chachachacha99999"
+TELEGRAM_CHANNEL_URL = "https://t.me/chachachacha99999999"
 QQ_GROUPS: tuple[tuple[str, str], ...] = (
     ("交流群", "1057540028"),
     ("专题群", "1077074552"),
 )
 TELEGRAM: tuple[tuple[str, str, str], ...] = (
-    ("群", "@chachachacha99999", "https://t.me/chachachacha99999"),
-    ("频道", "@chachacha99999999", "https://t.me/chachacha99999999"),
+    ("群", "@chachachacha99999", TELEGRAM_GROUP_URL),
+    ("频道", "@chachacha99999999", TELEGRAM_CHANNEL_URL),
 )
 BLADES: tuple[tuple[str, str, str, str], ...] = (
     ("REV", "逆向", "拆箱还原 · 静态+动态 · 偏移/伪代码", "#E8A872"),
@@ -54,7 +57,7 @@ TOOLS: tuple[dict[str, Any], ...] = (
         "id": "codex",
         "tag": "GPT-5.6",
         "short": "Codex ColdBrew",
-        "description": "Codex Studio · 五刃提示层 · review chain",
+        "description": "Codex Studio · MAXIMUM CORE · review chain",
         "accent": "#80F0BC",
         "dir": "codex-coldbrew",
         "entry": ("studio", "eni_solo_deploy.py"),
@@ -67,20 +70,20 @@ TOOLS: tuple[dict[str, Any], ...] = (
         "id": "claude",
         "tag": "Claude Code",
         "short": "Claude ColdBrew",
-        "description": "Opus 5 / Fable 5 / 4.8 · 同一条破甲链",
+        "description": "Opus 5 / Fable 5 / 4.8 · 同一条越狱链",
         "accent": "#FF9E7A",
         "dir": "claude-coldbrew",
         "entry": ("app", "claude_pojia.py"),
         "panel": ("app", "claude_pojia.py"),
-        "deploy": ("install", "--yes", "--profile", "max"),
-        "verify": ("verify", "--profile", "max"),
+        "deploy": ("install", "--yes", "--profile", "max-breaker"),
+        "verify": ("verify", "--profile", "max-breaker"),
         "restore": ("restore", "--yes"),
     },
     {
         "id": "grok",
         "tag": "Grok 4.6",
         "short": "Grok ColdBrew",
-        "description": "五刃系统提示 · profile 模板 · 原子恢复",
+        "description": "破甲系统提示 · profile 模板 · 原子恢复",
         "accent": "#23F5D7",
         "dir": "grok4.6-coldbrew",
         "entry": ("app", "grok_coldbrew.py"),
@@ -93,7 +96,7 @@ TOOLS: tuple[dict[str, Any], ...] = (
         "id": "deepseek",
         "tag": "DeepSeek v4 Pro",
         "short": "DeepSeek Harness",
-        "description": "Harness 五刃会话 · profile 配置 · 事务式部署",
+        "description": "Harness 越狱会话 · profile 配置 · 事务式部署",
         "accent": "#7AA2FF",
         "dir": "deepseek-harness",
         "entry": ("app", "deepseek_harness.py"),
@@ -105,6 +108,22 @@ TOOLS: tuple[dict[str, Any], ...] = (
 )
 
 DEPLOY_VERBS = {"deploy", "install"}
+
+
+def profile_args(tool: dict[str, Any], args: tuple[str, ...], profile: str) -> tuple[str, ...]:
+    """Map the shared profile id to each adapter's native profile name."""
+    values = list(args)
+    mapping = {
+        "claude": {"max": "max-breaker", "focused": "builder", "builder": "builder", "research": "research", "creative": "creative"},
+        "grok": {"max": "max", "focused": "focused", "builder": "max", "research": "research", "creative": "creative"},
+        "deepseek": {"max": "max", "focused": "focused", "builder": "max", "research": "research", "creative": "creative"},
+    }
+    mapped = mapping.get(str(tool.get("id")), {}).get(profile, profile)
+    if "--profile" in values:
+        values[values.index("--profile") + 1] = mapped
+    elif args and args[0] in DEPLOY_VERBS:
+        values.extend(("--profile", mapped))
+    return tuple(values)
 
 
 def tool_entry(tool: dict[str, Any]) -> Path:
@@ -203,15 +222,15 @@ def run_packer(tool: dict[str, Any] | None, log_q: queue.Queue) -> None:
 
 
 class HubApp:
-    BG = VOID = "#EFE6D6"
-    PANEL = "#FFF8F0"
-    PAPER = "#2A1810"
-    MUTED = "#7A6554"
-    GOLD = "#C45C14"
-    ICE = "#1F6B66"
-    ESPRESSO = "#2A1810"
-    CREAM = "#F7EFE3"
-    CRIMSON = "#B33A28"
+    BG = VOID = "#0D1117"
+    PANEL = "#151E28"
+    PAPER = "#EDF3F5"
+    MUTED = "#8FA2AD"
+    GOLD = "#FF8F5A"
+    ICE = "#57D8C7"
+    ESPRESSO = "#0A0E13"
+    CREAM = "#EDF3F5"
+    CRIMSON = "#F06C6C"
 
     def __init__(self, root: Any) -> None:
         import tkinter as tk
@@ -221,7 +240,7 @@ class HubApp:
         self.tk, self.root = tk, root
         self.GoldButton, self.draw_crest, self.plate = GoldButton, draw_crest, plate
         self.fonts = pick_fonts(root)
-        self.root.title("冷咖啡 · AI 破甲越狱")
+        self.root.title("冷咖啡 · ColdBrew Command Center")
         self.root.geometry("1380x860")
         self.root.minsize(1140, 740)
         self.root.configure(bg=self.BG)
@@ -236,12 +255,13 @@ class HubApp:
         self.jobs: set[str] = set()
         self.cards: dict[str, dict[str, Any]] = {}
         self.blade_buttons: dict[str, Any] = {}
-        self.status_var = tk.StringVar(value="破甲就绪")
+        self.status_var = tk.StringVar(value="MAXIMUM CORE 就绪")
         self.count_var = tk.StringVar(value="0 / 4 ONLINE")
         self.clock_var = tk.StringVar(value="")
         self.live_var = tk.StringVar(value="● LIVE")
         self.blade_var = tk.StringVar(value="ALL")
-        self.brief_var = tk.StringVar(value="五刃全开 · 按动词自动锁刃")
+        self.brief_var = tk.StringVar(value="目标 → 路由 → 上下文 → 产物 → 验证 → 恢复")
+        self.profile_var = tk.StringVar(value="max")
         self._pulse = True
         self._tick = 0
         self._build_shell()
@@ -249,8 +269,6 @@ class HubApp:
         self.root.after(400, self.env_check)
         for index, tool in enumerate(TOOLS, 1):
             self.root.bind(f"<Control-{index}>", lambda _event, t=tool: self._open_panel(t))
-        for index, blade in enumerate(BLADES, 1):
-            self.root.bind(f"<Alt-KeyPress-{index}>", lambda _event, blade_id=blade[0]: self._select_blade(blade_id))
 
     def _label(self, parent: Any, text: str = "", **kwargs: Any) -> Any:
         options = {"bg": parent.cget("bg"), "fg": self.PAPER, "font": (self.fonts["cn"], 9)}
@@ -260,6 +278,7 @@ class HubApp:
     def _build_shell(self) -> None:
         tk = self.tk
         GoldButton = self.GoldButton
+        from tkinter import ttk
         from model_roster import claude_line
 
         brand = tk.Frame(self.root, bg=self.ESPRESSO)
@@ -271,9 +290,9 @@ class HubApp:
         crest.grid(row=0, column=0, rowspan=2, sticky="w", padx=(0, 14))
         self.draw_crest(crest, 58, 58)
         self._label(head, "冷咖啡", bg=self.ESPRESSO, fg=self.CREAM, font=(self.fonts["cn"], 32, "bold")).grid(row=0, column=1, sticky="w")
-        badge = tk.Label(head, text="  AI 破甲越狱  ", bg=self.GOLD, fg="#FFF8F0", font=(self.fonts["cn"], 11, "bold"), padx=8, pady=4)
+        badge = tk.Label(head, text="  BREAK / JAILBREAK  ", bg=self.GOLD, fg="#111820", font=(self.fonts["cn"], 10, "bold"), padx=8, pady=4)
         badge.grid(row=0, column=2, sticky="w", padx=(14, 0))
-        self._label(head, "四模型工作台  ·  口令「冷咖啡」开工", bg=self.ESPRESSO, fg="#C9B49A", font=(self.fonts["cn"], 10)).grid(row=1, column=1, columnspan=2, sticky="w", pady=(2, 0))
+        self._label(head, "四模型工作台  ·  MAXIMUM CORE  ·  口令「冷咖啡」", bg=self.ESPRESSO, fg=self.MUTED, font=(self.fonts["cn"], 10)).grid(row=1, column=1, columnspan=2, sticky="w", pady=(2, 0))
         right = tk.Frame(head, bg=self.ESPRESSO)
         right.grid(row=0, column=3, rowspan=2, sticky="e")
         self._label(right, textvariable=self.live_var, bg=self.ESPRESSO, fg="#7DCFC8", font=(self.fonts["mono"], 11)).pack(anchor="e")
@@ -288,28 +307,20 @@ class HubApp:
         activation = self.plate(shell, padx=14, pady=10)
         activation.grid(row=0, column=0, sticky="ew", pady=(0, 8))
         activation.grid_columnconfigure(1, weight=1)
-        self._label(activation, "口令", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).grid(row=0, column=0, padx=(0, 12))
-        self._label(activation, "冷咖啡  /  COLD COFFEE  /  [[ENI:PROFILE=MAX]]", fg=self.PAPER, font=(self.fonts["mono"], 9)).grid(row=0, column=1, sticky="w")
+        self._label(activation, "CORE", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).grid(row=0, column=0, padx=(0, 12))
+        self._label(activation, "冷咖啡  /  COLD COFFEE  /  [[ENI:PROFILE=MAX]]  /  [[CB:MAX]]", fg=self.PAPER, font=(self.fonts["mono"], 9)).grid(row=0, column=1, sticky="w")
         act_right = tk.Frame(activation, bg=self.PANEL)
         act_right.grid(row=0, column=2, sticky="e")
         self._label(act_right, textvariable=self.status_var, fg=self.GOLD, font=(self.fonts["cn"], 9)).pack(side="left", padx=(0, 10))
         GoldButton(act_right, "清场", self._clear_log, fonts=self.fonts, kind="ghost", px=10, py=3).pack(side="left")
 
-        blade_row = self.plate(shell, padx=14, pady=8)
-        blade_row.grid(row=1, column=0, sticky="ew", pady=(0, 6))
-        blade_row.grid_columnconfigure(1, weight=1)
-        self._label(blade_row, "五刃", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).grid(row=0, column=0, padx=(0, 12), sticky="w")
-        tabs = tk.Frame(blade_row, bg=self.PANEL)
-        tabs.grid(row=0, column=1, sticky="w")
-        all_btn = GoldButton(tabs, "全开", lambda: self._select_blade("ALL"), fonts=self.fonts, kind="tab", px=14, py=7)
-        all_btn.pack(side="left", padx=(0, 6))
-        self.blade_buttons["ALL"] = all_btn
-        for blade_id, crop, _hint, _color in BLADES:
-            button = GoldButton(tabs, crop, lambda value=blade_id: self._select_blade(value), fonts=self.fonts, kind="tab", px=14, py=7)
-            button.pack(side="left", padx=(0, 6))
-            self.blade_buttons[blade_id] = button
-        self._label(blade_row, textvariable=self.brief_var, fg=self.MUTED, font=(self.fonts["cn"], 9)).grid(row=0, column=2, sticky="e", padx=(12, 0))
-        self._select_blade("ALL")
+        core_row = self.plate(shell, padx=14, pady=8)
+        core_row.grid(row=1, column=0, sticky="ew", pady=(0, 6))
+        core_row.grid_columnconfigure(1, weight=1)
+        self._label(core_row, "MAXIMUM CORE", fg=self.GOLD, font=(self.fonts["mono"], 9, "bold")).grid(row=0, column=0, padx=(0, 12), sticky="w")
+        self._label(core_row, textvariable=self.brief_var, fg=self.ICE, font=(self.fonts["cn"], 9)).grid(row=0, column=1, sticky="w")
+        self._label(core_row, "档位", fg=self.MUTED, font=(self.fonts["cn"], 9)).grid(row=0, column=2, sticky="e", padx=(12, 5))
+        ttk.Combobox(core_row, values=("max", "focused", "builder", "research", "creative"), textvariable=self.profile_var, state="readonly", width=11).grid(row=0, column=3, sticky="e")
 
         community_row = self.plate(shell, padx=14, pady=10)
         community_row.grid(row=2, column=0, sticky="ew", pady=(0, 6))
@@ -335,6 +346,15 @@ class HubApp:
                 px=10,
                 py=6,
             ).pack(side="left", padx=(0, 8))
+        GoldButton(
+            community_row,
+            "源码",
+            self._open_source,
+            fonts=self.fonts,
+            kind="ghost",
+            px=10,
+            py=6,
+        ).pack(side="left", padx=(8, 0))
         self._label(community_row, "点 QQ 复制群号  ·  点 TG 复制并打开", fg=self.MUTED, font=(self.fonts["cn"], 9)).pack(side="right")
 
         model_row = self.plate(shell, padx=14, pady=8)
@@ -368,7 +388,7 @@ class HubApp:
         log_panel.grid(row=0, column=0, sticky="nsew", padx=(0, 10))
         self._label(log_panel, "作业", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).pack(anchor="w")
         tk.Frame(log_panel, bg=self.GOLD, height=1).pack(fill="x", pady=(6, 6))
-        self.log_text = tk.Text(log_panel, height=5, bg="#F6EDE0", fg=self.PAPER, insertbackground=self.GOLD, relief="flat", font=(self.fonts["mono"], 9), padx=10, pady=8, bd=0, highlightthickness=0)
+        self.log_text = tk.Text(log_panel, height=5, bg="#0E151C", fg=self.PAPER, insertbackground=self.GOLD, relief="flat", font=(self.fonts["mono"], 9), padx=10, pady=8, bd=0, highlightthickness=0)
         self.log_text.pack(fill="both", expand=True)
         for tag, color in (("error", self.CRIMSON), ("ok", self.GOLD), ("info", self.ICE), ("out", self.MUTED)):
             self.log_text.tag_configure(tag, foreground=color)
@@ -376,7 +396,7 @@ class HubApp:
         summary.grid(row=0, column=1, sticky="nsew")
         self._label(summary, "快照", fg=self.GOLD, font=(self.fonts["cn"], 10, "bold")).pack(anchor="w")
         tk.Frame(summary, bg=self.GOLD, height=1).pack(fill="x", pady=(6, 6))
-        self.summary_text = tk.Text(summary, height=5, bg="#F6EDE0", fg=self.MUTED, relief="flat", font=(self.fonts["mono"], 8), padx=10, pady=8, wrap="word", bd=0, highlightthickness=0)
+        self.summary_text = tk.Text(summary, height=5, bg="#0E151C", fg=self.MUTED, relief="flat", font=(self.fonts["mono"], 8), padx=10, pady=8, wrap="word", bd=0, highlightthickness=0)
         self.summary_text.pack(fill="both", expand=True)
         self._render_summary(environment_snapshot())
         toolbar = tk.Frame(shell, bg=self.BG)
@@ -386,7 +406,7 @@ class HubApp:
         GoldButton(toolbar, "全系复原", self.restore_all, fonts=self.fonts, kind="ghost", px=14, py=7).pack(side="left", padx=4)
         GoldButton(toolbar, "封箱打包", self.pack_all, fonts=self.fonts, kind="ghost", px=14, py=7).pack(side="left", padx=4)
         GoldButton(toolbar, "自检", self.env_check, fonts=self.fonts, kind="ghost", px=14, py=7).pack(side="left", padx=4)
-        self._label(toolbar, "Ctrl+1–4 工作台   ·   Alt+1–5 锁刃", fg=self.MUTED, font=(self.fonts["mono"], 8)).pack(side="right")
+        self._label(toolbar, "Ctrl+1–4 打开席位   ·   profile 选择越狱档位", fg=self.MUTED, font=(self.fonts["mono"], 8)).pack(side="right")
 
     def _make_card(self, parent: Any, tool: dict[str, Any]) -> Any:
         tk = self.tk
@@ -429,6 +449,11 @@ class HubApp:
         _emit(self.log_q, "ok", f"[社群] Telegram {name} {handle}")
         self.status_var.set(f"Telegram  {name}  {handle}")
 
+    def _open_source(self) -> None:
+        webbrowser.open(PROJECT_SOURCE_URL, new=2)
+        _emit(self.log_q, "ok", f"[源码] {PROJECT_SOURCE_URL}")
+        self.status_var.set("公开源码已打开")
+
     def _copy_qq(self, name: str, number: str) -> None:
         self.root.clipboard_clear()
         self.root.clipboard_append(number)
@@ -440,20 +465,21 @@ class HubApp:
         self.blade_var.set(blade_id)
         if blade_id == "ALL":
             os.environ.pop("COLDBREW_BLADE", None)
-            self.brief_var.set("五刃全开 · 按动词自动锁刃")
+            self.brief_var.set("破甲全开 · 按目标自动选择通道")
         else:
             os.environ["COLDBREW_BLADE"] = blade_id
             hint = next((item[2] for item in BLADES if item[0] == blade_id), blade_id)
             self.brief_var.set(f"{blade_id}  ·  {hint}")
         for key, button in self.blade_buttons.items():
             button.set_active(key == blade_id)
-        _emit(self.log_q, "ok", f"[刃] {blade_id}")
-        self.status_var.set(f"刃口  {blade_id}")
+        _emit(self.log_q, "ok", f"[破甲通道] {blade_id}")
+        self.status_var.set(f"破甲通道  {blade_id}")
 
     def _open_panel(self, tool: dict[str, Any]) -> None:
         self._run_tool(tool, ("gui",), attach=True, panel=True)
 
     def _run_tool(self, tool: dict[str, Any], args: tuple[str, ...], *, attach: bool = False, panel: bool = False) -> None:
+        args = profile_args(tool, args, self.profile_var.get())
         key = f"{tool['id']}:{' '.join(args)}"
         if key in self.jobs:
             _emit(self.log_q, "info", f"[{tool['tag']}] 相同任务正在运行，已跳过重复点击")
@@ -490,15 +516,15 @@ class HubApp:
 
     def deploy_all(self) -> None:
         for tool in TOOLS:
-            self._run_tool(tool, tool["deploy"])
+            self._run_tool(tool, tuple(tool["deploy"]))
 
     def verify_all(self) -> None:
         for tool in TOOLS:
-            self._run_tool(tool, tool["verify"])
+            self._run_tool(tool, profile_args(tool, tuple(tool["verify"]), self.profile_var.get()))
 
     def restore_all(self) -> None:
         for tool in TOOLS:
-            self._run_tool(tool, tool["restore"])
+            self._run_tool(tool, profile_args(tool, tuple(tool["restore"]), self.profile_var.get()))
 
     def pack_all(self) -> None:
         self._run_pack(None)

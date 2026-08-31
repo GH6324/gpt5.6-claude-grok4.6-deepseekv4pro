@@ -13,6 +13,7 @@ contextBridge.exposeInMainWorld("brew", {
   choose: () => ipcRenderer.invoke("brew:choose"),
   open: (folder) => ipcRenderer.invoke("brew:open", folder),
   copy: (text) => ipcRenderer.invoke("brew:copy", text),
+  external: (url) => ipcRenderer.invoke("brew:external", url),
   setBlade: (id) => ipcRenderer.invoke("brew:blade", id),
   minimize: () => ipcRenderer.invoke("win:min"),
   toggleMaximize: () => ipcRenderer.invoke("win:max"),

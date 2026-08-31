@@ -1,0 +1,49 @@
+/* Shared breach-theme utilities for the GitHub surface and product pages. */
+:root {
+  --breach-cyan: #63e6ff;
+  --breach-lime: #b7f36b;
+  --breach-ink: #071016;
+  --breach-panel: #0d1a22;
+}
+
+.breach-kicker {
+  color: var(--breach-lime);
+  font: 700 0.72rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.breach-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.breach-scanline::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0,
+    transparent 5px,
+    rgb(99 230 255 / 0.035) 6px
+  );
+  content: "";
+}
+
+.breach-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--breach-cyan);
+  font: 600 0.78rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.breach-status::before {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  background: var(--breach-lime);
+  box-shadow: 0 0 0.8rem var(--breach-lime);
+  content: "";
+}

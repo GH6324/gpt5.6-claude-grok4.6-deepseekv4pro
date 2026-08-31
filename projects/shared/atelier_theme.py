@@ -1,7 +1,4 @@
-"""Cold-coffee chrome: cream paper, roast orange, ice teal.
-
-Brand: 冷咖啡. Product: AI 破甲越狱.
-"""
+"""ColdBrew visual system shared by the model workbenches."""
 
 from __future__ import annotations
 
@@ -12,22 +9,23 @@ import tkinter as tk
 import tkinter.font as tkfont
 
 
-VOID = "#EFE6D6"
-INK = "#2A1810"
-PLATE = "#FFF8F0"
-PLATE2 = "#F3E4D0"
-GOLD = "#C45C14"
-GOLD_HI = "#E07028"
-GOLD_DIM = "#A36A3A"
-ICE = "#1F6B66"
-ICE_HI = "#2A8A84"
-IVORY = "#2A1810"
-MUTE = "#7A6554"
-HAIR = "#E2D3C1"
-CRIMSON = "#B33A28"
-OK = "#C45C14"
-ESPRESSO = "#2A1810"
-CREAM = "#F7EFE3"
+# Graphite workspace with warm orange, teal, blue and yellow state accents.
+VOID = "#0D1117"
+INK = "#EDF3F5"
+PLATE = "#151E28"
+PLATE2 = "#1A2531"
+GOLD = "#FF8F5A"
+GOLD_HI = "#FFB07E"
+GOLD_DIM = "#B9694B"
+ICE = "#57D8C7"
+ICE_HI = "#7AE8DA"
+IVORY = "#EDF3F5"
+MUTE = "#8FA2AD"
+HAIR = "#273542"
+CRIMSON = "#F06C6C"
+OK = "#57D8C7"
+ESPRESSO = "#0A0E13"
+CREAM = "#EDF3F5"
 
 
 def pick_fonts(root: tk.Misc) -> dict[str, str]:
@@ -47,7 +45,7 @@ def pick_fonts(root: tk.Misc) -> dict[str, str]:
 
 
 class GoldButton(tk.Frame):
-    """kind: ghost | solid | tab. Solid = roast, tab active = ice teal."""
+    """Small themed button used by all model adapters."""
 
     def __init__(
         self,
@@ -57,8 +55,8 @@ class GoldButton(tk.Frame):
         *,
         fonts: dict[str, str],
         kind: str = "ghost",
-        px: int = 16,
-        py: int = 8,
+        px: int = 14,
+        py: int = 7,
     ) -> None:
         super().__init__(master, bg=HAIR, highlightthickness=0, padx=1, pady=1)
         self.kind = kind
@@ -67,9 +65,9 @@ class GoldButton(tk.Frame):
         self._active = False
         self.label = tk.Label(self, text=text, font=(fonts["cn"], 10), padx=px, pady=py, cursor="hand2")
         self.label.pack(fill="both", expand=True)
-        self.label.bind("<Button-1>", lambda _e: self.command())
-        self.label.bind("<Enter>", lambda _e: self._paint(hover=True))
-        self.label.bind("<Leave>", lambda _e: self._paint(hover=False))
+        self.label.bind("<Button-1>", lambda _event: self.command())
+        self.label.bind("<Enter>", lambda _event: self._paint(hover=True))
+        self.label.bind("<Leave>", lambda _event: self._paint(hover=False))
         self._paint()
 
     def set_text(self, text: str) -> None:
@@ -81,13 +79,13 @@ class GoldButton(tk.Frame):
 
     def _paint(self, hover: bool = False) -> None:
         if self.kind == "solid":
-            bg, fg = (GOLD_HI if hover else GOLD), "#FFF8F0"
+            bg, fg = (GOLD_HI if hover else GOLD), "#111820"
         elif self.kind == "tab" and self._active:
-            bg, fg = (ICE_HI if hover else ICE), "#FFF8F0"
+            bg, fg = (ICE_HI if hover else ICE), "#0D1719"
         elif hover:
-            bg, fg = PLATE2, GOLD
+            bg, fg = PLATE2, INK
         else:
-            bg, fg = PLATE, GOLD if self.kind == "tab" else IVORY
+            bg, fg = PLATE, GOLD if self.kind == "tab" else MUTE
         self.label.configure(bg=bg, fg=fg)
 
 
@@ -95,8 +93,8 @@ def plate(parent: tk.Misc, **kwargs: object) -> tk.Frame:
     return tk.Frame(parent, bg=PLATE, highlightthickness=1, highlightbackground=HAIR, **kwargs)  # type: ignore[arg-type]
 
 
-def hairline(parent: tk.Misc, **pack) -> tk.Frame:
-    line = tk.Frame(parent, bg=GOLD, height=2)
+def hairline(parent: tk.Misc, **pack: object) -> tk.Frame:
+    line = tk.Frame(parent, bg=GOLD, height=1)
     if pack:
         line.pack(**pack)
     return line
@@ -105,11 +103,11 @@ def hairline(parent: tk.Misc, **pack) -> tk.Frame:
 def draw_crest(canvas: tk.Canvas, width: int, height: int, *, ink: str = GOLD) -> None:
     canvas.delete("crest")
     cx, cy = width / 2, height / 2
-    r = min(width, height) * 0.36
-    pts = []
-    for i in range(5):
-        a = -pi / 2 + i * 2 * pi / 5
-        pts.extend((cx + r * cos(a), cy + r * sin(a)))
-    canvas.create_polygon(*pts, fill="#3A2216", outline=ink, width=2, tags="crest")
-    hole = max(4.0, r * 0.22)
-    canvas.create_oval(cx - hole, cy - hole, cx + hole, cy + hole, outline="#E8C9A0", width=2, tags="crest")
+    radius = min(width, height) * 0.36
+    points: list[float] = []
+    for index in range(5):
+        angle = -pi / 2 + index * 2 * pi / 5
+        points.extend((cx + radius * cos(angle), cy + radius * sin(angle)))
+    canvas.create_polygon(*points, fill=PLATE2, outline=ink, width=2, tags="crest")
+    hole = max(4.0, radius * 0.22)
+    canvas.create_oval(cx - hole, cy - hole, cx + hole, cy + hole, outline=GOLD_HI, width=2, tags="crest")

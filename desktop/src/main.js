@@ -1,6 +1,6 @@
 const { app, BrowserWindow, ipcMain, dialog, shell, clipboard } = require("electron");
 const path = require("node:path");
-const { BLADES, QQ_GROUPS, TELEGRAM, TOOLS, toolById } = require("./lib/catalog");
+const { BLADES, QQ_GROUPS, TELEGRAM, PROFILES, TOOLS, toolById } = require("./lib/catalog");
 const { catalogStatus, runTool } = require("./lib/hub");
 const { inspectTarget, resolveCodexHome } = require("./lib/inspect");
 const { environmentStatus, pythonExecutable } = require("./lib/env");
@@ -46,7 +46,7 @@ function createMain() {
     minHeight: 720,
     frame: false,
     show: false,
-    backgroundColor: "#EFE6D6",
+    backgroundColor: "#0D1117",
     autoHideMenuBar: true,
     icon: APP_ICON,
     titleBarStyle: IS_MAC ? "hiddenInset" : "default",
@@ -73,6 +73,7 @@ function onLog(source) {
 
 ipcMain.handle("brew:meta", () => ({
   blades: BLADES,
+  profiles: PROFILES,
   tools: TOOLS.map((tool) => ({ id: tool.id, tag: tool.tag, short: tool.short, accent: tool.accent })),
   qq: QQ_GROUPS,
   telegram: TELEGRAM,
@@ -93,6 +94,7 @@ ipcMain.handle("brew:run", async (_event, payload) => {
     python: python(),
     home: payload.home,
     blade: payload.blade || currentBlade,
+    profile: payload.profile || "max",
     onLog: onLog(tool?.tag || payload.id),
   });
   emitLog({
@@ -108,6 +110,7 @@ ipcMain.handle("brew:deploy-all", async (_event, payload) => {
     python: python(),
     home,
     blade: payload?.blade || currentBlade,
+    profile: payload?.profile || "max",
     onLog: (entry) => emitLog(entry),
   });
 });
@@ -116,6 +119,7 @@ ipcMain.handle("brew:restore-all", async (_event, payload) => {
   return oneClickRestore({
     python: python(),
     home,
+    profile: payload?.profile || "max",
     onLog: (entry) => emitLog(entry),
   });
 });
@@ -127,6 +131,7 @@ ipcMain.handle("brew:accept", async (_event, payload) => {
     const result = await runTool(tool.id, "verify", {
       python: python(),
       home: tool.id === "codex" ? home : null,
+      profile: payload?.profile || "max",
       onLog: onLog(tool.tag),
     });
     proofs.push({ id: tool.id, ok: result.ok });
@@ -157,6 +162,12 @@ ipcMain.handle("brew:open", async (_event, folder) => {
 ipcMain.handle("brew:copy", (_event, text) => {
   clipboard.writeText(String(text || ""));
   return true;
+});
+ipcMain.handle("brew:external", async (_event, url) => {
+  const target = String(url || "").trim();
+  if (!/^https:\/\//i.test(target)) throw new Error("只允许打开 HTTPS 社群链接");
+  await shell.openExternal(target);
+  return target;
 });
 ipcMain.handle("win:min", () => mainWindow?.minimize());
 ipcMain.handle("win:max", () => {

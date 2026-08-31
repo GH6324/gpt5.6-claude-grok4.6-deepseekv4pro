@@ -33,7 +33,7 @@ LICENSE_PATHS = tuple(
     ROOT / name
     for name in ("LICENSE", "LICENSE_POLICY.md", "THIRD_PARTY_NOTICES.md")
 )
-PROJECT_SOURCE_URL = "https://github.com/茶/codex5.6-coldbrew"
+PROJECT_SOURCE_URL = "https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro"
 WORK_PATH = ROOT / "build" / "pyinstaller-codex"
 SPEC_PATH = ROOT / "build"
 

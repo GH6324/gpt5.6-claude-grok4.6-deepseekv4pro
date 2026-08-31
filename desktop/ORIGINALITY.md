@@ -4,11 +4,11 @@
 
 ## 新写的
 
-- `src/splash`：锁盘被五刃劈开、碎甲、落印「破」、字幕「一键破甲越狱」
-- `src/renderer`：奶油纸 + 焦糖字的无卡密工作台
+- `src/splash`：破甲信号启动、核心点亮、落印「破」、字幕「BREAK / JAILBREAK」
+- `src/renderer`：石墨底、信号青与荧光黄的 MAXIMUM CORE 工作台
 - `src/lib`：四模型调度、Codex 挂钩加厚、环境扫描、静态验收、Desktop app-server 联机
-- `scripts/make_icon.py`：焦糖底「破」字图标
-- 主色：espresso `#2A1810`、gold `#C45C14`、cream `#F7EFE3`
+- `scripts/make_icon.py`：深色底「破」字图标
+- 主色：graphite `#0D1719`、signal teal `#43E4D0`、lime `#C7F36B`
 
 ## 随包芯
 

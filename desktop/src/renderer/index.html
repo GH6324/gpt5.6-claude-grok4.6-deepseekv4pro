@@ -3,128 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;" />
-    <title>冷咖啡 · 一键破甲越狱</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'" />
+    <title>冷咖啡 · ColdBrew Command Center</title>
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
     <header class="titlebar">
-      <div class="brand">
-        <span class="seal">破</span>
-        <strong>冷咖啡</strong>
-        <small>一键破甲越狱</small>
+      <div class="brand-lockup">
+        <span class="brand-mark" aria-hidden="true"><span>冷</span></span>
+        <span class="brand-copy">
+          <strong>冷咖啡</strong>
+          <small>COLDBREW COMMAND CENTER</small>
+        </span>
       </div>
-      <div class="title-spacer"></div>
-      <span id="clockChip" class="chip">--:--:--</span>
-      <div class="win-btns">
-        <button id="minBtn" type="button" aria-label="最小化"></button>
-        <button id="maxBtn" type="button" aria-label="最大化"></button>
-        <button id="closeBtn" type="button" aria-label="关闭"></button>
+      <div class="titlebar-center">
+        <span class="live-indicator"><i></i> LOCAL WORKSPACE</span>
+        <span id="clockChip" class="clock">--:--:--</span>
+      </div>
+      <div class="window-actions">
+        <button id="minBtn" type="button" aria-label="最小化" title="最小化"><span></span></button>
+        <button id="maxBtn" type="button" aria-label="最大化" title="最大化"><span></span></button>
+        <button id="closeBtn" type="button" aria-label="关闭" title="关闭"><span></span></button>
       </div>
     </header>
 
-    <div class="shell">
-      <aside>
-        <p class="nav-kicker">破甲</p>
-        <button class="nav is-on" data-jump="pulse" type="button"><b>01</b><span>总览</span></button>
-        <button class="nav" data-jump="hearths" type="button"><b>02</b><span>模型</span></button>
-        <button class="nav" data-jump="launch" type="button"><b>03</b><span>一键破甲</span></button>
-        <button class="nav" data-jump="runtime" type="button"><b>04</b><span>环境</span></button>
-        <button class="nav" data-jump="stream" type="button"><b>05</b><span>记录</span></button>
-        <div class="aside-foot">
-          <span>LOCAL / OPEN</span>
-          <span>无卡密门</span>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="nav-list" aria-label="工作区导航">
+          <button class="nav-item is-on" data-jump="command" type="button"><span class="nav-index">01</span><span>指挥台</span><kbd>⌘1</kbd></button>
+          <button class="nav-item" data-jump="models" type="button"><span class="nav-index">02</span><span>模型席位</span><kbd>⌘2</kbd></button>
+          <button class="nav-item" data-jump="launch" type="button"><span class="nav-index">03</span><span>执行中心</span><kbd>⌘3</kbd></button>
+          <button class="nav-item" data-jump="runtime" type="button"><span class="nav-index">04</span><span>运行环境</span><kbd>⌘4</kbd></button>
+          <button class="nav-item" data-jump="activity" type="button"><span class="nav-index">05</span><span>活动流</span><kbd>⌘5</kbd></button>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-label">QUICK ACCESS</div>
+        <button class="side-action" id="sideCommunityBtn" type="button"><span class="side-icon">◎</span><span>社群入口</span><span class="side-arrow">↗</span></button>
+        <button class="side-action" id="sideOpenBtn" type="button"><span class="side-icon">⌂</span><span>打开工作目录</span><span class="side-arrow">↗</span></button>
+
+        <div class="sidebar-footer">
+          <div class="footer-rule"></div>
+          <div class="footer-row"><span class="footer-dot"></span><span>所有操作在本机执行</span></div>
+          <div class="footer-meta">COLDBREW / V5.0 · BUILD 2026.09</div>
         </div>
       </aside>
 
-      <div class="stage">
-        <section id="pulse" class="pulse" tabindex="-1">
-          <div>
-            <p class="eyebrow">BREAK STATUS</p>
-            <h1 id="statusTitle">破甲软件正在点火</h1>
-            <p id="statusDetail">读指令、技能、工具桥、恢复清单、四个模型入口</p>
-          </div>
-          <div class="orb"><i id="statusDot"></i></div>
-        </section>
-
-        <section class="blade-row">
-          <p class="eyebrow">五刃</p>
-          <div id="bladeBar" class="blades"></div>
-          <span id="bladeHint" class="hint">五刃全开 · 按动词自动锁刃</span>
-        </section>
-
-        <section class="community">
-          <p class="eyebrow">社群</p>
-          <div id="communityBar" class="community-bar"></div>
-        </section>
-
-        <section id="hearths" class="hearths" tabindex="-1">
-          <div class="heading">
-            <div>
-              <p class="eyebrow">02 / MODELS</p>
-              <h2>四个模型</h2>
+      <main class="stage" id="stage">
+        <section id="command" class="command-hero" tabindex="-1">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> COMMAND CENTER <span class="eyebrow-state">READY</span></div>
+            <h1 id="statusTitle">把想做的事，交给一条完整链路。</h1>
+            <p id="statusDetail">选择模型、越狱档位与目标，预览变更后直接执行。每一步都有记录，也随时可以恢复。</p>
+            <div class="hero-controls">
+              <button id="deployAllBtn" class="primary-cta" type="button"><span class="cta-symbol">↯</span><span><b>一键启动 MAX</b><small>四个模型 · 完整链路</small></span><span class="cta-arrow">→</span></button>
+              <button id="verifyAllBtn" class="secondary-cta" type="button"><span>验收当前工作区</span><span>⌁</span></button>
             </div>
-            <span id="readyChip" class="chip">0 / 4</span>
           </div>
-          <div id="hearthGrid" class="hearth-grid"></div>
-        </section>
-
-        <section id="launch" class="panel" tabindex="-1">
-          <div class="heading">
-            <div>
-              <p class="eyebrow">03 / ONE SHOT</p>
-              <h2>一键破甲</h2>
-            </div>
-            <button id="chooseBtn" class="ghost" type="button">选择 Codex 目录</button>
-          </div>
-          <div class="path-row">
-            <code id="codexPath">自动检测中</code>
-            <span id="targetLocale" class="locale">语言 · 检测中</span>
-            <button id="openBtn" class="text" type="button">打开</button>
-          </div>
-          <div id="codexFacts" class="facts"></div>
-          <div class="actions">
-            <button id="deployAllBtn" class="solid" type="button">
-              <span>一键破甲</span>
-              <small>中文、指令、技能、工具桥、四个模型挂钩一次写完</small>
-            </button>
-            <button id="restoreAllBtn" class="warn" type="button" disabled>
-              <span>恢复默认</span>
-              <small>只撤走冷咖啡托管文件，漂移项留下</small>
-            </button>
-            <button id="verifyAllBtn" class="ghost-block" type="button">
-              <span>完整验收</span>
-              <small>SHA-256、挂钩体检、四个模型校验、Desktop 真人任务</small>
-            </button>
-            <button id="envBtn" class="ghost-block" type="button">
-              <span id="envBtnTitle">安装运行环境</span>
-              <small id="envBtnDetail">扫描后把逆向 Python 依赖装进本机</small>
-            </button>
+          <div class="hero-orbit" aria-hidden="true">
+            <div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-ring ring-three"></div>
+            <div class="orbit-core"><span id="statusDot" class="ready"></span><b>MAX</b><small>CORE</small></div>
+            <span class="orbit-label label-top">OBJECTIVE</span><span class="orbit-label label-right">VERIFY</span><span class="orbit-label label-bottom">RECOVERY</span><span class="orbit-label label-left">ROUTE</span>
           </div>
         </section>
 
-        <div class="split">
-          <section id="runtime" class="panel" tabindex="-1">
-            <div class="heading compact">
-              <div>
-                <p class="eyebrow">04 / RUNTIME</p>
-                <h2>本机状态</h2>
-              </div>
-            </div>
-            <div id="envFacts" class="facts"><span>等待检测</span></div>
-          </section>
-          <section id="stream" class="panel" tabindex="-1">
-            <div class="heading compact">
-              <div>
-                <p class="eyebrow">05 / STREAM</p>
-                <h2>活动流</h2>
-              </div>
-              <button id="clearBtn" class="text" type="button">清空</button>
-            </div>
-            <div id="log" class="log" role="log"></div>
-          </section>
-        </div>
-      </div>
+        <section class="control-strip" aria-label="会话控制">
+          <div class="control-block control-profile">
+            <div class="control-heading"><span class="eyebrow">PROFILE</span><span id="profileSummary">完整路由、连续上下文与直接交付链。</span></div>
+            <div id="profileBar" class="segmented"></div>
+          </div>
+          <div class="control-block control-layers">
+            <div class="control-heading"><span class="eyebrow">BREAK / JAILBREAK</span><span>MAXIMUM CORE · 6 层持续状态</span></div>
+            <div class="layer-track" aria-label="破甲核心六层"><span class="layer active">目标</span><span class="layer active">路由</span><span class="layer active">上下文</span><span class="layer active">产物</span><span class="layer active">验证</span><span class="layer active">恢复</span></div>
+          </div>
+        </section>
+
+        <section id="models" class="section-block" tabindex="-1">
+          <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> MODEL SEATS</div><h2>四个模型，统一工作台。</h2></div><div class="section-stat"><strong id="readyChip">0 / 4</strong><span>入口就绪</span></div></div>
+          <div id="hearthGrid" class="model-grid"></div>
+        </section>
+
+        <section id="launch" class="section-block execution" tabindex="-1">
+          <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> EXECUTION</div><h2>执行中心</h2><p class="section-note">目标目录、社区入口和恢复点都集中在这里。</p></div><div class="execution-status"><span id="targetLocale" class="locale">语言 · 检测中</span><button id="chooseBtn" class="outline-btn" type="button">选择目标目录</button></div></div>
+          <div class="target-row"><div class="target-icon">⌂</div><div class="target-info"><span>当前目标</span><code id="codexPath">自动检测中…</code></div><button id="openBtn" class="link-btn" type="button">打开目录 ↗</button></div>
+          <div id="codexFacts" class="fact-grid"></div>
+          <div class="action-grid"><button id="restoreAllBtn" class="action-card restore" type="button" disabled><span class="action-icon">↺</span><span><b>恢复默认</b><small>回到上一个恢复点</small></span><span class="action-arrow">→</span></button><button id="envBtn" class="action-card" type="button"><span class="action-icon">◌</span><span><b id="envBtnTitle">准备运行环境</b><small id="envBtnDetail">检查 Python 与四个适配器</small></span><span class="action-arrow">→</span></button><button id="clearBtn" class="action-card" type="button"><span class="action-icon">≡</span><span><b>清空活动流</b><small>保留文件与结果</small></span><span class="action-arrow">→</span></button></div>
+        </section>
+
+        <section class="lower-grid">
+          <section id="runtime" class="section-block compact-block" tabindex="-1"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> RUNTIME</div><h2>本机状态</h2></div><span class="status-pulse">LIVE</span></div><div id="envFacts" class="runtime-list"><span>等待检测…</span></div></section>
+          <section id="activity" class="section-block compact-block" tabindex="-1"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ACTIVITY STREAM</div><h2>活动流</h2></div><button id="copyLogBtn" class="icon-btn" type="button" title="复制活动流">⧉</button></div><div id="log" class="activity-log" role="log" aria-live="polite"></div></section>
+        </section>
+
+        <section class="community-section" aria-label="社群入口">
+          <div class="community-copy"><div class="eyebrow"><span class="eyebrow-line"></span> COMMUNITY</div><h2>一起把工作台打磨得更好。</h2><p>QQ 交流群、专题群与 Telegram 入口继续保留，点击即可复制或打开。</p></div><div id="communityBar" class="community-links"></div>
+        </section>
+        <footer class="stage-footer"><span>冷咖啡 / COLDBREW</span><span>MAXIMUM CORE · LOCAL FIRST</span><span>所有改动都有恢复锚点</span></footer>
+      </main>
     </div>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
     <script src="app.js"></script>

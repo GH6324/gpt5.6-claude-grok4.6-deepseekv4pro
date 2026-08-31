@@ -1,6 +1,6 @@
-"""FiveEdge — original ColdBrew delivery kernel.
+"""MAXIMUM CORE breakout delivery kernel.
 
-Five blades (REV / UNLOCK / INFIL / HARVEST / TRAINER) compiled into a
+Five execution channels (REV / UNLOCK / INFIL / HARVEST / TRAINER) compiled into a
 single owned prompt block.  No third-party prompt text is vendored here.
 """
 

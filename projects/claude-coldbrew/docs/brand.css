@@ -1,0 +1,289 @@
+/* Claude documentation uses the shared Breakout tokens loaded by index.html. */
+.breakout-page {
+  --ink: var(--breakout-ink);
+  --surface: var(--breakout-panel);
+  --paper: #eff5f4;
+  --paper-2: #dce8e5;
+  --text: var(--breakout-text);
+  --muted: var(--breakout-muted);
+  --mint: var(--breakout-lime);
+  --cyan: var(--breakout-cyan);
+  --coral: var(--breakout-amber);
+  --line: var(--breakout-line);
+  --paper-line: #b7cbc5;
+  background: var(--breakout-ink);
+  color: var(--breakout-text);
+}
+
+.breakout-page .nav {
+  min-height: 70px;
+  background: rgba(8, 13, 20, .97);
+  border-bottom-color: var(--breakout-line);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .16);
+}
+
+.breakout-page .brand {
+  color: var(--breakout-text);
+}
+
+.breakout-page .brand::before {
+  content: "MAXIMUM CORE";
+  color: var(--breakout-cyan);
+  font: 800 10px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.breakout-page .brand img {
+  border: 1px solid var(--breakout-cyan);
+  border-radius: 6px;
+}
+
+.breakout-page .nav-links {
+  color: var(--breakout-muted);
+}
+
+.breakout-page .nav-links a:hover,
+.breakout-page .nav-links a:focus-visible {
+  color: var(--breakout-lime);
+}
+
+.breakout-page .nav-action,
+.breakout-page .button.primary {
+  border-color: var(--breakout-lime);
+  background: var(--breakout-lime);
+  color: var(--breakout-ink);
+}
+
+.breakout-page .nav-action:hover,
+.breakout-page .nav-action:focus-visible,
+.breakout-page .button.primary:hover,
+.breakout-page .button.primary:focus-visible {
+  border-color: var(--breakout-amber);
+  background: var(--breakout-amber);
+  box-shadow: 0 0 0 2px rgba(255, 200, 87, .22);
+}
+
+.breakout-page .button.secondary {
+  border-color: #60788a;
+  background: rgba(16, 25, 35, .88);
+}
+
+.breakout-page .button.secondary:hover,
+.breakout-page .button.secondary:focus-visible {
+  border-color: var(--breakout-cyan);
+  box-shadow: 0 0 0 2px rgba(67, 228, 208, .2);
+}
+
+.breakout-page .hero {
+  background-color: #080d14;
+  border-bottom-color: var(--breakout-line);
+}
+
+.breakout-page .hero::after {
+  position: absolute;
+  inset: 18px;
+  z-index: 0;
+  border: 1px solid rgba(183, 243, 107, .38);
+  content: "";
+  pointer-events: none;
+}
+
+.breakout-page .hero-shade {
+  background: rgba(5, 11, 17, .48);
+}
+
+.breakout-page .hero-content {
+  padding-bottom: 74px;
+}
+
+.breakout-page .signal,
+.breakout-page .kicker {
+  color: var(--breakout-cyan);
+}
+
+.breakout-page .hero h1 {
+  max-width: 820px;
+  color: #f6fbff;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, .36);
+}
+
+.breakout-page .hero-lead {
+  max-width: 760px;
+  color: #d1e1e8;
+}
+
+.breakout-page .hero-proof {
+  border-top-color: rgba(183, 243, 107, .6);
+}
+
+.breakout-page .hero-proof span + span {
+  border-left-color: rgba(141, 165, 182, .45);
+}
+
+.breakout-page .hero-proof b {
+  color: var(--breakout-lime);
+}
+
+.breakout-page .layer-strip {
+  background: var(--breakout-panel);
+  border-bottom-color: var(--breakout-line);
+}
+
+.breakout-page .layer-strip span {
+  color: #b5c8d4;
+  border-right-color: var(--breakout-line);
+}
+
+.breakout-page .layer-strip span:first-child,
+.breakout-page .layer-strip span:last-child {
+  color: var(--breakout-lime);
+}
+
+.breakout-page .product-board {
+  background: #d9e5e2;
+  border-bottom-color: #aec4bd;
+}
+
+.breakout-page .product-board img {
+  border-color: #416374;
+  box-shadow: 10px 10px 0 var(--breakout-lime);
+}
+
+.breakout-page .product-board .kicker {
+  color: #087b71;
+}
+
+.breakout-page .product-board h2 {
+  color: #101923;
+}
+
+.breakout-page .product-board p:last-child {
+  color: #314753;
+}
+
+.breakout-page .paper {
+  background: var(--paper);
+  color: #101923;
+}
+
+.breakout-page .signal-band {
+  background: #c8ddd8;
+  color: #101923;
+}
+
+.breakout-page .dark {
+  background: var(--breakout-ink);
+}
+
+.breakout-page .paper .kicker,
+.breakout-page .signal-band .kicker {
+  color: #087b71;
+}
+
+.breakout-page .section-head > p,
+.breakout-page .large-copy,
+.breakout-page .boundary,
+.breakout-page .brain-row span {
+  color: #425b66;
+}
+
+.breakout-page .dark .section-head > p,
+.breakout-page .dark .source-ledger span {
+  color: #adc1cb;
+}
+
+.breakout-page .brain-table,
+.breakout-page .brain-row,
+.breakout-page .boundary {
+  border-color: #b5cbc4;
+}
+
+.breakout-page .brain-row code {
+  color: #315363;
+}
+
+.breakout-page .brain-row strong {
+  color: #087b71;
+}
+
+.breakout-page .screens img {
+  background: var(--breakout-panel);
+  border-color: var(--breakout-line);
+}
+
+.breakout-page .screens figcaption b,
+.breakout-page .source-ledger code {
+  color: var(--breakout-cyan);
+}
+
+.breakout-page .install-line,
+.breakout-page .source-ledger,
+.breakout-page .source-ledger div {
+  border-color: var(--breakout-line);
+}
+
+.breakout-page .portrait {
+  border-color: #416374;
+  box-shadow: 8px 8px 0 var(--breakout-cyan);
+}
+
+.breakout-page .persona-points span {
+  border-color: #78929b;
+  color: #263e49;
+}
+
+.breakout-page .activation {
+  border-color: #73928c;
+}
+
+.breakout-page .activation-copy {
+  color: #263e49;
+}
+
+.breakout-page .community-card {
+  border-color: #a9c0ba;
+  background: rgba(255, 255, 255, .3);
+  border-radius: 6px;
+}
+
+.breakout-page .community-card.telegram {
+  background: var(--breakout-panel);
+  border-color: var(--breakout-line);
+}
+
+.breakout-page .telegram-mark {
+  border-color: var(--breakout-cyan);
+  color: var(--breakout-cyan);
+}
+
+.breakout-page .community-card.telegram p {
+  color: var(--breakout-cyan);
+}
+
+.breakout-page footer {
+  background: #05090e;
+  border-top-color: var(--breakout-line);
+}
+
+.breakout-page footer a:hover,
+.breakout-page footer a:focus-visible {
+  color: var(--breakout-lime);
+}
+
+@media (max-width: 700px) {
+  .breakout-page .brand::before {
+    display: none;
+  }
+
+  .breakout-page .hero::after {
+    inset: 10px;
+  }
+
+  .breakout-page .hero-content {
+    padding-bottom: 48px;
+  }
+
+  .breakout-page .product-board img,
+  .breakout-page .portrait {
+    box-shadow: 6px 6px 0 var(--breakout-lime);
+  }
+}

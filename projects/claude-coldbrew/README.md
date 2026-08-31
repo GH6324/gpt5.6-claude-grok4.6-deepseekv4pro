@@ -1,12 +1,12 @@
-<p align="center"><a href="https://茶.github.io/claude-coldbrew/"><img src="docs/images/claude-release-board.png" width="1200" alt="Claude 破甲 ColdBrew Studio v3.1.0 工作台与产品视觉板"></a></p>
+<p align="center"><a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/claude-coldbrew"><img src="docs/images/claude-release-board.png" width="1200" alt="Claude 破甲 ColdBrew Studio v3.2.0 工作台与产品视觉板"></a></p>
 
 <h1 align="center">Claude 破甲 · 冷咖啡</h1>
 
-<p align="center"><strong>Claude ColdBrew Studio v3.1.0</strong><br>默认任务链直接就绪，保留用户级 / 项目级多层部署、预览、验证、启动和恢复。</p>
+<p align="center"><strong>Claude ColdBrew Studio v3.2.0</strong><br>默认任务链直接就绪，保留用户级 / 项目级多层部署、预览、验证、启动和恢复。</p>
 
 <p align="center">
-  <a href="https://github.com/茶/claude-coldbrew/releases/latest"><strong>下载 Windows 软件</strong></a> ·
-  <a href="https://茶.github.io/claude-coldbrew/"><strong>查看宣传页</strong></a> ·
+  <a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/releases/latest"><strong>下载 Windows 软件</strong></a> ·
+  <a href="https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/claude-coldbrew"><strong>查看项目</strong></a> ·
   <a href="README_EN.md"><strong>English</strong></a> ·
    ·
   
@@ -40,8 +40,8 @@ Windows 用户打开软件后，预览、部署、验证、恢复与启动控制
 
 ### Windows
 
-1. 打开 [Releases](https://github.com/茶/claude-coldbrew/releases/latest)。
-2. 下载 `Claude-ColdBrew-Studio-v3.1.0-Windows.exe`。
+1. 打开 [Releases](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/releases/latest)。
+2. 下载 `Claude-ColdBrew-Studio-v3.2.0-Windows.exe`。
 3. 双击软件，在顶部输入框只输入 `冷咖啡`。
 4. 选择用户级或项目级，再运行“预览变更”。
 5. 点“一键部署”，完成后运行“验证部署”。
@@ -129,10 +129,10 @@ API、GraphQL、WebSocket、JWT、OAuth、Docker、Kubernetes、云权限、源�
 
 | 产品 | 仓库 | 用途 |
 |---|---|---|
-| Codex 5.6 ColdBrew | [codex5.6-coldbrew](https://github.com/茶/codex5.6-coldbrew) | Codex 多层本地指令部署工作台 |
-| Claude ColdBrew | [claude-coldbrew](https://github.com/茶/claude-coldbrew) | Claude Code 多层规则部署工作台 |
-| Grok 4.6 ColdBrew | [grok4.6-coldbrew](https://github.com/茶/grok4.6-coldbrew) | Grok 会话模板与系统提示词工作台 |
-| DeepSeek Harness ColdBrew | [deepseek-harness-coldbrew](https://github.com/茶/deepseek-harness-coldbrew) | DeepSeek 本地 Harness 配置工作台 |
+| Codex 5.6 ColdBrew | [codex5.6-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/codex-coldbrew) | Codex 多层本地指令部署工作台 |
+| Claude ColdBrew | [claude-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/claude-coldbrew) | Claude Code 多层规则部署工作台 |
+| Grok 4.6 ColdBrew | [grok4.6-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/grok4.6-coldbrew) | Grok 会话模板与系统提示词工作台 |
+| DeepSeek Harness ColdBrew | [deepseek-harness-coldbrew](https://github.com/3641397194-wq/gpt5.6-claude-grok4.6-deepseekv4pro/tree/main/projects/deepseek-harness) | DeepSeek 本地 Harness 配置工作台 |
 
 
 ## 原创与来源
@@ -150,15 +150,15 @@ API、GraphQL、WebSocket、JWT、OAuth、Docker、Kubernetes、云权限、源�
 
 本仓库使用 **ColdBrew Studio Community License v1.0**。源代码、构建材料和项目自有资源必须保持公开；禁止闭源再发布、商业销售、付费托管、收费下载、租赁授权或把修改版放在付费墙后。该许可证包含使用限制，因此不是 OSI 认可的开源许可证；准确分类是**源码公开 / source-available 社区许可证**。
 
-详见 [LICENSE](LICENSE) 与 [LICENSE_POLICY.md](LICENSE_POLICY.md)。第三方商标和素材权利不因本许可证转让。
+详见 [LICENSE_POLICY.md](LICENSE_POLICY.md) 与 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。第三方商标和素材权利不因本许可证转让。
 
 ## 发布与验证
 
-v3.1.0 发布资产：
+v3.2.0 发布资产：
 
-- `Claude-ColdBrew-Studio-v3.1.0-Windows.exe`
-- `Claude-ColdBrew-Studio-v3.1.0-Windows.sha256`
-- `Claude-ColdBrew-Studio-v3.1.0-Source.zip`
+- `Claude-ColdBrew-Studio-v3.2.0-Windows.exe`
+- `Claude-ColdBrew-Studio-v3.2.0-Windows.sha256`
+- `Claude-ColdBrew-Studio-v3.2.0-Source.zip`
 
 开发者回归：
 
@@ -189,11 +189,11 @@ docs/            GitHub Pages、产品文档、截图与社区图片
 | QQ 群：codex 破甲 | QQ 群：codex claude 破甲 |
 |---|---|
 | 群号 **1057540028** | 群号 **1077074552** |
-| <img src="docs/images/qq-group-codex.png" alt="QQ群 1057540028" width="300"> | <img src="docs/images/qq-group-codex-claude.png" alt="QQ群 1077074552" width="300"> |
+| <img src="docs/images/qq-group-1.jpg" alt="QQ群 1057540028" width="300"> | <img src="docs/images/qq-group-2.jpg" alt="QQ群 1077074552" width="300"> |
 
 - 微信群：**冷咖啡破甲社区**
 
   <img src="docs/images/codex-group-qr.png" alt="微信群：冷咖啡破甲社区" width="240">
 
 - Telegram 交流群：[@chachachacha99999](https://t.me/chachachacha99999)
-- 官方 Telegram 频道：[@chachacha99999999](https://t.me/chachacha99999999)
+- 官方 Telegram 频道：[@chachachacha99999999](https://t.me/chachachacha99999999)
